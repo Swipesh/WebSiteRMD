@@ -1,0 +1,13 @@
+C:\Users\mista\RiderProjects\PluralsightASP\PluralsightASP.Data\bin\Debug\netcoreapp3.1\PluralsightASP.Data.deps.json
+C:\Users\mista\RiderProjects\PluralsightASP\PluralsightASP.Data\bin\Debug\netcoreapp3.1\PluralsightASP.Data.runtimeconfig.json
+C:\Users\mista\RiderProjects\PluralsightASP\PluralsightASP.Data\bin\Debug\netcoreapp3.1\PluralsightASP.Data.runtimeconfig.dev.json
+C:\Users\mista\RiderProjects\PluralsightASP\PluralsightASP.Data\bin\Debug\netcoreapp3.1\PluralsightASP.Data.dll
+C:\Users\mista\RiderProjects\PluralsightASP\PluralsightASP.Data\bin\Debug\netcoreapp3.1\PluralsightASP.Data.pdb
+C:\Users\mista\RiderProjects\PluralsightASP\PluralsightASP.Data\bin\Debug\netcoreapp3.1\PluralsightASP.Core.dll
+C:\Users\mista\RiderProjects\PluralsightASP\PluralsightASP.Data\bin\Debug\netcoreapp3.1\PluralsightASP.Core.pdb
+C:\Users\mista\RiderProjects\PluralsightASP\PluralsightASP.Data\obj\Debug\netcoreapp3.1\PluralsightASP.Data.csprojAssemblyReference.cache
+C:\Users\mista\RiderProjects\PluralsightASP\PluralsightASP.Data\obj\Debug\netcoreapp3.1\PluralsightASP.Data.AssemblyInfoInputs.cache
+C:\Users\mista\RiderProjects\PluralsightASP\PluralsightASP.Data\obj\Debug\netcoreapp3.1\PluralsightASP.Data.AssemblyInfo.cs
+C:\Users\mista\RiderProjects\PluralsightASP\PluralsightASP.Data\obj\Debug\netcoreapp3.1\PluralsightASP.Data.csproj.CopyComplete
+C:\Users\mista\RiderProjects\PluralsightASP\PluralsightASP.Data\obj\Debug\netcoreapp3.1\PluralsightASP.Data.dll
+C:\Users\mista\RiderProjects\PluralsightASP\PluralsightASP.Data\obj\Debug\netcoreapp3.1\PluralsightASP.Data.pdb
