@@ -1,30 +1,28 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using System.Threading;
+using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using PluralsightASP.Core;
 using PluralsightASP.Data;
 
 namespace PluralsightASP.Pages.Users
 {
+    [Authorize(Roles="Administrator")]
     public class EditModel : PageModel
     {
-        private readonly IUsersData _usersData;
+        private readonly UserStore _userStore;
 
         public User User { get; set; }
-        public EditModel(IUsersData usersData)
+        public EditModel(UserStore userStore)
         {
-            _usersData = usersData;
+            _userStore = userStore;
         }
         
-        public IActionResult OnGet(int? userId)
+        public IActionResult OnGet(string userId)
         {
-            if (userId.HasValue)
-            {
-                User = _usersData.GetById(userId.Value);
-            }
-            else
-            {
-                User = new User();
-            }
+           
+            //User = _userStore.FindByIdAsync(userId,CancellationToken.None);
+                
             if (User == null)
             {
                 return RedirectToPage("./NotFound");

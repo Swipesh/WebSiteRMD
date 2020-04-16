@@ -1,9 +1,11 @@
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.EntityFrameworkCore;
+using PluralsightASP.Core;
 using PluralsightASP.Data;
 
 namespace PluralsightASP
@@ -22,9 +24,14 @@ namespace PluralsightASP
         {
             services.AddDbContextPool<PluralsightASPDbContext>(options =>
                 {
-                    options.UseMySql(Configuration.GetConnectionString("MySql"));
+                    options.UseMySql(Configuration.GetConnectionString("MySql"),
+
+                        x => x.MigrationsAssembly("PluralsightASP.Data"));
                 });
-            services.AddScoped<IUsersData, SqlUsersData>();
+            
+            services.AddIdentityCore<User>(options => {});
+            services.AddScoped<IUserStore<User>, UserStore>();
+            services.AddAuthentication("cookies").AddCookie("cookies", options => options.LoginPath = "/Home/Login");
             services.AddRazorPages();
         }
 
@@ -47,6 +54,7 @@ namespace PluralsightASP
 
             app.UseRouting();
 
+            app.UseAuthentication();
             app.UseAuthorization();
 
             app.UseEndpoints(endpoints => { endpoints.MapRazorPages(); });

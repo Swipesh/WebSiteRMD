@@ -4,29 +4,28 @@
 @{
 }
 
-<link href = "http://netdna.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel = "stylesheet">
 <div>
-    <table class="table">
-        <tr>
-            <th>Name</th>
-            <th>Location</th>
-            <th>Age</th>
-        </tr>
-        @foreach (var user in Model.Users)
-        {
+    <div class="table-responsive">
+        <table class="table">
+            <thead>
             <tr>
-                <td>@user.Name</td>
-                <td>@user.Location</td>
-                <td>@user.Age</td>
-                <td>
-                    <a class="btn btn-lg"
-                       asp-page="./Edit" asp-route-userId="@user.Id">
-                        <span class="glyphicon glyphicon-pencil"></span> Edit
-                    </a>
-                </td>
+                <th>Name</th>
+                <th>Location</th>
+                <th>Age</th>
             </tr>
-        }
-    </table>
+            </thead>
+@*             <tbody> *@
+@*             @foreach (var user in Model.Users) *@
+@*                     { *@
+@*                         <tr> *@
+@*                             <td>@user.Name</td> *@
+@*                             <td>@user.Location</td> *@
+@*                             <td>@user.Age</td> *@
+@*                         </tr> *@
+@*                     } *@
+@*             </tbody> *@
+        </table>
+    </div>
     <a asp-page="./Edit" class="btn btn-primary">
         Add User
     </a>

@@ -12,17 +12,17 @@ namespace PluralsightASP.Pages.Users
     {
 
         private readonly IConfiguration _configuration;
-        private readonly IUsersData _usersData;
+        //private readonly UserStore _usersData;
         public IEnumerable<User> Users { get; set; }
 
-        public ListModel(IConfiguration configuration, IUsersData usersData)
+        public ListModel(IConfiguration configuration)
         {
             _configuration = configuration;
-            _usersData = usersData;
+            //_usersData = usersData;
         }
         public void OnGet()
         {
-            Users = _usersData.GetAll();
+           //Users = _usersData.GetAll();
         }
     }
 }

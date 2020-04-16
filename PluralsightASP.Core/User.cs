@@ -1,10 +1,12 @@
-﻿namespace PluralsightASP.Core
+﻿using Microsoft.AspNetCore.Identity;
+
+namespace PluralsightASP.Core
 {
-    public class User
+    public class User : IdentityUser
     {
-        public int Id { get; set; }
-        public string Name { get; set; }
-        public string Location { get; set; }
-        public int Age { get; set; }
+        public string Id { get; set; }
+        public string UserName { get; set; }
+        public string NormalizedUserName { get; set; }
+        public string PasswordHash { get; set; }
     }
 }

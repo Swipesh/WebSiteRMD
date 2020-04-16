@@ -6,12 +6,19 @@
 
     <ItemGroup>
       <PackageReference Include="bootstrap" Version="4.4.1" />
-      <PackageReference Include="Microsoft.EntityFrameworkCore" Version="3.1.2" />
-      <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="3.1.2" />
+      <PackageReference Include="Microsoft.AspNetCore.Authentication.Cookies" Version="2.2.0" />
+      <PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="3.1.3" />
+      <PackageReference Include="Microsoft.EntityFrameworkCore" Version="3.1.3" />
+      <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="3.1.3" />
+      <PackageReference Include="Microsoft.Extensions.Identity.Core" Version="3.1.3" />
     </ItemGroup>
 
     <ItemGroup>
       <ProjectReference Include="..\PluralsightASP.Data\PluralsightASP.Data.csproj" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <_ContentIncludedByDefault Remove="wwwroot\js\site.js" />
     </ItemGroup>
 
 

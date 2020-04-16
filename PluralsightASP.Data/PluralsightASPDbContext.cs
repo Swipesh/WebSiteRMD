@@ -1,10 +1,12 @@
-﻿using System.Net.Mime;
+﻿using System.Collections.Generic;
+using System.Net.Mime;
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 using PluralsightASP.Core;
 
 namespace PluralsightASP.Data
 {
-    public class PluralsightASPDbContext : DbContext
+    public class PluralsightASPDbContext : IdentityDbContext<User>
     {
         public DbSet<User> Users { get; set; }
 
@@ -13,4 +15,6 @@ namespace PluralsightASP.Data
             Database.EnsureCreated();
         }
     }
+
+    
 }

@@ -1,9 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ContentModelStore">
-    <e p="C:\Users\mista\.Rider2019.3\system\extResources" t="IncludeRecursive" />
-    <e p="C:\Users\mista\.Rider2019.3\system\resharper-host\local\Transient\ReSharperHost\v193\SolutionCaches\_PluralsightASP.1717055261.00" t="ExcludeRecursive" />
-    <e p="C:\Users\mista\RiderProjects\PluralsightASP" t="IncludeFlat">
+    <e p="$USER_HOME$/Library/Caches/Rider2019.3/extResources" t="IncludeRecursive" />
+    <e p="$USER_HOME$/Library/Caches/Rider2019.3/resharper-host/local/Transient/ReSharperHost/v193/SolutionCaches/_PluralsightASP.-94747078.00" t="ExcludeRecursive" />
+    <e p="$APPLICATION_CONFIG_DIR$/javascript/extLibs/http_cdnjs.cloudflare.com_ajax_libs_baguettebox.js_1.10.0_baguetteBox.css" t="IncludeRecursive" />
+    <e p="$APPLICATION_CONFIG_DIR$/javascript/extLibs/http_cdnjs.cloudflare.com_ajax_libs_baguettebox.js_1.10.0_baguetteBox.js" t="IncludeRecursive" />
+    <e p="$PROJECT_DIR$" t="IncludeFlat">
       <e p="packages" t="ExcludeRecursive" />
       <e p="PluralsightASP" t="IncludeRecursive">
         <e p="appsettings.Development.json" t="Include" />
@@ -20,6 +22,8 @@
         <e p="Pages" t="Include">
           <e p="_ViewImports.cshtml" t="Include" />
           <e p="_ViewStart.cshtml" t="Include" />
+          <e p="About.cshtml" t="Include" />
+          <e p="About.cshtml.cs" t="Include" />
           <e p="Error.cshtml" t="Include" />
           <e p="Error.cshtml.cs" t="Include" />
           <e p="Index.cshtml" t="Include" />
@@ -46,66 +50,55 @@
         </e>
         <e p="Startup.cs" t="Include" />
         <e p="wwwroot" t="Include">
-          <e p="css" t="Include">
-            <e p="site.css" t="Include" />
+          <e p="assets" t="Include">
+            <e p="bootstrap" t="Include">
+              <e p="css" t="Include">
+                <e p="bootstrap.min.css" t="Include" />
+              </e>
+              <e p="js" t="Include">
+                <e p="bootstrap.min.js" t="Include" />
+              </e>
+            </e>
+            <e p="css" t="Include">
+              <e p="smoothproducts.css" t="Include" />
+            </e>
+            <e p="fonts" t="Include">
+              <e p="Simple-Line-Icons.eot" t="Include" />
+              <e p="simple-line-icons.min.css" t="Include" />
+              <e p="Simple-Line-Icons.svg" t="Include" />
+              <e p="Simple-Line-Icons.ttf" t="Include" />
+              <e p="Simple-Line-Icons.woff" t="Include" />
+              <e p="Simple-Line-Icons.woff2" t="Include" />
+            </e>
+            <e p="img" t="Include">
+              <e p="avatars" t="Include">
+                <e p="avatar1.jpg" t="Include" />
+                <e p="avatar2.jpg" t="Include" />
+                <e p="avatar3.jpg" t="Include" />
+              </e>
+              <e p="scenery" t="Include">
+                <e p="image1.jpg" t="Include" />
+                <e p="image4.jpg" t="Include" />
+                <e p="image5.jpg" t="Include" />
+                <e p="image6.jpg" t="Include" />
+              </e>
+              <e p="star-empty.svg" t="Include" />
+              <e p="star-half-empty.svg" t="Include" />
+              <e p="star.svg" t="Include" />
+              <e p="tech" t="Include">
+                <e p="image1.jpg" t="Include" />
+                <e p="image2.jpg" t="Include" />
+                <e p="image3.png" t="Include" />
+                <e p="image4.jpg" t="Include" />
+              </e>
+            </e>
+            <e p="js" t="Include">
+              <e p="jquery.min.js" t="Include" />
+              <e p="smoothproducts.min.js" t="Include" />
+              <e p="theme.js" t="Include" />
+            </e>
           </e>
           <e p="favicon.ico" t="Include" />
-          <e p="js" t="Include">
-            <e p="site.js" t="Include" />
-          </e>
-          <e p="lib" t="Include">
-            <e p="bootstrap" t="Include">
-              <e p="dist" t="Include">
-                <e p="css" t="Include">
-                  <e p="bootstrap-grid.css" t="Include" />
-                  <e p="bootstrap-grid.css.map" t="Include" />
-                  <e p="bootstrap-grid.min.css" t="Include" />
-                  <e p="bootstrap-grid.min.css.map" t="Include" />
-                  <e p="bootstrap-reboot.css" t="Include" />
-                  <e p="bootstrap-reboot.css.map" t="Include" />
-                  <e p="bootstrap-reboot.min.css" t="Include" />
-                  <e p="bootstrap-reboot.min.css.map" t="Include" />
-                  <e p="bootstrap.css" t="Include" />
-                  <e p="bootstrap.css.map" t="Include" />
-                  <e p="bootstrap.min.css" t="Include" />
-                  <e p="bootstrap.min.css.map" t="Include" />
-                </e>
-                <e p="js" t="Include">
-                  <e p="bootstrap.bundle.js" t="Include" />
-                  <e p="bootstrap.bundle.js.map" t="Include" />
-                  <e p="bootstrap.bundle.min.js" t="Include" />
-                  <e p="bootstrap.bundle.min.js.map" t="Include" />
-                  <e p="bootstrap.js" t="Include" />
-                  <e p="bootstrap.js.map" t="Include" />
-                  <e p="bootstrap.min.js" t="Include" />
-                  <e p="bootstrap.min.js.map" t="Include" />
-                </e>
-              </e>
-              <e p="LICENSE" t="Include" />
-            </e>
-            <e p="jquery" t="Include">
-              <e p="dist" t="Include">
-                <e p="jquery.js" t="Include" />
-                <e p="jquery.min.js" t="Include" />
-                <e p="jquery.min.map" t="Include" />
-              </e>
-              <e p="LICENSE.txt" t="Include" />
-            </e>
-            <e p="jquery-validation" t="Include">
-              <e p="dist" t="Include">
-                <e p="additional-methods.js" t="Include" />
-                <e p="additional-methods.min.js" t="Include" />
-                <e p="jquery.validate.js" t="Include" />
-                <e p="jquery.validate.min.js" t="Include" />
-              </e>
-              <e p="LICENSE.md" t="Include" />
-            </e>
-            <e p="jquery-validation-unobtrusive" t="Include">
-              <e p="jquery.validate.unobtrusive.js" t="Include" />
-              <e p="jquery.validate.unobtrusive.min.js" t="Include" />
-              <e p="LICENSE.txt" t="Include" />
-            </e>
-          </e>
         </e>
       </e>
       <e p="PluralsightASP.Core" t="IncludeRecursive">
@@ -118,14 +111,14 @@
           </e>
         </e>
         <e p="PluralsightASP.Core.csproj" t="IncludeRecursive" />
+        <e p="Role.cs" t="Include" />
         <e p="User.cs" t="Include" />
       </e>
       <e p="PluralsightASP.Data" t="IncludeRecursive">
         <e p="bin" t="ExcludeRecursive" />
-        <e p="IUsersData.cs" t="Include" />
         <e p="Migrations" t="Include">
-          <e p="20200310091113_initialcreate.cs" t="Include" />
-          <e p="20200310091113_initialcreate.Designer.cs" t="Include" />
+          <e p="20200416172555_Initial.cs" t="Include" />
+          <e p="20200416172555_Initial.Designer.cs" t="Include" />
           <e p="PluralsightASPDbContextModelSnapshot.cs" t="Include" />
         </e>
         <e p="obj" t="ExcludeRecursive">
@@ -135,9 +128,19 @@
             </e>
           </e>
         </e>
+        <e p="PluralsightASP" t="Include">
+          <e p="obj" t="Include">
+            <e p="PluralsightASP.csproj.EntityFrameworkCore.targets" t="Include" />
+          </e>
+        </e>
+        <e p="PluralsightASP.Data" t="Include">
+          <e p="obj" t="Include">
+            <e p="PluralsightASP.Data.csproj.EntityFrameworkCore.targets" t="Include" />
+          </e>
+        </e>
         <e p="PluralsightASP.Data.csproj" t="IncludeRecursive" />
         <e p="PluralsightASPDbContext.cs" t="Include" />
-        <e p="SqlUsersData.cs" t="Include" />
+        <e p="UserStore.cs" t="Include" />
       </e>
       <e p="PluralsightASP.sln" t="IncludeFlat" />
     </e>

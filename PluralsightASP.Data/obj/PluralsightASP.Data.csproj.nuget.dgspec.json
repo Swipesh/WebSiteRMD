@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\mista\\RiderProjects\\PluralsightASP\\PluralsightASP.Data\\PluralsightASP.Data.csproj": {}
+    "/Users/swipe/RiderProjects/WebSiteRMD/PluralsightASP.Data/PluralsightASP.Data.csproj": {}
   },
   "projects": {
-    "C:\\Users\\mista\\RiderProjects\\PluralsightASP\\PluralsightASP.Core\\PluralsightASP.Core.csproj": {
+    "/Users/swipe/RiderProjects/WebSiteRMD/PluralsightASP.Core/PluralsightASP.Core.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\mista\\RiderProjects\\PluralsightASP\\PluralsightASP.Core\\PluralsightASP.Core.csproj",
+        "projectUniqueName": "/Users/swipe/RiderProjects/WebSiteRMD/PluralsightASP.Core/PluralsightASP.Core.csproj",
         "projectName": "PluralsightASP.Core",
-        "projectPath": "C:\\Users\\mista\\RiderProjects\\PluralsightASP\\PluralsightASP.Core\\PluralsightASP.Core.csproj",
-        "packagesPath": "C:\\Users\\mista\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\mista\\RiderProjects\\PluralsightASP\\PluralsightASP.Core\\obj\\",
+        "projectPath": "/Users/swipe/RiderProjects/WebSiteRMD/PluralsightASP.Core/PluralsightASP.Core.csproj",
+        "packagesPath": "/Users/swipe/.nuget/packages/",
+        "outputPath": "/Users/swipe/RiderProjects/WebSiteRMD/PluralsightASP.Core/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\mista\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "/Users/swipe/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "netcoreapp3.1"
@@ -36,6 +36,18 @@
       "frameworks": {
         "netcoreapp3.1": {
           "dependencies": {
+            "Microsoft.AspNetCore.Authentication.Cookies": {
+              "target": "Package",
+              "version": "[2.2.0, )"
+            },
+            "Microsoft.AspNetCore.Identity.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[3.1.3, )"
+            },
+            "Microsoft.Extensions.Identity.Core": {
+              "target": "Package",
+              "version": "[3.1.3, )"
+            },
             "bootstrap": {
               "target": "Package",
               "version": "[4.4.1, )"
@@ -56,21 +68,21 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.102\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/3.1.200/RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\mista\\RiderProjects\\PluralsightASP\\PluralsightASP.Data\\PluralsightASP.Data.csproj": {
+    "/Users/swipe/RiderProjects/WebSiteRMD/PluralsightASP.Data/PluralsightASP.Data.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\mista\\RiderProjects\\PluralsightASP\\PluralsightASP.Data\\PluralsightASP.Data.csproj",
+        "projectUniqueName": "/Users/swipe/RiderProjects/WebSiteRMD/PluralsightASP.Data/PluralsightASP.Data.csproj",
         "projectName": "PluralsightASP.Data",
-        "projectPath": "C:\\Users\\mista\\RiderProjects\\PluralsightASP\\PluralsightASP.Data\\PluralsightASP.Data.csproj",
-        "packagesPath": "C:\\Users\\mista\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\mista\\RiderProjects\\PluralsightASP\\PluralsightASP.Data\\obj\\",
+        "projectPath": "/Users/swipe/RiderProjects/WebSiteRMD/PluralsightASP.Data/PluralsightASP.Data.csproj",
+        "packagesPath": "/Users/swipe/.nuget/packages/",
+        "outputPath": "/Users/swipe/RiderProjects/WebSiteRMD/PluralsightASP.Data/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\mista\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "/Users/swipe/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "netcoreapp3.1"
@@ -81,8 +93,8 @@
         "frameworks": {
           "netcoreapp3.1": {
             "projectReferences": {
-              "C:\\Users\\mista\\RiderProjects\\PluralsightASP\\PluralsightASP.Core\\PluralsightASP.Core.csproj": {
-                "projectPath": "C:\\Users\\mista\\RiderProjects\\PluralsightASP\\PluralsightASP.Core\\PluralsightASP.Core.csproj"
+              "/Users/swipe/RiderProjects/WebSiteRMD/PluralsightASP.Core/PluralsightASP.Core.csproj": {
+                "projectPath": "/Users/swipe/RiderProjects/WebSiteRMD/PluralsightASP.Core/PluralsightASP.Core.csproj"
               }
             }
           }
@@ -96,13 +108,25 @@
       "frameworks": {
         "netcoreapp3.1": {
           "dependencies": {
+            "Microsoft.AspNetCore.Authentication.Cookies": {
+              "target": "Package",
+              "version": "[2.2.0, )"
+            },
+            "Microsoft.AspNetCore.Identity.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[3.1.3, )"
+            },
             "Microsoft.EntityFrameworkCore": {
               "target": "Package",
-              "version": "[3.1.2, )"
+              "version": "[3.1.3, )"
             },
             "Microsoft.EntityFrameworkCore.Design": {
               "target": "Package",
-              "version": "[3.1.2, )"
+              "version": "[3.1.3, )"
+            },
+            "Microsoft.Extensions.Identity.Core": {
+              "target": "Package",
+              "version": "[3.1.3, )"
             },
             "Pomelo.EntityFrameworkCore.MySql": {
               "target": "Package",
@@ -128,7 +152,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.102\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/3.1.200/RuntimeIdentifierGraph.json"
         }
       }
     }
