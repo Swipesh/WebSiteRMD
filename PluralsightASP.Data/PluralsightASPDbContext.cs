@@ -14,7 +14,19 @@ namespace PluralsightASP.Data
         {
             Database.EnsureCreated();
         }
-    }
 
-    
+        protected override void OnModelCreating(ModelBuilder builder)
+        {
+            base.OnModelCreating(builder);
+
+            builder.Entity<User>(user => { user.HasMany<File>(); });
+
+            builder.Entity<File>(file =>
+            {
+                file.ToTable("Files");
+                file.HasKey(x => x.Id);
+                file.HasMany<User>();
+            });
+        }
+    }
 }

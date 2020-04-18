@@ -145,6 +145,24 @@ namespace PluralsightASP.Data.Migrations
                     b.ToTable("AspNetUserTokens");
                 });
 
+            modelBuilder.Entity("PluralsightASP.Core.File", b =>
+                {
+                    b.Property<string>("Id")
+                        .HasColumnType("varchar(255) CHARACTER SET utf8mb4");
+
+                    b.Property<string>("OwnerId")
+                        .HasColumnType("longtext CHARACTER SET utf8mb4");
+
+                    b.Property<string>("UserId")
+                        .HasColumnType("varchar(255) CHARACTER SET utf8mb4");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("UserId");
+
+                    b.ToTable("Files");
+                });
+
             modelBuilder.Entity("PluralsightASP.Core.User", b =>
                 {
                     b.Property<string>("Id")
@@ -163,6 +181,9 @@ namespace PluralsightASP.Data.Migrations
 
                     b.Property<bool>("EmailConfirmed")
                         .HasColumnType("tinyint(1)");
+
+                    b.Property<string>("FileId")
+                        .HasColumnType("varchar(255) CHARACTER SET utf8mb4");
 
                     b.Property<bool>("LockoutEnabled")
                         .HasColumnType("tinyint(1)");
@@ -198,6 +219,8 @@ namespace PluralsightASP.Data.Migrations
                         .HasMaxLength(256);
 
                     b.HasKey("Id");
+
+                    b.HasIndex("FileId");
 
                     b.HasIndex("NormalizedEmail")
                         .HasName("EmailIndex");
@@ -258,6 +281,20 @@ namespace PluralsightASP.Data.Migrations
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
+                });
+
+            modelBuilder.Entity("PluralsightASP.Core.File", b =>
+                {
+                    b.HasOne("PluralsightASP.Core.User", null)
+                        .WithMany()
+                        .HasForeignKey("UserId");
+                });
+
+            modelBuilder.Entity("PluralsightASP.Core.User", b =>
+                {
+                    b.HasOne("PluralsightASP.Core.File", null)
+                        .WithMany()
+                        .HasForeignKey("FileId");
                 });
 #pragma warning restore 612, 618
         }

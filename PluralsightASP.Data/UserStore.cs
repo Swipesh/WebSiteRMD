@@ -5,7 +5,7 @@ using PluralsightASP.Core;
 
 namespace PluralsightASP.Data
 {
-    public class UserStore : IUserStore<User>, IUserPasswordStore<User>
+    public class UserStore : IUserPasswordStore<User>
     {
         
         private readonly PluralsightASPDbContext _dbContext;
