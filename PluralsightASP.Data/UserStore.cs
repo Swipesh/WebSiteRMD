@@ -1,3 +1,4 @@
+using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Identity;
@@ -63,8 +64,8 @@ namespace PluralsightASP.Data
 
         public async Task<User> FindByIdAsync(string userId, CancellationToken cancellationToken)
         {
-           // _dbContext.Find()
-           throw new System.NotImplementedException();
+
+            return await Task.FromResult(_dbContext.Users.First(u => u.Id == "user1"));
         }
 
         public async Task<User> FindByNameAsync(string normalizedUserName, CancellationToken cancellationToken)

@@ -1,5 +1,5 @@
 ﻿<!DOCTYPE html>
-<html>
+<html xmlns="http://www.w3.org/1999/html">
 
 <head>
     <meta charset="utf-8">
@@ -13,83 +13,108 @@
 </head>
 
 <body>
-<header>
-    <nav class="navbar navbar-light navbar-expand-lg fixed-top bg-white clean-navbar">
+<nav class="navbar navbar-light navbar-expand-lg fixed-top bg-white clean-navbar">
+    <div class="container">
+        <a class="navbar-brand logo" href="#">Brand</a>
+        <button data-toggle="collapse" class="navbar-toggler" data-target="#navcol-1">
+            <span class="sr-only">Toggle navigation</span><span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse"
+             id="navcol-1">
+            <ul class="nav navbar-nav ml-auto">
+                <li class="nav-item" role="presentation">
+                    <a class="nav-link active" asp-page="/Index">Home</a>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <a class="nav-link" asp-page="/Users/List">Features</a>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <a class="nav-link" asp-page="/Users/Edit">Pricing</a>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <a class="nav-link" asp-page="/About">About Us</a>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <a class="nav-link" asp-page="/Index">Contact Us</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+<main class="page">
+    <section class="clean-block">
         <div class="container">
-            <a class="navbar-brand logo" href="#">Brand</a>
-            <button data-toggle="collapse" class="navbar-toggler" data-target="#navcol-1">
-                <span class="sr-only">Toggle navigation</span><span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse"
-                 id="navcol-1">
-                <ul class="nav navbar-nav ml-auto">
-                    <li class="nav-item" role="presentation">
-                        <a class="nav-link active" asp-page="/Index">Home</a>
+            <div class="block-content">
+                @RenderBody()
+            </div>
+        </div>
+    </section>
+</main>
+<footer class="page-footer dark">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-3">
+                <h5>Get started</h5>
+                <ul>
+                    <li>
+                        <a href="#">Home</a>
                     </li>
-                    <li class="nav-item" role="presentation">
-                        <a class="nav-link" asp-page="/Users/List">Features</a>
+                    <li>
+                        <a href="#">Sign up</a>
                     </li>
-                    <li class="nav-item" role="presentation">
-                        <a class="nav-link" asp-page="/Users/Edit">Pricing</a>
+                    <li>
+                        <a href="#">Downloads</a>
                     </li>
-                    <li class="nav-item" role="presentation">
-                        <a class="nav-link" asp-page="/Index">About Us</a>
+                </ul>
+            </div>
+            <div class="col-sm-3">
+                <h5>About us</h5>
+                <ul>
+                    <li>
+                        <a href="#">Company Information</a>
                     </li>
-                    <li class="nav-item" role="presentation">
-                        <a class="nav-link" asp-page="/Index">Contact Us</a>
+                    <li>
+                        <a href="#">Contact us</a>
+                    </li>
+                    <li>
+                        <a href="#">Reviews</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-sm-3">
+                <h5>Support</h5>
+                <ul>
+                    <li>
+                        <a href="#">FAQ</a>
+                    </li>
+                    <li>
+                        <a href="#">Help desk</a>
+                    </li>
+                    <li>
+                        <a href="#">Forums</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-sm-3">
+                <h5>Legal</h5>
+                <ul>
+                    <li>
+                        <a href="#">Terms of Service</a>
+                    </li>
+                    <li>
+                        <a href="#">Terms of Use</a>
+                    </li>
+                    <li>
+                        <a href="#">Privacy Policy</a>
                     </li>
                 </ul>
             </div>
         </div>
-    </nav>
-</header>
-<div class="container">
-    <main class="page landing-page">
-        @RenderBody()
-    </main>
-</div>
-
-<footer class="page-footer dark">
-        <div class="container">
-            <div class="row">
-                <div class="col-sm-3">
-                    <h5>Get started</h5>
-                    <ul>
-                        <li><a href="#">Home</a></li>
-                        <li><a href="#">Sign up</a></li>
-                        <li><a href="#">Downloads</a></li>
-                    </ul>
-                </div>
-                <div class="col-sm-3">
-                    <h5>About us</h5>
-                    <ul>
-                        <li><a href="#">Company Information</a></li>
-                        <li><a href="#">Contact us</a></li>
-                        <li><a href="#">Reviews</a></li>
-                    </ul>
-                </div>
-                <div class="col-sm-3">
-                    <h5>Support</h5>
-                    <ul>
-                        <li><a href="#">FAQ</a></li>
-                        <li><a href="#">Help desk</a></li>
-                        <li><a href="#">Forums</a></li>
-                    </ul>
-                </div>
-                <div class="col-sm-3">
-                    <h5>Legal</h5>
-                    <ul>
-                        <li><a href="#">Terms of Service</a></li>
-                        <li><a href="#">Terms of Use</a></li>
-                        <li><a href="#">Privacy Policy</a></li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-        <div class="footer-copyright">
-            <p>© 2018 Copyright Text</p>
-        </div>
-    </footer>
+    </div>
+    <div class="footer-copyright">
+        <p>© 2018 Copyright Text</p>
+    </div>
+</footer>
 
 <script src="assets/js/jquery.min.js"></script>
 <script src="assets/bootstrap/js/bootstrap.min.js"></script>

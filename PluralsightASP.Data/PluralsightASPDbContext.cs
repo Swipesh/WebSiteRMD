@@ -8,7 +8,7 @@ namespace PluralsightASP.Data
 {
     public class PluralsightASPDbContext : IdentityDbContext<User>
     {
-        public DbSet<User> Users { get; set; }
+        
 
         public PluralsightASPDbContext(DbContextOptions<PluralsightASPDbContext> options) : base(options)
         {

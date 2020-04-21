@@ -8,9 +8,5 @@ namespace PluralsightASP.Core
         private IEnumerable<string> Files { get; set; }
     }
 
-    public class File
-    {
-        public string Id { get; set; }
-        public string OwnerId { get; set; }
-    }
+    
 }

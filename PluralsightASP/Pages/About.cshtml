@@ -5,7 +5,19 @@
     ViewData["Title"] = "About";
 }
 
+<form method="post" enctype="multipart/form-data" class="form-control-file">
+    <div class="custom-file">
 
-<div>
-    About
-</div>
+        <input type="file" id="inputGroupFile03" class="custom-file-input" name="photo"/>
+        <label class="custom-file-label" for="inputGroupFile03">Choose file<br/></label>
+        <input type="submit" class="custom-file-label" value="Upload"/>
+        @if (!string.IsNullOrEmpty(Model.FileName))
+        {
+            <span>
+                <br/>
+                <img src="~/images/@Model.FileName"/>
+            </span>
+        }
+    </div>
+
+</form>

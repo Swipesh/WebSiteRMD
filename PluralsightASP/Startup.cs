@@ -32,7 +32,7 @@ namespace PluralsightASP
                 });
             
             services.AddIdentityCore<User>(options => {});
-            services.AddScoped<IUserStore<User>, UserOnlyStore<User,PluralsightASPDbContext>>();
+            services.AddScoped<IUserStore<User>, UserStore>();
             services.AddAuthentication("cookies").AddCookie("cookies", options => options.LoginPath = "/Home/Login");
             services.AddRazorPages();
         }
