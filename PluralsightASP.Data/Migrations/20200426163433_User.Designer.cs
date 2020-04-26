@@ -9,8 +9,8 @@ using PluralsightASP.Data;
 namespace PluralsightASP.Data.Migrations
 {
     [DbContext(typeof(PluralsightASPDbContext))]
-    [Migration("20200421140910_Initial")]
-    partial class Initial
+    [Migration("20200426163433_User")]
+    partial class User
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -152,18 +152,14 @@ namespace PluralsightASP.Data.Migrations
                     b.Property<string>("Id")
                         .HasColumnType("varchar(255) CHARACTER SET utf8mb4");
 
-                    b.Property<string>("OwnerId")
-                        .HasColumnType("longtext CHARACTER SET utf8mb4");
+                    b.Property<bool>("IsAccessibleToAll")
+                        .HasColumnType("tinyint(1)");
 
                     b.Property<string>("Path")
+                        .IsRequired()
                         .HasColumnType("longtext CHARACTER SET utf8mb4");
 
-                    b.Property<string>("UserId")
-                        .HasColumnType("varchar(255) CHARACTER SET utf8mb4");
-
                     b.HasKey("Id");
-
-                    b.HasIndex("UserId");
 
                     b.ToTable("Files");
                 });
@@ -187,8 +183,11 @@ namespace PluralsightASP.Data.Migrations
                     b.Property<bool>("EmailConfirmed")
                         .HasColumnType("tinyint(1)");
 
-                    b.Property<string>("FileId")
-                        .HasColumnType("varchar(255) CHARACTER SET utf8mb4");
+                    b.Property<string>("FirstName")
+                        .HasColumnType("longtext CHARACTER SET utf8mb4");
+
+                    b.Property<string>("LastName")
+                        .HasColumnType("longtext CHARACTER SET utf8mb4");
 
                     b.Property<bool>("LockoutEnabled")
                         .HasColumnType("tinyint(1)");
@@ -225,8 +224,6 @@ namespace PluralsightASP.Data.Migrations
 
                     b.HasKey("Id");
 
-                    b.HasIndex("FileId");
-
                     b.HasIndex("NormalizedEmail")
                         .HasName("EmailIndex");
 
@@ -235,6 +232,28 @@ namespace PluralsightASP.Data.Migrations
                         .HasName("UserNameIndex");
 
                     b.ToTable("AspNetUsers");
+                });
+
+            modelBuilder.Entity("PluralsightASP.Core.UsersFiles", b =>
+                {
+                    b.Property<string>("Id")
+                        .HasColumnType("varchar(255) CHARACTER SET utf8mb4");
+
+                    b.Property<string>("FileId")
+                        .IsRequired()
+                        .HasColumnType("varchar(255) CHARACTER SET utf8mb4");
+
+                    b.Property<string>("UserId")
+                        .IsRequired()
+                        .HasColumnType("varchar(255) CHARACTER SET utf8mb4");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("FileId");
+
+                    b.HasIndex("UserId");
+
+                    b.ToTable("UsersFiles");
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<string>", b =>
@@ -288,18 +307,19 @@ namespace PluralsightASP.Data.Migrations
                         .IsRequired();
                 });
 
-            modelBuilder.Entity("PluralsightASP.Core.File", b =>
+            modelBuilder.Entity("PluralsightASP.Core.UsersFiles", b =>
                 {
-                    b.HasOne("PluralsightASP.Core.User", null)
-                        .WithMany()
-                        .HasForeignKey("UserId");
-                });
+                    b.HasOne("PluralsightASP.Core.File", "File")
+                        .WithMany("UsersFiles")
+                        .HasForeignKey("FileId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
 
-            modelBuilder.Entity("PluralsightASP.Core.User", b =>
-                {
-                    b.HasOne("PluralsightASP.Core.File", null)
-                        .WithMany()
-                        .HasForeignKey("FileId");
+                    b.HasOne("PluralsightASP.Core.User", "User")
+                        .WithMany("UsersFiles")
+                        .HasForeignKey("UserId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
                 });
 #pragma warning restore 612, 618
         }

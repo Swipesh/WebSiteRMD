@@ -37,19 +37,15 @@
                 <li class="nav-item" role="presentation">
                     <a class="nav-link" asp-page="/Index">Contact Us</a>
                 </li>
+                <partial name="_LoginPartial"/>
+
             </ul>
         </div>
     </div>
 </nav>
-<main class="page">
-    <section class="clean-block">
-        <div class="container">
-            <div class="block-content">
-                @RenderBody()
-            </div>
-        </div>
-    </section>
-</main>
+
+@RenderBody()
+
 <footer class="page-footer dark">
     <div class="container">
         <div class="row">

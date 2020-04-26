@@ -2,36 +2,22 @@
 @model ListModel
 
 @{
+    Layout = "~/Pages/Shared/_Layout.cshtml";
 }
 
 <div>
-    <div class="table-responsive">
-        <table class="table">
-            <thead>
-            <tr>
-                <th>Name</th>
-                <th>Location</th>
-                <th>Age</th>
-            </tr>
-            </thead>
-            <tbody>
-            <tr>
-                <td>@Model.tempUser.PhoneNumberConfirmed.ToString()</td>
-            </tr>
-            </tbody>
-@*             <tbody> *@
-@*             @foreach (var user in Model.Users) *@
-@*                     { *@
-@*                         <tr> *@
-@*                             <td>@user.Name</td> *@
-@*                             <td>@user.Location</td> *@
-@*                             <td>@user.Age</td> *@
-@*                         </tr> *@
-@*                     } *@
-@*             </tbody> *@
-        </table>
-    </div>
-    <a asp-page="./Edit" class="btn btn-primary">
-        Add User
-    </a>
+  @if(User.Identity.IsAuthenticated)
+  {
+      <p>@User.Identity.Name</p>
+   
+      //<form method="post" @*asp-controller="Account" asp-action="Logout"*@>
+          <input type="submit" value="Выход" />
+      //</form>
+  }
+  else
+  {
+      @*<a asp-controller="Account" asp-action="Login">Вход</a>
+      <a asp-controller="Account" asp-action="Register">Регистрация</a>*@
+      <div>Вход Регистрация</div>
+  }
 </div>

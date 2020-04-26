@@ -1,14 +1,12 @@
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Identity;
-using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.EntityFrameworkCore;
 using PluralsightASP.Core;
 using PluralsightASP.Data;
-using UserStore = PluralsightASP.Data.UserStore;
 
 namespace PluralsightASP
 {
@@ -31,9 +29,10 @@ namespace PluralsightASP
                         x => x.MigrationsAssembly("PluralsightASP.Data"));
                 });
             
-            services.AddIdentityCore<User>(options => {});
-            services.AddScoped<IUserStore<User>, UserStore>();
-            services.AddAuthentication("cookies").AddCookie("cookies", options => options.LoginPath = "/Home/Login");
+            //services.AddIdentityCore<User>(options => {});
+            services.AddIdentity<User, IdentityRole>().AddEntityFrameworkStores<PluralsightASPDbContext>();
+            
+            services.AddAuthentication("cookies").AddCookie("cookies", options => options.LoginPath = "/Login");
             services.AddRazorPages();
         }
 

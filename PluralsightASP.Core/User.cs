@@ -5,8 +5,10 @@ namespace PluralsightASP.Core
 {
     public class User : IdentityUser
     {
-        private IEnumerable<string> Files { get; set; }
-    }
+        public string FirstName { get; set; }
 
-    
+        public string LastName { get; set; }
+        
+        public virtual ICollection<UsersFiles> UsersFiles { get; set; }
+    }
 }

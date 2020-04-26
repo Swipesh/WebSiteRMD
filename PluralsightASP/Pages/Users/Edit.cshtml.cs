@@ -10,12 +10,10 @@ namespace PluralsightASP.Pages.Users
     [Authorize(Roles="Administrator")]
     public class EditModel : PageModel
     {
-        private readonly UserStore _userStore;
 
         public User User { get; set; }
-        public EditModel(UserStore userStore)
+        public EditModel()
         {
-            _userStore = userStore;
         }
         
         public IActionResult OnGet(string userId)

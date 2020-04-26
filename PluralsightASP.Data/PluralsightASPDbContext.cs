@@ -8,14 +8,16 @@ namespace PluralsightASP.Data
 {
     public class PluralsightASPDbContext : IdentityDbContext<User>
     {
+        public DbSet<File> Files { get; set; }
         
+        public DbSet<UsersFiles> UsersFiles { get; set; }
 
         public PluralsightASPDbContext(DbContextOptions<PluralsightASPDbContext> options) : base(options)
         {
-            Database.EnsureCreated();
+            //Database.EnsureCreated();
         }
 
-        protected override void OnModelCreating(ModelBuilder builder)
+        /*protected override void OnModelCreating(ModelBuilder builder)
         {
             base.OnModelCreating(builder);
 
@@ -27,6 +29,8 @@ namespace PluralsightASP.Data
                 file.HasKey(x => x.Id);
                 file.HasMany<User>();
             });
-        }
+        }*/
+        
+        
     }
 }
