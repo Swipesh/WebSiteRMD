@@ -8,7 +8,8 @@ namespace PluralsightASP.Core
         public string FirstName { get; set; }
 
         public string LastName { get; set; }
-        
+
+
         public virtual ICollection<UsersFiles> UsersFiles { get; set; }
     }
 }

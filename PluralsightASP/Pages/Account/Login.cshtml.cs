@@ -47,7 +47,7 @@ namespace PluralsightASP.Pages
                      await _signInManager.PasswordSignInAsync(Email, Password, RememberMe, false);
                 if (result.Succeeded)
                 {
-                    //return RedirectToPage("/Users/List");
+                    return RedirectToPage("Profile");
                 }
                 else
                 {
@@ -55,7 +55,7 @@ namespace PluralsightASP.Pages
                 }
             }
 
-            return RedirectToPage("Index");
+            return RedirectToPage("../Index");
         }
  
         

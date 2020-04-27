@@ -19,10 +19,10 @@ namespace PluralsightASP.Pages
             _signInManager = signInManager;
         }
         
-        public async Task<IActionResult> OnPost()
+        public async Task<IActionResult> OnPostAsync()
         {
             await _signInManager.SignOutAsync();
-            return RedirectToPage("Index");
+            return RedirectToPage("../Index");
         }
     }
 }

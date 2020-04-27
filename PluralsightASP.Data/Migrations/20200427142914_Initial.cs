@@ -40,7 +40,10 @@ namespace PluralsightASP.Data.Migrations
                     TwoFactorEnabled = table.Column<bool>(nullable: false),
                     LockoutEnd = table.Column<DateTimeOffset>(nullable: true),
                     LockoutEnabled = table.Column<bool>(nullable: false),
-                    AccessFailedCount = table.Column<int>(nullable: false)
+                    AccessFailedCount = table.Column<int>(nullable: false),
+                    FirstName = table.Column<string>(nullable: true),
+                    LastName = table.Column<string>(nullable: true),
+                    Location = table.Column<string>(nullable: true)
                 },
                 constraints: table =>
                 {
@@ -53,6 +56,7 @@ namespace PluralsightASP.Data.Migrations
                 {
                     Id = table.Column<string>(nullable: false),
                     Path = table.Column<string>(nullable: false),
+                    Name = table.Column<string>(nullable: false),
                     IsAccessibleToAll = table.Column<bool>(nullable: false)
                 },
                 constraints: table =>
@@ -170,23 +174,22 @@ namespace PluralsightASP.Data.Migrations
                 name: "UsersFiles",
                 columns: table => new
                 {
-                    Id = table.Column<string>(nullable: false),
-                    UserId = table.Column<string>(nullable: false),
-                    FileId = table.Column<string>(nullable: false)
+                    FileId = table.Column<string>(nullable: false),
+                    UserId = table.Column<string>(nullable: false)
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_UsersFiles", x => x.Id);
+                    table.PrimaryKey("PK_UsersFiles", x => new { x.FileId, x.UserId });
                     table.ForeignKey(
-                        name: "FK_UsersFiles_Files_FileId",
+                        name: "FK_UsersFiles_AspNetUsers_FileId",
                         column: x => x.FileId,
-                        principalTable: "Files",
+                        principalTable: "AspNetUsers",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
                     table.ForeignKey(
-                        name: "FK_UsersFiles_AspNetUsers_UserId",
+                        name: "FK_UsersFiles_Files_UserId",
                         column: x => x.UserId,
-                        principalTable: "AspNetUsers",
+                        principalTable: "Files",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
                 });
@@ -229,11 +232,6 @@ namespace PluralsightASP.Data.Migrations
                 unique: true);
 
             migrationBuilder.CreateIndex(
-                name: "IX_UsersFiles_FileId",
-                table: "UsersFiles",
-                column: "FileId");
-
-            migrationBuilder.CreateIndex(
                 name: "IX_UsersFiles_UserId",
                 table: "UsersFiles",
                 column: "UserId");
@@ -263,10 +261,10 @@ namespace PluralsightASP.Data.Migrations
                 name: "AspNetRoles");
 
             migrationBuilder.DropTable(
-                name: "Files");
+                name: "AspNetUsers");
 
             migrationBuilder.DropTable(
-                name: "AspNetUsers");
+                name: "Files");
         }
     }
 }

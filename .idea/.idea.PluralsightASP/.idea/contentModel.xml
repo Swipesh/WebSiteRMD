@@ -25,20 +25,26 @@
           <e p="_ViewStart.cshtml" t="Include" />
           <e p="About.cshtml" t="Include" />
           <e p="About.cshtml.cs" t="Include" />
+          <e p="Account" t="Include">
+            <e p="FileUpload.cshtml" t="Include" />
+            <e p="FileUpload.cshtml.cs" t="Include" />
+            <e p="Login.cshtml" t="Include" />
+            <e p="Login.cshtml.cs" t="Include" />
+            <e p="Logout.cshtml" t="Include" />
+            <e p="Logout.cshtml.cs" t="Include" />
+            <e p="Profile.cshtml" t="Include" />
+            <e p="Profile.cshtml.cs" t="Include" />
+            <e p="Register.cshtml" t="Include" />
+            <e p="Register.cshtml.cs" t="Include" />
+          </e>
           <e p="Error.cshtml" t="Include" />
           <e p="Error.cshtml.cs" t="Include" />
           <e p="Index.cshtml" t="Include" />
           <e p="Index.cshtml.cs" t="Include" />
-          <e p="Login.cshtml" t="Include" />
-          <e p="Login.cshtml.cs" t="Include" />
-          <e p="Logout.cshtml" t="Include" />
-          <e p="Logout.cshtml.cs" t="Include" />
           <e p="NotFound.cshtml" t="Include" />
           <e p="NotFound.cshtml.cs" t="Include" />
           <e p="Privacy.cshtml" t="Include" />
           <e p="Privacy.cshtml.cs" t="Include" />
-          <e p="Register.cshtml" t="Include" />
-          <e p="Register.cshtml.cs" t="Include" />
           <e p="Shared" t="Include">
             <e p="_Layout.cshtml" t="Include" />
             <e p="_ValidationScriptsPartial.cshtml" t="Include" />
@@ -109,7 +115,12 @@
           <e p="images" t="Include">
             <e p="15D5B06D-0FF7-4E69-AA6B-2888A49C79D9.jpeg" t="Include" />
             <e p="6C040787-9CA4-4AB1-9870-AD9548F013D2.jpeg" t="Include" />
+            <e p="diplom.txt" t="Include" />
             <e p="Diplomnaya_rabota_Dedik.docx" t="Include" />
+            <e p="image1.jpg" t="Include" />
+            <e p="image2.jpg" t="Include" />
+            <e p="image4.jpg" t="Include" />
+            <e p="star-empty.svg" t="Include" />
             <e p="VID_20200415_124142.mp4" t="Include" />
           </e>
         </e>
@@ -131,10 +142,10 @@
       <e p="PluralsightASP.Data" t="IncludeRecursive">
         <e p="bin" t="ExcludeRecursive" />
         <e p="Migrations" t="Include">
-          <e p="20200426114453_Initial.cs" t="Include" />
-          <e p="20200426114453_Initial.Designer.cs" t="Include" />
-          <e p="20200426163433_User.cs" t="Include" />
-          <e p="20200426163433_User.Designer.cs" t="Include" />
+          <e p="20200427142914_Initial.cs" t="Include" />
+          <e p="20200427142914_Initial.Designer.cs" t="Include" />
+          <e p="20200427160655_Initial2.cs" t="Include" />
+          <e p="20200427160655_Initial2.Designer.cs" t="Include" />
           <e p="PluralsightASPDbContextModelSnapshot.cs" t="Include" />
         </e>
         <e p="obj" t="ExcludeRecursive">
@@ -156,6 +167,7 @@
         </e>
         <e p="PluralsightASP.Data.csproj" t="IncludeRecursive" />
         <e p="PluralsightASPDbContext.cs" t="Include" />
+        <e p="UserManager.cs" t="Include" />
       </e>
       <e p="PluralsightASP.sln" t="IncludeFlat" />
     </e>

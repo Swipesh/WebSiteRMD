@@ -7,7 +7,6 @@ using Microsoft.Extensions.Hosting;
 using Microsoft.EntityFrameworkCore;
 using PluralsightASP.Core;
 using PluralsightASP.Data;
-
 namespace PluralsightASP
 {
     public class Startup
@@ -24,15 +23,12 @@ namespace PluralsightASP
         {
             services.AddDbContextPool<PluralsightASPDbContext>(options =>
                 {
-                    options.UseMySql(Configuration.GetConnectionString("MySql"),
-
-                        x => x.MigrationsAssembly("PluralsightASP.Data"));
+                    options.UseMySql(Configuration.GetConnectionString("MySql"));
                 });
             
-            //services.AddIdentityCore<User>(options => {});
-            services.AddIdentity<User, IdentityRole>().AddEntityFrameworkStores<PluralsightASPDbContext>();
+            services.AddIdentity<User, IdentityRole>().AddEntityFrameworkStores<PluralsightASPDbContext>().AddUserManager<UserManager>();
             
-            services.AddAuthentication("cookies").AddCookie("cookies", options => options.LoginPath = "/Login");
+            services.AddAuthentication("cookies").AddCookie("cookies", options => options.LoginPath = "Account/Login");
             services.AddRazorPages();
         }
 

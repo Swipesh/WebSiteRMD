@@ -14,23 +14,20 @@ namespace PluralsightASP.Data
 
         public PluralsightASPDbContext(DbContextOptions<PluralsightASPDbContext> options) : base(options)
         {
-            //Database.EnsureCreated();
         }
 
-        /*protected override void OnModelCreating(ModelBuilder builder)
+        protected override void OnModelCreating(ModelBuilder builder)
         {
+            
             base.OnModelCreating(builder);
-
-            builder.Entity<User>(user => { user.HasMany<File>(); });
-
-            builder.Entity<File>(file =>
+            
+            builder.Entity<UsersFiles>(usersFiles =>
             {
-                file.ToTable("Files");
-                file.HasKey(x => x.Id);
-                file.HasMany<User>();
+                usersFiles.HasKey(x =>  new {x.FileId, x.UserId});
+                
+                usersFiles.HasOne<File>(u => u.File).WithMany(f => f.UsersFiles).HasForeignKey(f => f.UserId);
+                usersFiles.HasOne<User>(u => u.User).WithMany(f => f.UsersFiles).HasForeignKey(f => f.FileId);
             });
-        }*/
-        
-        
+        }
     }
 }

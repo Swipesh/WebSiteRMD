@@ -16,34 +16,45 @@ namespace PluralsightASP.Pages
 
         [BindProperty]
         [Required]
+        [Display(Name = "First Name")]
+        public string FirstName { get; set; }
+
+        [BindProperty]
+        [Required]
+        [Display(Name = "Last Name")]
+        public string LastName { get; set; }
+
+        [BindProperty]
+        [Required]
         [DataType(DataType.Password)]
         [Display(Name = "Пароль")]
         public string Password { get; set; }
- 
+
         [BindProperty]
         [Required]
         //[Compare("Password", ErrorMessage = "Пароли не совпадают")]
         [DataType(DataType.Password)]
         [Display(Name = "Подтвердить пароль")]
         public string PasswordConfirm { get; set; }
-        
+
         private readonly UserManager<User> _userManager;
         private readonly SignInManager<User> _signInManager;
 
         private readonly RoleManager<IdentityRole> _roleManager;
-        //private readonly RoleManager<User> _roleManager;
 
 
-        public Register(UserManager<User> userManager, SignInManager<User> signInManager, RoleManager<IdentityRole> roleManager)
+        public Register(UserManager<User> userManager, SignInManager<User> signInManager,
+            RoleManager<IdentityRole> roleManager)
         {
             _userManager = userManager;
             _signInManager = signInManager;
             _roleManager = roleManager;
         }
+
         public IActionResult OnGet()
         {
             if (User.Identity.IsAuthenticated)
-                return RedirectToPage("Users/List");
+                return RedirectToPage("Profile");
             else
             {
                 return Page();
@@ -51,20 +62,18 @@ namespace PluralsightASP.Pages
         }
 
 
-        public async Task<IActionResult> OnPost()
+        public async Task<IActionResult> OnPostAsync()
         {
-            if(ModelState.IsValid)
+            if (ModelState.IsValid)
             {
-                User user = new User { Email = Email, UserName = Email};
+                User user = new User {Email = Email, UserName = Email,FirstName =  FirstName,LastName = LastName};
                 // добавляем пользователя
-                await _roleManager.CreateAsync(new IdentityRole("admin"));
                 var result = await _userManager.CreateAsync(user, Password);
-                await _userManager.AddToRoleAsync(user,"admin");
                 if (result.Succeeded)
                 {
                     // установка куки
-                     await _signInManager.SignInAsync(user, false);
-                    
+                    await _signInManager.SignInAsync(user, false);
+                    return RedirectToPage("Profile");
                 }
                 else
                 {
@@ -74,7 +83,8 @@ namespace PluralsightASP.Pages
                     }
                 }
             }
-            return RedirectToPage("Index");
+
+            return RedirectToPage("../Index");
         }
     }
 }

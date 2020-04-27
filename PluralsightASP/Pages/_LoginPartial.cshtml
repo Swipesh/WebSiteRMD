@@ -1,17 +1,20 @@
 @if (User.Identity.IsAuthenticated)
 
 {
-    <div>@User.Identity.Name</div>
-    <form class="form-inline" asp-page="Logout">
+    
+    <li class="nav-item" role="presentation">
+        <a class="nav-link" asp-page="/Account/Profile">@User.Identity.Name</a>
+    </li>
+    <form class="form-inline" asp-page="/Account/Logout">
         <button type="submit" class="nav-link btn btn-link">Logout</button>
     </form>
 }
 else
 {
     <li class="nav-item" role="presentation">
-        <a class="nav-link" asp-page="/Login">Login</a>
+        <a class="nav-link" asp-page="/Account/Login">Login</a>
     </li>
     <li class="nav-item" role="presentation">
-        <a class="nav-link" asp-page="/Register">Register</a>
+        <a class="nav-link" asp-page="/Account/Register">Register</a>
     </li>
 }

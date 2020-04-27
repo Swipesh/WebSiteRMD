@@ -5,7 +5,7 @@
 }
 
 
-<main class="page registration-page">
+<main class="page">
     <section class="clean-block clean-form dark">
         <div class="container">
             <div class="block-heading">
@@ -17,6 +17,16 @@
                     <label asp-for="Email"></label>
                     <input asp-for="Email" class="form-control item" type="email" id="email">
                     <span asp-validation-for="Email"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="FirstName"></label>
+                    <input asp-for="FirstName" class="form-control item" type="text" id="firstname">
+                    <span asp-validation-for="FirstName"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="LastName"></label>
+                    <input asp-for="LastName" class="form-control item" type="text" id="lastname">
+                    <span asp-validation-for="LastName"></span>
                 </div>
                 <div class="form-group">
                     <label asp-for="Password"></label>
