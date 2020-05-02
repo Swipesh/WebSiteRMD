@@ -15,7 +15,7 @@
 <body>
 <nav class="navbar navbar-light navbar-expand-lg fixed-top bg-white clean-navbar">
     <div class="container">
-        <a class="navbar-brand logo" href="#">Brand</a>
+        <a class="navbar-brand logo" asp-page="/Index">Brand</a>
         <button data-toggle="collapse" class="navbar-toggler" data-target="#navcol-1">
             <span class="sr-only">Toggle navigation</span><span class="navbar-toggler-icon"></span>
         </button>
@@ -23,12 +23,15 @@
              id="navcol-1">
             <ul class="nav navbar-nav ml-auto">
                 <li class="nav-item" role="presentation">
-                    <a class="nav-link active" asp-page="/Index">Home</a>
+                    <a class="nav-link active" asp-page="/Index">About</a>
                 </li>
                 <li class="nav-item" role="presentation">
-                    <a class="nav-link active" asp-page="/Account/FileUpload">Home</a>
+                    <a class="nav-link active" asp-page="/Account/FileUpload">Education</a>
                 </li>
-                <li class="nav-item dropdown">
+                <li class="nav-item" role="presentation">
+                    <a class="nav-link active" asp-page="/Account/FileUpload">Science</a>
+                </li>
+                <li class="nav-item dropdown" >
                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                         Dropdown link
                     </a>
@@ -44,9 +47,13 @@
         </div>
     </div>
 </nav>
-
-@RenderBody()
-
+<main class="page login-page">
+    <section class="clean-block clean-form dark">
+        <div class="container pt-3">
+            @RenderBody()
+        </div>
+    </section>
+</main>
 <footer class="page-footer dark">
     <div class="container">
         <div class="row">
@@ -109,16 +116,28 @@
         </div>
     </div>
     <div class="footer-copyright">
-        <p>© 2018 Copyright Text</p>
+        <p>© 2020 Copyright Text</p>
     </div>
 </footer>
+
 
 <script src="~/assets/js/jquery.min.js"></script>
 <script src="~/assets/bootstrap/js/bootstrap.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.10.0/baguetteBox.min.js"></script>
 <script src="~/assets/js/smoothproducts.min.js"></script>
 <script src="~/assets/js/theme.js"></script>
-
+<script>$(".dropdown-toggle").on("mouseenter", function () {
+            // make sure it is not shown:
+            if (!$(this).parent().hasClass("show")) {
+                $(this).click();
+            }
+        });
+        $(".btn-group, .dropdown").on("mouseleave", function () {
+            // make sure it is shown:
+            if ($(this).hasClass("show")){
+                $(this).children('.dropdown-toggle').first().click();
+            }
+        });</script>
 @RenderSection("Scripts", required: false)
 </body>
 </html>

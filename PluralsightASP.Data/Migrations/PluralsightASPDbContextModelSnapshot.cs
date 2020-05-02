@@ -7,7 +7,7 @@ using PluralsightASP.Data;
 
 namespace PluralsightASP.Data.Migrations
 {
-    [DbContext(typeof(PluralsightASPDbContext))]
+    [DbContext(typeof(PluralsightAspDbContext))]
     partial class PluralsightASPDbContextModelSnapshot : ModelSnapshot
     {
         protected override void BuildModel(ModelBuilder modelBuilder)
@@ -242,15 +242,15 @@ namespace PluralsightASP.Data.Migrations
 
             modelBuilder.Entity("PluralsightASP.Core.UsersFiles", b =>
                 {
-                    b.Property<string>("FileId")
-                        .HasColumnType("varchar(255) CHARACTER SET utf8mb4");
-
                     b.Property<string>("UserId")
                         .HasColumnType("varchar(255) CHARACTER SET utf8mb4");
 
-                    b.HasKey("FileId", "UserId");
+                    b.Property<string>("FileId")
+                        .HasColumnType("varchar(255) CHARACTER SET utf8mb4");
 
-                    b.HasIndex("UserId");
+                    b.HasKey("UserId", "FileId");
+
+                    b.HasIndex("FileId");
 
                     b.ToTable("UsersFiles");
                 });
@@ -308,13 +308,13 @@ namespace PluralsightASP.Data.Migrations
 
             modelBuilder.Entity("PluralsightASP.Core.UsersFiles", b =>
                 {
-                    b.HasOne("PluralsightASP.Core.User", "User")
+                    b.HasOne("PluralsightASP.Core.File", "File")
                         .WithMany("UsersFiles")
                         .HasForeignKey("FileId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.HasOne("PluralsightASP.Core.File", "File")
+                    b.HasOne("PluralsightASP.Core.User", "User")
                         .WithMany("UsersFiles")
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade)

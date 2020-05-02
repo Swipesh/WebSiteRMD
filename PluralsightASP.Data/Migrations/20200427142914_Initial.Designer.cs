@@ -8,7 +8,7 @@ using PluralsightASP.Data;
 
 namespace PluralsightASP.Data.Migrations
 {
-    [DbContext(typeof(PluralsightASPDbContext))]
+    [DbContext(typeof(PluralsightAspDbContext))]
     [Migration("20200427142914_Initial")]
     partial class Initial
     {

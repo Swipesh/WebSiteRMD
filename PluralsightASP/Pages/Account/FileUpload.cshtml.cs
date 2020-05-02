@@ -15,7 +15,7 @@ namespace PluralsightASP.Pages.Account
     public class FileUpload : PageModel
     {
         private readonly IWebHostEnvironment _environment;
-        private readonly PluralsightASPDbContext _dbContext;
+        private readonly PluralsightAspDbContext _dbContext;
         private readonly UserManager<User> _userManager;
         
         public string FileName { get; set; }
@@ -23,7 +23,7 @@ namespace PluralsightASP.Pages.Account
         [BindProperty]
         public IFormFile File { get; set; }
 
-        public FileUpload(IWebHostEnvironment environment,PluralsightASPDbContext dbContext,UserManager<User> userManager)
+        public FileUpload(IWebHostEnvironment environment,PluralsightAspDbContext dbContext,UserManager<User> userManager)
         {
             _environment = environment;
             _dbContext = dbContext;

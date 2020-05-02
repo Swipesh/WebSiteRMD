@@ -6,13 +6,13 @@ using PluralsightASP.Core;
 
 namespace PluralsightASP.Data
 {
-    public class PluralsightASPDbContext : IdentityDbContext<User>
+    public class PluralsightAspDbContext : IdentityDbContext<User>
     {
         public DbSet<File> Files { get; set; }
         
         public DbSet<UsersFiles> UsersFiles { get; set; }
 
-        public PluralsightASPDbContext(DbContextOptions<PluralsightASPDbContext> options) : base(options)
+        public PluralsightAspDbContext(DbContextOptions<PluralsightAspDbContext> options) : base(options)
         {
         }
 
@@ -23,10 +23,10 @@ namespace PluralsightASP.Data
             
             builder.Entity<UsersFiles>(usersFiles =>
             {
-                usersFiles.HasKey(x =>  new {x.FileId, x.UserId});
+                usersFiles.HasKey(x =>  new {x.UserId,x.FileId});
                 
-                usersFiles.HasOne<File>(u => u.File).WithMany(f => f.UsersFiles).HasForeignKey(f => f.UserId);
-                usersFiles.HasOne<User>(u => u.User).WithMany(f => f.UsersFiles).HasForeignKey(f => f.FileId);
+                usersFiles.HasOne(u => u.File).WithMany(f => f.UsersFiles).HasForeignKey(f => f.FileId);
+                usersFiles.HasOne(u => u.User).WithMany(f => f.UsersFiles).HasForeignKey(f => f.UserId);
             });
         }
     }
