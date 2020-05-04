@@ -13,6 +13,7 @@ namespace PluralsightASP.Areas.Identity.Pages.Account.Manage
         public static string Email => "Email";
 
         public static string ChangePassword => "ChangePassword";
+        public static string UsersManagement => "UsersManagement";
 
 
         public static string IndexNavClass(ViewContext viewContext) => PageNavClass(viewContext, Index);
@@ -20,6 +21,7 @@ namespace PluralsightASP.Areas.Identity.Pages.Account.Manage
         public static string EmailNavClass(ViewContext viewContext) => PageNavClass(viewContext, Email);
 
         public static string ChangePasswordNavClass(ViewContext viewContext) => PageNavClass(viewContext, ChangePassword);
+        public static string UsersManagementNavClass(ViewContext viewContext) => PageNavClass(viewContext, UsersManagement);
 
         
 

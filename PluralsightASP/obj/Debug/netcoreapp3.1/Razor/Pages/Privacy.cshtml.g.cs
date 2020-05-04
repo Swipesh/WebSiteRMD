@@ -26,15 +26,8 @@ using PluralsightASP.Pages;
 #line default
 #line hidden
 #nullable disable
-#nullable restore
-#line 3 "/Users/swipe/RiderProjects/WebSiteRMD/PluralsightASP/Pages/_ViewImports.cshtml"
-using PluralsightASP.Pages.Users;
-
-#line default
-#line hidden
-#nullable disable
     [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"c8ffa67bf13ecc52588f9c2df9df1e50c8be1d11", @"/Pages/Privacy.cshtml")]
-    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"793363ea98e4e2ec02cc26017c46d64f9e8ce97a", @"/Pages/_ViewImports.cshtml")]
+    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"2a4394c194ecc119985f5b12e364036b8ebbe6dc", @"/Pages/_ViewImports.cshtml")]
     public class Pages_Privacy : global::Microsoft.AspNetCore.Mvc.RazorPages.Page
     {
         #pragma warning disable 1998

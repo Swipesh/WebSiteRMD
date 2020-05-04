@@ -26,15 +26,8 @@ using PluralsightASP.Pages;
 #line default
 #line hidden
 #nullable disable
-#nullable restore
-#line 3 "/Users/swipe/RiderProjects/WebSiteRMD/PluralsightASP/Pages/_ViewImports.cshtml"
-using PluralsightASP.Pages.Users;
-
-#line default
-#line hidden
-#nullable disable
     [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"4cb67a5be77499cec5e5d339975eaaa8800ba92f", @"/Pages/About.cshtml")]
-    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"793363ea98e4e2ec02cc26017c46d64f9e8ce97a", @"/Pages/_ViewImports.cshtml")]
+    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"2a4394c194ecc119985f5b12e364036b8ebbe6dc", @"/Pages/_ViewImports.cshtml")]
     public class Pages_About : global::Microsoft.AspNetCore.Mvc.RazorPages.Page
     {
         private static readonly global::Microsoft.AspNetCore.Razor.TagHelpers.TagHelperAttribute __tagHelperAttribute_0 = new global::Microsoft.AspNetCore.Razor.TagHelpers.TagHelperAttribute("method", "post", global::Microsoft.AspNetCore.Razor.TagHelpers.HtmlAttributeValueStyle.DoubleQuotes);
@@ -76,7 +69,7 @@ using PluralsightASP.Pages.Users;
 #line hidden
 #nullable disable
             WriteLiteral("\n");
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "4cb67a5be77499cec5e5d339975eaaa8800ba92f4695", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "4cb67a5be77499cec5e5d339975eaaa8800ba92f4508", async() => {
                 WriteLiteral(@"
     <div class=""custom-file"">
 
@@ -93,7 +86,7 @@ using PluralsightASP.Pages.Users;
 #line hidden
 #nullable disable
                 WriteLiteral("            <span>\n                <br/>\n                ");
-                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("img", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.SelfClosing, "4cb67a5be77499cec5e5d339975eaaa8800ba92f5553", async() => {
+                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("img", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.SelfClosing, "4cb67a5be77499cec5e5d339975eaaa8800ba92f5366", async() => {
                 }
                 );
                 __Microsoft_AspNetCore_Mvc_Razor_TagHelpers_UrlResolutionTagHelper = CreateTagHelper<global::Microsoft.AspNetCore.Mvc.Razor.TagHelpers.UrlResolutionTagHelper>();

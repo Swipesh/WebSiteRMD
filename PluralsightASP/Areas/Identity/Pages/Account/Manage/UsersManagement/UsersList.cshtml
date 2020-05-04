@@ -1,0 +1,60 @@
+@page
+@model UsersList
+
+@{
+    
+    ViewData["Title"] = "Users management";
+    ViewData["ActivePage"] = ManageNavPages.UsersManagement;
+}
+
+<h4>@ViewData["Title"]</h4>
+<partial name="_StatusMessage" model="Model.StatusMessage" />
+<table class="table table-bordered">
+    <thead>
+    <tr>
+        <th>
+            FirstName
+        </th>
+        <th>
+            LastName
+        </th>
+        <th>
+            UserName
+        </th>
+        <th></th>
+    </tr>
+    </thead>
+    <tbody>
+    @foreach (var item in Model.Users)
+    {
+        <tr>
+            <td>
+                @item.FirstName
+            </td>
+            <td>
+                @item.LastName
+            </td>
+            <td>
+                @item.UserName
+            </td>
+            <td>
+                <div>
+                    <a asp-page="Edit" asp-route-id="@item.Id">Edit</a>
+                </div>
+                <div>
+                    <a asp-page="Details" asp-route-id="@item.Id">Details</a>
+                </div>
+                <div>
+                    <a asp-page="Delete" asp-route-id="@item.Id">Delete</a>
+                </div>
+                <div>
+                    <a asp-page="EditUserRoles" asp-route-id="@item.Id">Edit roles</a>
+                </div>
+            </td>
+        </tr>
+    }
+    </tbody>
+</table>
+<div>
+    <a class="btn btn-primary" asp-page="Create" >Add new</a>
+</div>

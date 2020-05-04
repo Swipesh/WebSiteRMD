@@ -1,3 +1,6 @@
+using System;
+using GeekLearning.Storage;
+using GeekLearning.Storage.Configuration;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Identity;
@@ -12,8 +15,11 @@ namespace PluralsightASP
 {
     public class Startup
     {
-        public Startup(IConfiguration configuration)
+        private readonly IWebHostEnvironment _environment;
+
+        public Startup(IConfiguration configuration,IWebHostEnvironment environment)
         {
+            _environment = environment;
             Configuration = configuration;
         }
 
@@ -27,6 +33,11 @@ namespace PluralsightASP
                 {
                     options.UseMySql(Configuration.GetConnectionString("MySql"));
                 });
+
+            services.AddStorage(Configuration.GetSection("Storage")).AddFileSystemStorage(_environment.ContentRootPath);
+
+            services.Configure<StorageOptions>(Configuration.GetSection("Storage"));
+            
             services.AddScoped<IEmailSender, EmailService>();
             services.AddIdentity<User, IdentityRole>()
                 .AddEntityFrameworkStores<PluralsightAspDbContext>()
@@ -56,7 +67,7 @@ namespace PluralsightASP
             app.UseStaticFiles();
 
             app.UseRouting();
-
+            //app.UseFileSystemStorageServer();
             app.UseAuthentication();
             app.UseAuthorization();
 

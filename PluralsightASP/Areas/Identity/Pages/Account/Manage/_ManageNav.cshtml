@@ -1,6 +1,4 @@
-@inject SignInManager<User> SignInManager
 @{
-    var hasExternalLogins = (await SignInManager.GetExternalAuthenticationSchemesAsync()).Any();
 }
 <ul class="nav nav-pills flex-column">
     <li class="nav-item">
@@ -12,4 +10,11 @@
     <li class="nav-item">
         <a class="nav-link @ManageNavPages.ChangePasswordNavClass(ViewContext)" id="change-password" asp-page="./ChangePassword">Password</a>
     </li>
+    @if (User.IsInRole("admin"))
+    {
+        <li class="nav-item">
+            <a class="nav-link @ManageNavPages.UsersManagementNavClass(ViewContext)" id="users-management" asp-page="UsersManagement/UsersList">Users Management</a>
+        </li>
+    }
+    
 </ul>

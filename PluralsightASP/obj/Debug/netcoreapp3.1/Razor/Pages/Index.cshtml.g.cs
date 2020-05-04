@@ -26,15 +26,8 @@ using PluralsightASP.Pages;
 #line default
 #line hidden
 #nullable disable
-#nullable restore
-#line 3 "/Users/swipe/RiderProjects/WebSiteRMD/PluralsightASP/Pages/_ViewImports.cshtml"
-using PluralsightASP.Pages.Users;
-
-#line default
-#line hidden
-#nullable disable
     [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"1411e219732e38465187294f4f023d43023db506", @"/Pages/Index.cshtml")]
-    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"793363ea98e4e2ec02cc26017c46d64f9e8ce97a", @"/Pages/_ViewImports.cshtml")]
+    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"2a4394c194ecc119985f5b12e364036b8ebbe6dc", @"/Pages/_ViewImports.cshtml")]
     public class Pages_Index : global::Microsoft.AspNetCore.Mvc.RazorPages.Page
     {
         #pragma warning disable 1998

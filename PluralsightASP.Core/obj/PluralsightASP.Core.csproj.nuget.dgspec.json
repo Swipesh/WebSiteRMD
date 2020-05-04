@@ -36,6 +36,18 @@
       "frameworks": {
         "netcoreapp3.1": {
           "dependencies": {
+            "GeekLearning.Storage": {
+              "target": "Package",
+              "version": "[0.8.0, )"
+            },
+            "GeekLearning.Storage.FileSystem": {
+              "target": "Package",
+              "version": "[0.8.0, )"
+            },
+            "GeekLearning.Storage.FileSystem.Server": {
+              "target": "Package",
+              "version": "[0.8.0, )"
+            },
             "Microsoft.AspNetCore.Authentication.Cookies": {
               "target": "Package",
               "version": "[2.2.0, )"

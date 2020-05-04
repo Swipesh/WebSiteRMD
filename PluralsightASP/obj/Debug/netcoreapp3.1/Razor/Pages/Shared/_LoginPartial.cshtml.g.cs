@@ -27,13 +27,6 @@ using PluralsightASP.Pages;
 #line hidden
 #nullable disable
 #nullable restore
-#line 3 "/Users/swipe/RiderProjects/WebSiteRMD/PluralsightASP/Pages/_ViewImports.cshtml"
-using PluralsightASP.Pages.Users;
-
-#line default
-#line hidden
-#nullable disable
-#nullable restore
 #line 1 "/Users/swipe/RiderProjects/WebSiteRMD/PluralsightASP/Pages/Shared/_LoginPartial.cshtml"
 using Microsoft.AspNetCore.Identity;
 
@@ -48,7 +41,7 @@ using PluralsightASP.Core;
 #line hidden
 #nullable disable
     [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"fe7c0c5d56d28490cfb2a3ba8fa1722e53d99cde", @"/Pages/Shared/_LoginPartial.cshtml")]
-    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"793363ea98e4e2ec02cc26017c46d64f9e8ce97a", @"/Pages/_ViewImports.cshtml")]
+    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"2a4394c194ecc119985f5b12e364036b8ebbe6dc", @"/Pages/_ViewImports.cshtml")]
     public class Pages_Shared__LoginPartial : global::Microsoft.AspNetCore.Mvc.Razor.RazorPage<dynamic>
     {
         private static readonly global::Microsoft.AspNetCore.Razor.TagHelpers.TagHelperAttribute __tagHelperAttribute_0 = new global::Microsoft.AspNetCore.Razor.TagHelpers.TagHelperAttribute("id", new global::Microsoft.AspNetCore.Html.HtmlString("manage"), global::Microsoft.AspNetCore.Razor.TagHelpers.HtmlAttributeValueStyle.DoubleQuotes);
@@ -100,7 +93,7 @@ using PluralsightASP.Core;
 #line hidden
 #nullable disable
             WriteLiteral("    <li class=\"nav-item\">\r\n        ");
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "fe7c0c5d56d28490cfb2a3ba8fa1722e53d99cde8207", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "fe7c0c5d56d28490cfb2a3ba8fa1722e53d99cde8020", async() => {
                 WriteLiteral("Hello ");
 #nullable restore
 #line 11 "/Users/swipe/RiderProjects/WebSiteRMD/PluralsightASP/Pages/Shared/_LoginPartial.cshtml"
@@ -129,7 +122,7 @@ using PluralsightASP.Core;
             Write(__tagHelperExecutionContext.Output);
             __tagHelperExecutionContext = __tagHelperScopeManager.End();
             WriteLiteral("\r\n    </li>\r\n    <li class=\"nav-item\">\r\n        ");
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "fe7c0c5d56d28490cfb2a3ba8fa1722e53d99cde10194", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "fe7c0c5d56d28490cfb2a3ba8fa1722e53d99cde10007", async() => {
                 WriteLiteral("\r\n            <button id=\"logout\" type=\"submit\" class=\"nav-link btn btn-link text-dark\">Logout</button>\r\n        ");
             }
             );
@@ -176,7 +169,7 @@ else
 #line hidden
 #nullable disable
             WriteLiteral("    <li class=\"nav-item\">\r\n        ");
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "fe7c0c5d56d28490cfb2a3ba8fa1722e53d99cde13444", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "fe7c0c5d56d28490cfb2a3ba8fa1722e53d99cde13257", async() => {
                 WriteLiteral("Register");
             }
             );
@@ -196,7 +189,7 @@ else
             Write(__tagHelperExecutionContext.Output);
             __tagHelperExecutionContext = __tagHelperScopeManager.End();
             WriteLiteral("\r\n    </li>\r\n    <li class=\"nav-item\">\r\n        ");
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "fe7c0c5d56d28490cfb2a3ba8fa1722e53d99cde14998", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "fe7c0c5d56d28490cfb2a3ba8fa1722e53d99cde14811", async() => {
                 WriteLiteral("Login");
             }
             );

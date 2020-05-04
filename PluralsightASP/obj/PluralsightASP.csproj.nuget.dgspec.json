@@ -14,7 +14,7 @@
         "outputPath": "/Users/swipe/RiderProjects/WebSiteRMD/PluralsightASP.Core/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "/Users/swipe/.nuget/NuGet/NuGet.Config"
+          "/Users/swipe/.config/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "netcoreapp3.1"
@@ -36,6 +36,18 @@
       "frameworks": {
         "netcoreapp3.1": {
           "dependencies": {
+            "GeekLearning.Storage": {
+              "target": "Package",
+              "version": "[0.8.0, )"
+            },
+            "GeekLearning.Storage.FileSystem": {
+              "target": "Package",
+              "version": "[0.8.0, )"
+            },
+            "GeekLearning.Storage.FileSystem.Server": {
+              "target": "Package",
+              "version": "[0.8.0, )"
+            },
             "Microsoft.AspNetCore.Authentication.Cookies": {
               "target": "Package",
               "version": "[2.2.0, )"
@@ -84,6 +96,9 @@
           "assetTargetFallback": true,
           "warn": true,
           "frameworkReferences": {
+            "Microsoft.AspNetCore.App": {
+              "privateAssets": "none"
+            },
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
             }
@@ -102,7 +117,7 @@
         "outputPath": "/Users/swipe/RiderProjects/WebSiteRMD/PluralsightASP.Data/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "/Users/swipe/.nuget/NuGet/NuGet.Config"
+          "/Users/swipe/.config/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "netcoreapp3.1"
@@ -128,6 +143,18 @@
       "frameworks": {
         "netcoreapp3.1": {
           "dependencies": {
+            "GeekLearning.Storage": {
+              "target": "Package",
+              "version": "[0.8.0, )"
+            },
+            "GeekLearning.Storage.FileSystem": {
+              "target": "Package",
+              "version": "[0.8.0, )"
+            },
+            "GeekLearning.Storage.FileSystem.Server": {
+              "target": "Package",
+              "version": "[0.8.0, )"
+            },
             "Microsoft.AspNetCore.Authentication.Cookies": {
               "target": "Package",
               "version": "[2.2.0, )"
@@ -196,6 +223,9 @@
           "assetTargetFallback": true,
           "warn": true,
           "frameworkReferences": {
+            "Microsoft.AspNetCore.App": {
+              "privateAssets": "none"
+            },
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
             }
@@ -214,7 +244,7 @@
         "outputPath": "/Users/swipe/RiderProjects/WebSiteRMD/PluralsightASP/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "/Users/swipe/.nuget/NuGet/NuGet.Config"
+          "/Users/swipe/.config/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "netcoreapp3.1"
@@ -240,6 +270,18 @@
       "frameworks": {
         "netcoreapp3.1": {
           "dependencies": {
+            "GeekLearning.Storage": {
+              "target": "Package",
+              "version": "[0.8.0, )"
+            },
+            "GeekLearning.Storage.FileSystem": {
+              "target": "Package",
+              "version": "[0.8.0, )"
+            },
+            "GeekLearning.Storage.FileSystem.Server": {
+              "target": "Package",
+              "version": "[0.8.0, )"
+            },
             "MailKit": {
               "target": "Package",
               "version": "[2.6.0, )"

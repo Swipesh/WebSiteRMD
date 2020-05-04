@@ -6,6 +6,9 @@
 
     <ItemGroup>
       <PackageReference Include="bootstrap" Version="4.4.1" />
+      <PackageReference Include="GeekLearning.Storage" Version="0.8.0" />
+      <PackageReference Include="GeekLearning.Storage.FileSystem" Version="0.8.0" />
+      <PackageReference Include="GeekLearning.Storage.FileSystem.Server" Version="0.8.0" />
       <PackageReference Include="Microsoft.AspNetCore.Authentication.Cookies" Version="2.2.0" />
       <PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="3.1.3" />
       <PackageReference Include="Microsoft.AspNetCore.Identity.UI" Version="3.1.3" />
