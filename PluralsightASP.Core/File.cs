@@ -18,9 +18,7 @@ namespace PluralsightASP.Core
         
         [Required]
         public string FileType { get; set; }
-        
-        public bool IsAccessibleToAll { get; set; }
-        
+
         public virtual ICollection<UsersFiles> UsersFiles { get; set; }
         
     }

@@ -14,7 +14,7 @@
         "outputPath": "/Users/swipe/RiderProjects/WebSiteRMD/PluralsightASP.Core/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "/Users/swipe/.config/NuGet/NuGet.Config"
+          "/Users/swipe/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "netcoreapp3.1"
@@ -96,9 +96,6 @@
           "assetTargetFallback": true,
           "warn": true,
           "frameworkReferences": {
-            "Microsoft.AspNetCore.App": {
-              "privateAssets": "none"
-            },
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
             }
@@ -117,7 +114,7 @@
         "outputPath": "/Users/swipe/RiderProjects/WebSiteRMD/PluralsightASP.Data/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "/Users/swipe/.config/NuGet/NuGet.Config"
+          "/Users/swipe/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "netcoreapp3.1"
@@ -223,9 +220,6 @@
           "assetTargetFallback": true,
           "warn": true,
           "frameworkReferences": {
-            "Microsoft.AspNetCore.App": {
-              "privateAssets": "none"
-            },
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
             }
@@ -244,7 +238,7 @@
         "outputPath": "/Users/swipe/RiderProjects/WebSiteRMD/PluralsightASP/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "/Users/swipe/.config/NuGet/NuGet.Config"
+          "/Users/swipe/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "netcoreapp3.1"

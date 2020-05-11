@@ -29,11 +29,47 @@
       <_ContentIncludedByDefault Remove="wwwroot\js\site.js" />
       <_ContentIncludedByDefault Remove="Areas\Identity\Pages\_ValidationScriptsPartial.cshtml" />
       <_ContentIncludedByDefault Remove="Areas\Identity\Pages\_ViewStart.cshtml" />
-    </ItemGroup>
-
-    <ItemGroup>
-      <Folder Include="Areas\Admin\Pages" />
-      <Folder Include="Areas\Identity\Pages\Account\Manage\RolesManagement" />
+      <_ContentIncludedByDefault Remove="Areas\Identity\Pages\Account\Manage\UsersManagement\Create.cshtml" />
+      <_ContentIncludedByDefault Remove="Areas\Identity\Pages\Account\Manage\UsersManagement\Delete.cshtml" />
+      <_ContentIncludedByDefault Remove="Areas\Identity\Pages\Account\Manage\UsersManagement\Details.cshtml" />
+      <_ContentIncludedByDefault Remove="Areas\Identity\Pages\Account\Manage\UsersManagement\Edit.cshtml" />
+      <_ContentIncludedByDefault Remove="Areas\Identity\Pages\Account\Manage\UsersManagement\UsersList.cshtml" />
+      <_ContentIncludedByDefault Remove="Areas\Identity\Pages\Account\Manage\UsersManagement\_ViewImports.cshtml" />
+      <_ContentIncludedByDefault Remove="Areas\Admin\Pages\Users\Index.cshtml" />
+      <_ContentIncludedByDefault Remove="Areas\Admin\Pages\Users\_ViewImports.cshtml" />
+      <_ContentIncludedByDefault Remove="Areas\Admin\Pages\RolesManagement\Create.cshtml" />
+      <_ContentIncludedByDefault Remove="Areas\Admin\Pages\RolesManagement\Delete.cshtml" />
+      <_ContentIncludedByDefault Remove="Areas\Admin\Pages\RolesManagement\Details.cshtml" />
+      <_ContentIncludedByDefault Remove="Areas\Admin\Pages\RolesManagement\Edit.cshtml" />
+      <_ContentIncludedByDefault Remove="Areas\Admin\Pages\RolesManagement\RolesList.cshtml" />
+      <_ContentIncludedByDefault Remove="Areas\Admin\Pages\RolesManagement\_ViewImports.cshtml" />
+      <_ContentIncludedByDefault Remove="Areas\Admin\Pages\UsersManagement\Create.cshtml" />
+      <_ContentIncludedByDefault Remove="Areas\Admin\Pages\UsersManagement\Delete.cshtml" />
+      <_ContentIncludedByDefault Remove="Areas\Admin\Pages\UsersManagement\Details.cshtml" />
+      <_ContentIncludedByDefault Remove="Areas\Admin\Pages\UsersManagement\Edit.cshtml" />
+      <_ContentIncludedByDefault Remove="Areas\Admin\Pages\UsersManagement\UsersList.cshtml" />
+      <_ContentIncludedByDefault Remove="Areas\Admin\Pages\UsersManagement\_ViewImports.cshtml" />
+      <_ContentIncludedByDefault Remove="Areas\Admin\Pages\_ManageNav.cshtml" />
+      <_ContentIncludedByDefault Remove="Areas\Admin\Pages\_StatusMessage.cshtml" />
+      <_ContentIncludedByDefault Remove="Areas\Admin\Pages\_ValidationScriptsPartial.cshtml" />
+      <_ContentIncludedByDefault Remove="Areas\Admin\Pages\_ViewImports.cshtml" />
+      <_ContentIncludedByDefault Remove="Areas\Admin\Pages\_ViewStart.cshtml" />
+      <_ContentIncludedByDefault Remove="Areas\Identity\Pages\Admin\Pages\UsersManagement\Create.cshtml" />
+      <_ContentIncludedByDefault Remove="Areas\Identity\Pages\Admin\Pages\UsersManagement\Delete.cshtml" />
+      <_ContentIncludedByDefault Remove="Areas\Identity\Pages\Admin\Pages\UsersManagement\Details.cshtml" />
+      <_ContentIncludedByDefault Remove="Areas\Identity\Pages\Admin\Pages\UsersManagement\Edit.cshtml" />
+      <_ContentIncludedByDefault Remove="Areas\Identity\Pages\Admin\Pages\UsersManagement\UsersList.cshtml" />
+      <_ContentIncludedByDefault Remove="Areas\Identity\Pages\Admin\Pages\UsersManagement\_ViewImports.cshtml" />
+      <_ContentIncludedByDefault Remove="Areas\Identity\Pages\Admin\UsersManagement\Create.cshtml" />
+      <_ContentIncludedByDefault Remove="Areas\Identity\Pages\Admin\UsersManagement\Delete.cshtml" />
+      <_ContentIncludedByDefault Remove="Areas\Identity\Pages\Admin\UsersManagement\Details.cshtml" />
+      <_ContentIncludedByDefault Remove="Areas\Identity\Pages\Admin\UsersManagement\Edit.cshtml" />
+      <_ContentIncludedByDefault Remove="Areas\Identity\Pages\Admin\UsersManagement\UsersList.cshtml" />
+      <_ContentIncludedByDefault Remove="Areas\Identity\Pages\Admin\UsersManagement\_ViewImports.cshtml" />
+      <_ContentIncludedByDefault Remove="Areas\Identity\Pages\Admin\_StatusMessage.cshtml" />
+      <_ContentIncludedByDefault Remove="Areas\Identity\Pages\Admin\_ValidationScriptsPartial.cshtml" />
+      <_ContentIncludedByDefault Remove="Areas\Identity\Pages\Admin\_ViewImports.cshtml" />
+      <_ContentIncludedByDefault Remove="Areas\Identity\Pages\Admin\_ViewStart.cshtml" />
     </ItemGroup>
 
 

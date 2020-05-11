@@ -3230,10 +3230,7 @@
         },
         "runtime": {
           "bin/placeholder/PluralsightASP.Core.dll": {}
-        },
-        "frameworkReferences": [
-          "Microsoft.AspNetCore.App"
-        ]
+        }
       },
       "PluralsightASP.Data/1.0.0": {
         "type": "project",
@@ -3260,10 +3257,7 @@
         },
         "runtime": {
           "bin/placeholder/PluralsightASP.Data.dll": {}
-        },
-        "frameworkReferences": [
-          "Microsoft.AspNetCore.App"
-        ]
+        }
       }
     }
   },
@@ -10264,7 +10258,7 @@
       "outputPath": "/Users/swipe/RiderProjects/WebSiteRMD/PluralsightASP/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "/Users/swipe/.config/NuGet/NuGet.Config"
+        "/Users/swipe/.nuget/NuGet/NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "netcoreapp3.1"
