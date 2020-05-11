@@ -11,7 +11,7 @@
 <partial name="_StatusMessage" model="Model.StatusMessage" />
 <hr />
 <div class="row">
-    <div class="col-md-6 offset-3">
+    <div class="col-md-6">
         <form method="post">
             <div asp-validation-summary="All" class="text-danger"></div>
             <div class="form-group">
@@ -46,7 +46,7 @@
                     @foreach (var role in Model.IdentityRoles)
                     {
                         <input type="checkbox" name="NewUserRoles" value="@role.Name"
-                               @(Model.OldUserRoles.Contains(role.Name) ? "checked=\"checked\"" : "") />@role.Name <br />
+                               @(Model.OldUserRoles.Contains(role.Name) ? "checked=\"checked\"" : "") />    @role.Name <br />
                     }
                 </div>
             <div class="form-group">

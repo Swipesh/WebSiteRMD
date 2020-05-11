@@ -10,15 +10,14 @@
     <li class="nav-item">
         <a class="nav-link @ManageNavPages.ChangePasswordNavClass(ViewContext)" id="change-password" asp-area="Identity" asp-page="/Account/Manage/ChangePassword">Password</a>
     </li>
-    @*@if (User.IsInRole("admin"))
-    {*@
-    <li class="nav-item">
-        <a class="nav-link @ManageNavPages.UsersManagementNavClass(ViewContext)" id="users-management" asp-area="Identity" asp-page="/Account/Manage/UsersManagement/UsersList">Users Management</a>
-    </li>
-    <li class="nav-item">
-        <a class="nav-link @ManageNavPages.RolesManagementNavClass(ViewContext)" id="roles-management" asp-area="Identity" asp-page="/Account/Manage/RolesManagement/RolesList">Roles Management</a>
-    </li>
-    
-    @*}*@
-    
+    @if (User.IsInRole("admin"))
+    {
+        <li class="nav-item">
+            <a class="nav-link @ManageNavPages.UsersManagementNavClass(ViewContext)" id="users-management" asp-area="Identity" asp-page="/Account/Manage/UsersManagement/UsersList">Users Management</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link @ManageNavPages.RolesManagementNavClass(ViewContext)" id="roles-management" asp-area="Identity" asp-page="/Account/Manage/RolesManagement/RolesList">Roles Management</a>
+        </li>
+    }
+
 </ul>

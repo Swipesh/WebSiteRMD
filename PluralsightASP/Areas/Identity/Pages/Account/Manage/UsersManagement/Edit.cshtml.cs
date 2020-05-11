@@ -14,43 +14,45 @@ namespace PluralsightASP.Areas.Identity.Pages.Account.Manage.UsersManagement
     {
         private readonly UserManager<User> _userManager;
         private readonly RoleManager<IdentityRole> _roleManager;
+        private readonly SignInManager<User> _signInManager;
 
-        public EditModel(UserManager<User> userManager, RoleManager<IdentityRole> roleManager)
+        public EditModel(UserManager<User> userManager, RoleManager<IdentityRole> roleManager,
+            SignInManager<User> signInManager)
         {
             _userManager = userManager;
             _roleManager = roleManager;
+            _signInManager = signInManager;
         }
 
-        [BindProperty]
-        public InputModel Input { get; set; }
-
+        [BindProperty] public InputModel Input { get; set; }
 
 
         public class InputModel
         {
             public string Id { get; set; }
+
             [Required]
             [DataType(DataType.EmailAddress)]
             [Display(Name = "Email")]
             public string UserName { get; set; }
-            
+
             [Required]
             [DataType(DataType.Text)]
-            [StringLength(100, ErrorMessage = "The {0} must be at least {2} and at max {1} characters long.", MinimumLength = 2)]
+            [StringLength(100, ErrorMessage = "The {0} must be at least {2} and at max {1} characters long.",
+                MinimumLength = 2)]
             [Display(Name = "First Name")]
             public string FirstName { get; set; }
 
             [Required]
             [DataType(DataType.Text)]
-            [StringLength(100, ErrorMessage = "The {0} must be at least {2} and at max {1} characters long.", MinimumLength = 2)]
+            [StringLength(100, ErrorMessage = "The {0} must be at least {2} and at max {1} characters long.",
+                MinimumLength = 2)]
             [Display(Name = "Last Name")]
             public string LastName { get; set; }
 
-            [DataType(DataType.PhoneNumber)]
-            public string PhoneNumber { get; set; }
-            
-            public bool EmailConfirmed { get; set; }
+            [DataType(DataType.PhoneNumber)] public string PhoneNumber { get; set; }
 
+            public bool EmailConfirmed { get; set; }
         }
 
 
@@ -62,7 +64,6 @@ namespace PluralsightASP.Areas.Identity.Pages.Account.Manage.UsersManagement
 
         public async Task<IActionResult> OnGetAsync(string id)
         {
-            
             if (id == null)
             {
                 return NotFound();
@@ -75,15 +76,17 @@ namespace PluralsightASP.Areas.Identity.Pages.Account.Manage.UsersManagement
                 return NotFound();
             }
 
-            Input = new InputModel {Id = user.Id, UserName = user.UserName,FirstName = user.FirstName,LastName = user.LastName,EmailConfirmed = user.EmailConfirmed,PhoneNumber = user.PhoneNumber};
+            Input = new InputModel
+            {
+                Id = user.Id, UserName = user.UserName, FirstName = user.FirstName, LastName = user.LastName,
+                EmailConfirmed = user.EmailConfirmed, PhoneNumber = user.PhoneNumber
+            };
 
             IdentityRoles = _roleManager.Roles.ToList();
             OldUserRoles = await _userManager.GetRolesAsync(user);
             return Page();
         }
 
-        // To protect from overposting attacks, enable the specific properties you want to bind to, for
-        // more details, see https://aka.ms/RazorPagesCRUD.
         public async Task<IActionResult> OnPostAsync(string id, List<string> NewUserRoles)
         {
             var user = await _userManager.FindByIdAsync(id);
@@ -98,10 +101,10 @@ namespace PluralsightASP.Areas.Identity.Pages.Account.Manage.UsersManagement
             user.LastName = Input.LastName;
             user.PhoneNumber = Input.PhoneNumber;
             user.EmailConfirmed = Input.EmailConfirmed;
-            
-            if (OldUserRoles !=null && OldUserRoles.Count > 0)
+
+            if (OldUserRoles != null && OldUserRoles.Count > 0)
                 await _userManager.RemoveFromRolesAsync(user, OldUserRoles);
-            
+
             try
             {
                 await _userManager.AddToRolesAsync(user, NewUserRoles);
@@ -120,6 +123,7 @@ namespace PluralsightASP.Areas.Identity.Pages.Account.Manage.UsersManagement
             }
 
             StatusMessage = "User has been updated successfully";
+            await _signInManager.RefreshSignInAsync(user);
             return RedirectToPage("UsersList");
         }
 
