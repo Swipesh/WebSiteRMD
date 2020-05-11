@@ -1,0 +1,45 @@
+@page
+@model EditModel
+
+@{
+    ViewData["Title"] = "Edit role";
+    ViewData["ActivePage"] = ManageNavPages.RolesManagement;
+}
+
+
+<h4>@ViewData["Title"]</h4>
+<partial name="_StatusMessage" model="Model.StatusMessage"/>
+<hr/>
+<div class="row">
+    <div class="col-md-6 offset-3">
+        <form method="post">
+            <div asp-validation-summary="All" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="Input.Name" class="control-label"></label>
+                <input asp-for="Input.Name" class="form-control"/>
+                <span asp-validation-for="Input.Name" class="text-danger"></span>
+            </div>
+            <input hidden="hidden" name="id" asp-for="Input.Id"/>
+            @*<div class="form-group">
+                @foreach (var user in Model.UsersInRole)
+                {
+                    <input type="checkbox" name="NewUserRoles" value="Input.Name"
+                           @(Model._userManager.IsInRole(user, Input.Name) ? "checked=\"checked\"" : "")/>
+                    @role.Name
+                    <br/>
+                }
+            </div>*@
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary"/>
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-page="RolesList">Back to List</a>
+</div>
+
+@section Scripts {
+    @{ await Html.RenderPartialAsync("_ValidationScriptsPartial"); }
+}
