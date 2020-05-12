@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ContentModelStore">
-    <e p="$USER_HOME$/Library/Caches/Rider2019.3/extResources" t="IncludeRecursive" />
-    <e p="$USER_HOME$/Library/Caches/Rider2019.3/resharper-host/local/Transient/ReSharperHost/v193/SolutionCaches/_PluralsightASP.-94747078.00" t="ExcludeRecursive" />
+    <e p="$USER_HOME$/ExpressLocalizationResource.ru.resx" t="Include" />
     <e p="$APPLICATION_CONFIG_DIR$/javascript/extLibs/http_cdnjs.cloudflare.com_ajax_libs_baguettebox.js_1.10.0_baguetteBox.css" t="IncludeRecursive" />
     <e p="$APPLICATION_CONFIG_DIR$/javascript/extLibs/http_cdnjs.cloudflare.com_ajax_libs_baguettebox.js_1.10.0_baguetteBox.js" t="IncludeRecursive" />
+    <e p="$USER_HOME$/Library/Caches/JetBrains/Rider2020.1/extResources" t="IncludeRecursive" />
+    <e p="$USER_HOME$/Library/Caches/JetBrains/Rider2020.1/resharper-host/local/Transient/ReSharperHost/v201/SolutionCaches/_PluralsightASP.-94747078.00" t="ExcludeRecursive" />
     <e p="$PROJECT_DIR$" t="IncludeFlat">
       <e p="packages" t="ExcludeRecursive" />
       <e p="PluralsightASP" t="IncludeRecursive">
@@ -98,6 +99,11 @@
         <e p="LocalAssets" t="Include">
           <e p="test.txt" t="Include" />
         </e>
+        <e p="LocalizationResources" t="Include">
+          <e p="ExpressLocalizationResource.cs" t="Include" />
+          <e p="ViewLocalizationResource.cs" t="Include" />
+          <e p="ViewLocalizationResource.ru.resx" t="Include" />
+        </e>
         <e p="obj" t="ExcludeRecursive">
           <e p="Debug" t="Include">
             <e p="netcoreapp3.1" t="Include">
@@ -128,6 +134,7 @@
           <e p="Privacy.cshtml" t="Include" />
           <e p="Privacy.cshtml.cs" t="Include" />
           <e p="Shared" t="Include">
+            <e p="_LanguagePartial.cshtml" t="Include" />
             <e p="_Layout.cshtml" t="Include" />
             <e p="_LoginPartial.cshtml" t="Include" />
             <e p="_ValidationScriptsPartial.cshtml" t="Include" />

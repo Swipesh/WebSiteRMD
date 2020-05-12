@@ -1,4 +1,5 @@
 using System;
+using System.Globalization;
 using GeekLearning.Storage;
 using GeekLearning.Storage.Configuration;
 using Microsoft.AspNetCore.Builder;
@@ -10,7 +11,13 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.EntityFrameworkCore;
 using PluralsightASP.Core;
+using LazZiya.ExpressLocalization;
+using LazZiya.TagHelpers;
+using Microsoft.AspNetCore.Localization;
+using Microsoft.AspNetCore.Razor.TagHelpers;
 using PluralsightASP.Data;
+using PluralsightASP.LocalizationResources;
+
 namespace PluralsightASP
 {
     public class Startup
@@ -45,8 +52,23 @@ namespace PluralsightASP
                 .AddDefaultUI()
                 .AddDefaultTokenProviders();
             
-            services.AddAuthentication("cookies").AddCookie("cookies", options => options.LoginPath = "Account/Login");
-            services.AddRazorPages();
+            services.AddAuthentication("cookies").AddCookie("cookies", options => options.LoginPath = "Areas/IdentityAccount/Login");
+            var cultures = new[]
+            {
+                new CultureInfo("ru"),
+                new CultureInfo("en"),
+            };
+            services.AddRazorPages().AddExpressLocalization<ExpressLocalizationResource,ViewLocalizationResource>(ops =>
+                {
+                    ops.ResourcesPath = "LocalizationResources";
+                    ops.RequestLocalizationOptions = o =>
+                    {
+                        o.SupportedCultures = cultures;
+                        o.SupportedUICultures = cultures;
+                        o.DefaultRequestCulture = new RequestCulture("ru");
+                    };
+                });
+            services.AddTransient<ITagHelperComponent, LocalizationValidationScriptsTagHelperComponent>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -63,11 +85,11 @@ namespace PluralsightASP
                 app.UseHsts();
             }
 
+            app.UseRequestLocalization();
             app.UseHttpsRedirection();
             app.UseStaticFiles();
 
             app.UseRouting();
-            //app.UseFileSystemStorageServer();
             app.UseAuthentication();
             app.UseAuthorization();
 

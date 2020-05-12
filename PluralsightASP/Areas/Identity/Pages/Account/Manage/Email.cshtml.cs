@@ -5,6 +5,7 @@ using System.Text;
 using System.Text.Encodings.Web;
 using System.Linq;
 using System.Threading.Tasks;
+using LazZiya.ExpressLocalization.DataAnnotations;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Identity.UI.Services;
 using Microsoft.AspNetCore.Mvc;
@@ -44,7 +45,7 @@ namespace PluralsightASP.Areas.Identity.Pages.Account.Manage
 
         public class InputModel
         {
-            [Required]
+            [ExRequired]
             [EmailAddress]
             [Display(Name = "New email")]
             public string NewEmail { get; set; }

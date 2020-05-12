@@ -2,21 +2,21 @@
 }
 <ul class="nav nav-pills flex-column">
     <li class="nav-item">
-        <a class="nav-link @ManageNavPages.IndexNavClass(ViewContext)" id="profile" asp-area="Identity" asp-page="/Account/Manage/Index">Profile</a>
+        <a class="nav-link @ManageNavPages.IndexNavClass(ViewContext)" id="profile" asp-area="Identity" asp-page="/Account/Manage/Index" localize-content>Profile</a>
     </li>
     <li class="nav-item">
-        <a class="nav-link @ManageNavPages.EmailNavClass(ViewContext)" id="email" asp-area="Identity" asp-page="/Account/Manage/Email">Email</a>
+        <a class="nav-link @ManageNavPages.EmailNavClass(ViewContext)" id="email" asp-area="Identity" asp-page="/Account/Manage/Email" localize-content>Email</a>
     </li>
     <li class="nav-item">
-        <a class="nav-link @ManageNavPages.ChangePasswordNavClass(ViewContext)" id="change-password" asp-area="Identity" asp-page="/Account/Manage/ChangePassword">Password</a>
+        <a class="nav-link @ManageNavPages.ChangePasswordNavClass(ViewContext)" id="change-password" asp-area="Identity" asp-page="/Account/Manage/ChangePassword" localize-content>Password</a>
     </li>
     @if (User.IsInRole("admin"))
     {
         <li class="nav-item">
-            <a class="nav-link @ManageNavPages.UsersManagementNavClass(ViewContext)" id="users-management" asp-area="Identity" asp-page="/Account/Manage/UsersManagement/UsersList">Users Management</a>
+            <a class="nav-link @ManageNavPages.UsersManagementNavClass(ViewContext)" id="users-management" asp-area="Identity" asp-page="/Account/Manage/UsersManagement/UsersList" localize-content>Users management</a>
         </li>
         <li class="nav-item">
-            <a class="nav-link @ManageNavPages.RolesManagementNavClass(ViewContext)" id="roles-management" asp-area="Identity" asp-page="/Account/Manage/RolesManagement/RolesList">Roles Management</a>
+            <a class="nav-link @ManageNavPages.RolesManagementNavClass(ViewContext)" id="roles-management" asp-area="Identity" asp-page="/Account/Manage/RolesManagement/RolesList"  localize-content>Roles management</a>
         </li>
     }
 

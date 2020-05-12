@@ -12,6 +12,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.Extensions.Logging;
 using PluralsightASP.Core;
+using LazZiya.ExpressLocalization.DataAnnotations;
 
 namespace PluralsightASP.Areas.Identity.Pages.Account
 {
@@ -43,12 +44,15 @@ namespace PluralsightASP.Areas.Identity.Pages.Account
 
         public class InputModel
         {
-            [Required]
+            [ExRequired]
             [EmailAddress]
+            [Display(Name = "Email")]
             public string Email { get; set; }
 
-            [Required]
+            [ExRequired]
+            [ExStringLength(100, MinimumLength = 6)]
             [DataType(DataType.Password)]
+            [Display(Name = "Password")]
             public string Password { get; set; }
 
             [Display(Name = "Remember me?")]

@@ -59,6 +59,42 @@
       "jQuery/3.0.0": {
         "type": "package"
       },
+      "LazZiya.ExpressLocalization/4.0.0": {
+        "type": "package",
+        "compile": {
+          "lib/netcoreapp3.1/LazZiya.ExpressLocalization.dll": {}
+        },
+        "runtime": {
+          "lib/netcoreapp3.1/LazZiya.ExpressLocalization.dll": {}
+        },
+        "frameworkReferences": [
+          "Microsoft.AspNetCore.App"
+        ]
+      },
+      "LazZiya.TagHelpers/4.0.1": {
+        "type": "package",
+        "compile": {
+          "lib/netcoreapp3.1/LazZiya.TagHelpers.dll": {}
+        },
+        "runtime": {
+          "lib/netcoreapp3.1/LazZiya.TagHelpers.dll": {}
+        },
+        "frameworkReferences": [
+          "Microsoft.AspNetCore.App"
+        ]
+      },
+      "LazZiya.TagHelpers.Localization/1.3.0": {
+        "type": "package",
+        "dependencies": {
+          "LazZiya.ExpressLocalization": "3.1.3"
+        },
+        "compile": {
+          "lib/netcoreapp3.1/LazZiya.TagHelpers.Localization.dll": {}
+        },
+        "runtime": {
+          "lib/netcoreapp3.1/LazZiya.TagHelpers.Localization.dll": {}
+        }
+      },
       "MailKit/2.6.0": {
         "type": "package",
         "dependencies": {
@@ -3215,6 +3251,9 @@
           "GeekLearning.Storage": "0.8.0",
           "GeekLearning.Storage.FileSystem": "0.8.0",
           "GeekLearning.Storage.FileSystem.Server": "0.8.0",
+          "LazZiya.ExpressLocalization": "4.0.0",
+          "LazZiya.TagHelpers": "4.0.1",
+          "LazZiya.TagHelpers.Localization": "1.3.0",
           "Microsoft.AspNetCore.Authentication.Cookies": "2.2.0",
           "Microsoft.AspNetCore.Identity.EntityFrameworkCore": "3.1.3",
           "Microsoft.AspNetCore.Identity.UI": "3.1.3",
@@ -3230,7 +3269,10 @@
         },
         "runtime": {
           "bin/placeholder/PluralsightASP.Core.dll": {}
-        }
+        },
+        "frameworkReferences": [
+          "Microsoft.AspNetCore.App"
+        ]
       },
       "PluralsightASP.Data/1.0.0": {
         "type": "project",
@@ -3239,6 +3281,9 @@
           "GeekLearning.Storage": "0.8.0",
           "GeekLearning.Storage.FileSystem": "0.8.0",
           "GeekLearning.Storage.FileSystem.Server": "0.8.0",
+          "LazZiya.ExpressLocalization": "4.0.0",
+          "LazZiya.TagHelpers": "4.0.1",
+          "LazZiya.TagHelpers.Localization": "1.3.0",
           "Microsoft.AspNetCore.Authentication.Cookies": "2.2.0",
           "Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore": "3.1.3",
           "Microsoft.AspNetCore.Identity.EntityFrameworkCore": "3.1.3",
@@ -3257,7 +3302,10 @@
         },
         "runtime": {
           "bin/placeholder/PluralsightASP.Data.dll": {}
-        }
+        },
+        "frameworkReferences": [
+          "Microsoft.AspNetCore.App"
+        ]
       }
     }
   },
@@ -3371,6 +3419,75 @@
         "Tools/uninstall.ps1",
         "jquery.3.0.0.nupkg.sha512",
         "jquery.nuspec"
+      ]
+    },
+    "LazZiya.ExpressLocalization/4.0.0": {
+      "sha512": "RjNubUbPtsVhEX9VsQje5EzKoffxMYgMJ7IoUlBCWvqgN1bV4TGS2Tg14ehJOQGsh4SsXhnXk+W4RYlURcOomA==",
+      "type": "package",
+      "path": "lazziya.expresslocalization/4.0.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "icon.png",
+        "lazziya.expresslocalization.4.0.0.nupkg.sha512",
+        "lazziya.expresslocalization.nuspec",
+        "lib/netcoreapp2.0/LazZiya.ExpressLocalization.dll",
+        "lib/netcoreapp2.0/LazZiya.ExpressLocalization.xml",
+        "lib/netcoreapp2.1/LazZiya.ExpressLocalization.dll",
+        "lib/netcoreapp2.1/LazZiya.ExpressLocalization.xml",
+        "lib/netcoreapp2.2/LazZiya.ExpressLocalization.dll",
+        "lib/netcoreapp2.2/LazZiya.ExpressLocalization.xml",
+        "lib/netcoreapp3.0/LazZiya.ExpressLocalization.dll",
+        "lib/netcoreapp3.0/LazZiya.ExpressLocalization.xml",
+        "lib/netcoreapp3.1/LazZiya.ExpressLocalization.dll",
+        "lib/netcoreapp3.1/LazZiya.ExpressLocalization.xml",
+        "license.txt"
+      ]
+    },
+    "LazZiya.TagHelpers/4.0.1": {
+      "sha512": "CVOGr0D70iyXrdeEqdI/FzaZD9A3Nwo1uBFNQ9VuWfrEHUuekbYmf1QJsndnGhjWPWq8hdyl6Lvo59sSd+DonA==",
+      "type": "package",
+      "path": "lazziya.taghelpers/4.0.1",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "icon.png",
+        "lazziya.taghelpers.4.0.1.nupkg.sha512",
+        "lazziya.taghelpers.nuspec",
+        "lib/netcoreapp2.0/LazZiya.TagHelpers.dll",
+        "lib/netcoreapp2.0/LazZiya.TagHelpers.xml",
+        "lib/netcoreapp2.1/LazZiya.TagHelpers.dll",
+        "lib/netcoreapp2.1/LazZiya.TagHelpers.xml",
+        "lib/netcoreapp2.2/LazZiya.TagHelpers.dll",
+        "lib/netcoreapp2.2/LazZiya.TagHelpers.xml",
+        "lib/netcoreapp3.0/LazZiya.TagHelpers.dll",
+        "lib/netcoreapp3.0/LazZiya.TagHelpers.xml",
+        "lib/netcoreapp3.1/LazZiya.TagHelpers.dll",
+        "lib/netcoreapp3.1/LazZiya.TagHelpers.xml",
+        "license.txt"
+      ]
+    },
+    "LazZiya.TagHelpers.Localization/1.3.0": {
+      "sha512": "2Lyj8Q2fJDI69MYsi+0VNT5+uO7hhNpmPRLiZj2iDA4gB5YflncMylj74Bp9dqlOOElLxLS5Qrq/FwHoaUZB9g==",
+      "type": "package",
+      "path": "lazziya.taghelpers.localization/1.3.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "icon.png",
+        "lazziya.taghelpers.localization.1.3.0.nupkg.sha512",
+        "lazziya.taghelpers.localization.nuspec",
+        "lib/netcoreapp2.0/LazZiya.TagHelpers.Localization.dll",
+        "lib/netcoreapp2.0/LazZiya.TagHelpers.Localization.xml",
+        "lib/netcoreapp2.1/LazZiya.TagHelpers.Localization.dll",
+        "lib/netcoreapp2.1/LazZiya.TagHelpers.Localization.xml",
+        "lib/netcoreapp2.2/LazZiya.TagHelpers.Localization.dll",
+        "lib/netcoreapp2.2/LazZiya.TagHelpers.Localization.xml",
+        "lib/netcoreapp3.0/LazZiya.TagHelpers.Localization.dll",
+        "lib/netcoreapp3.0/LazZiya.TagHelpers.Localization.xml",
+        "lib/netcoreapp3.1/LazZiya.TagHelpers.Localization.dll",
+        "lib/netcoreapp3.1/LazZiya.TagHelpers.Localization.xml",
+        "license.txt"
       ]
     },
     "MailKit/2.6.0": {
@@ -10231,6 +10348,9 @@
       "GeekLearning.Storage >= 0.8.0",
       "GeekLearning.Storage.FileSystem >= 0.8.0",
       "GeekLearning.Storage.FileSystem.Server >= 0.8.0",
+      "LazZiya.ExpressLocalization >= 4.0.0",
+      "LazZiya.TagHelpers >= 4.0.1",
+      "LazZiya.TagHelpers.Localization >= 1.3.0",
       "MailKit >= 2.6.0",
       "Microsoft.AspNetCore.Authentication.Cookies >= 2.2.0",
       "Microsoft.AspNetCore.Identity.EntityFrameworkCore >= 3.1.3",
@@ -10295,6 +10415,18 @@
           "GeekLearning.Storage.FileSystem.Server": {
             "target": "Package",
             "version": "[0.8.0, )"
+          },
+          "LazZiya.ExpressLocalization": {
+            "target": "Package",
+            "version": "[4.0.0, )"
+          },
+          "LazZiya.TagHelpers": {
+            "target": "Package",
+            "version": "[4.0.1, )"
+          },
+          "LazZiya.TagHelpers.Localization": {
+            "target": "Package",
+            "version": "[1.3.0, )"
           },
           "MailKit": {
             "target": "Package",

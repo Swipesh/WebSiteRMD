@@ -3,21 +3,22 @@
 
 @{
     ViewData["Title"] = "Log in";
+    var culture = CultureInfo.CurrentCulture.Name;
 }
 
 
 <div class="row">
     <div class="col-md-6 offset-3">
         <div class="block-heading">
-            <h2 class="text-info">@ViewData["Title"]</h2>
+            <h2 class="text-info" localize-content>@ViewData["Title"]</h2>
         </div>
         <section>
             <form id="account" method="post">
-                <h4>Use a local account to log in.</h4>
+                <h4 localize-content>Use a local account to log in.</h4>
                 <hr/>
                 <div asp-validation-summary="All" class="text-danger"></div>
                 <div class="form-group">
-                    <label asp-for="Input.Email"></label>
+                    <label asp-for="Input.Email" localize-content></label>
                     <input asp-for="Input.Email" class="form-control"/>
                     <span asp-validation-for="Input.Email" class="text-danger"></span>
                 </div>
@@ -28,24 +29,22 @@
                 </div>
                 <div class="form-group">
                     <div class="checkbox">
-                        <label asp-for="Input.RememberMe">
-                            <input asp-for="Input.RememberMe"/>
-                            @Html.DisplayNameFor(m => m.Input.RememberMe)
-                        </label>
+                        <input asp-for="Input.RememberMe"/>
+                        <label asp-for="Input.RememberMe" localize-content>Remember me?</label>
                     </div>
                 </div>
                 <div class="form-group">
-                    <button type="submit" class="btn btn-primary">Log in</button>
+                    <button type="submit" class="btn btn-primary" localize-content>Log in</button>
                 </div>
                 <div class="form-group">
                     <p>
-                        <a id="forgot-password" asp-page="./ForgotPassword">Forgot your password?</a>
+                        <a id="forgot-password" asp-page="./ForgotPassword" localize-content>Forgot your password?</a>
                     </p>
                     <p>
-                        <a asp-page="./Register" asp-route-returnUrl="@Model.ReturnUrl">Register as a new user</a>
+                        <a asp-page="./Register" asp-route-returnUrl="@Model.ReturnUrl" localize-content>Register as a new user</a>
                     </p>
                     <p>
-                        <a id="resend-confirmation" asp-page="./ResendEmailConfirmation">Resend email confirmation</a>
+                        <a id="resend-confirmation" asp-page="./ResendEmailConfirmation" localize-content>Resend email confirmation</a>
                     </p>
                 </div>
             </form>
@@ -56,4 +55,5 @@
 
 @section Scripts {
     <partial name="_ValidationScriptsPartial"/>
+    <localization-validation-scripts></localization-validation-scripts>
 }

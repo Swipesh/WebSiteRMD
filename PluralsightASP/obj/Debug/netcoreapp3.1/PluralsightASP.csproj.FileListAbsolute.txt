@@ -274,3 +274,13 @@ C:/Users/mista/RiderProjects/PluralsightASP/PluralsightASP/obj/Debug/netcoreapp3
 /Users/swipe/RiderProjects/WebSiteRMD/PluralsightASP/obj/Debug/netcoreapp3.1/Razor/Areas/Identity/Pages/Account/Manage/UsersManagement/UsersList.cshtml.g.cs
 /Users/swipe/RiderProjects/WebSiteRMD/PluralsightASP/obj/Debug/netcoreapp3.1/Razor/Areas/Identity/Pages/Account/Manage/RolesManagement/_ViewImports.cshtml.g.cs
 /Users/swipe/RiderProjects/WebSiteRMD/PluralsightASP/obj/Debug/netcoreapp3.1/Razor/Areas/Identity/Pages/Account/Manage/UsersManagement/_ViewImports.cshtml.g.cs
+/Users/swipe/RiderProjects/WebSiteRMD/PluralsightASP/bin/Debug/netcoreapp3.1/ru/PluralsightASP.resources.dll
+/Users/swipe/RiderProjects/WebSiteRMD/PluralsightASP/bin/Debug/netcoreapp3.1/LazZiya.ExpressLocalization.dll
+/Users/swipe/RiderProjects/WebSiteRMD/PluralsightASP/bin/Debug/netcoreapp3.1/LazZiya.TagHelpers.dll
+/Users/swipe/RiderProjects/WebSiteRMD/PluralsightASP/bin/Debug/netcoreapp3.1/LazZiya.TagHelpers.Localization.dll
+/Users/swipe/RiderProjects/WebSiteRMD/PluralsightASP/obj/Debug/netcoreapp3.1/PluralsightASP.LocalizationResources.ExpressLocalizationResource.ru.resources
+/Users/swipe/RiderProjects/WebSiteRMD/PluralsightASP/obj/Debug/netcoreapp3.1/PluralsightASP.csproj.GenerateResource.cache
+/Users/swipe/RiderProjects/WebSiteRMD/PluralsightASP/obj/Debug/netcoreapp3.1/ru/PluralsightASP.resources.cs
+/Users/swipe/RiderProjects/WebSiteRMD/PluralsightASP/obj/Debug/netcoreapp3.1/ru/PluralsightASP.resources.dll
+/Users/swipe/RiderProjects/WebSiteRMD/PluralsightASP/obj/Debug/netcoreapp3.1/PluralsightASP.LocalizationResources.ViewLocalizationResource.ru.resources
+/Users/swipe/RiderProjects/WebSiteRMD/PluralsightASP/obj/Debug/netcoreapp3.1/Razor/Pages/Shared/_LanguagePartial.cshtml.g.cs

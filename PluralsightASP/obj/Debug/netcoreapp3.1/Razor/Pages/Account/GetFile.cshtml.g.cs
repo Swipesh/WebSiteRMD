@@ -27,7 +27,7 @@ using PluralsightASP.Pages;
 #line hidden
 #nullable disable
     [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"97981f2ae06b168b9ce98415777d0a4418406638", @"/Pages/Account/GetFile.cshtml")]
-    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"2a4394c194ecc119985f5b12e364036b8ebbe6dc", @"/Pages/_ViewImports.cshtml")]
+    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"ba1a67e6039db29915e42b9690f4cc15c3155b17", @"/Pages/_ViewImports.cshtml")]
     public class Pages_Account_GetFile : global::Microsoft.AspNetCore.Mvc.RazorPages.Page
     {
         #line hidden

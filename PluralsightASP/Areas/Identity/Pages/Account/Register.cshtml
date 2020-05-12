@@ -2,16 +2,18 @@
 @model RegisterModel
 @{
     ViewData["Title"] = "Register";
+    
+    var culture = CultureInfo.CurrentCulture.Name;
 }
 
 
 <div class="row">
     <div class="col-md-6 offset-3">
         <div class="block-heading">
-            <h2 class="text-info">@ViewData["Title"]</h2>
+            <h2 class="text-info" localize-content>@ViewData["Title"]</h2>
         </div>
-        <form asp-route-returnUrl="@Model.ReturnUrl" method="post">
-            <h4>Create a new account.</h4>
+        <form asp-route-returnUrl="@Model.ReturnUrl" method="post" localize-content>
+            <h4 localize-content>Create a new account.</h4>
             <hr/>
             <div asp-validation-summary="All" class="text-danger"></div>
             <div class="form-group">
@@ -22,12 +24,12 @@
             <div class="form-group">
                 <label asp-for="Input.FirstName"></label>
                 <input asp-for="Input.FirstName" class="form-control item" type="text" id="firstname">
-                <span asp-validation-for="Input.FirstName"></span>
+                <span asp-validation-for="Input.FirstName" class="text-danger" localize-content></span>
             </div>
             <div class="form-group">
                 <label asp-for="Input.LastName"></label>
                 <input asp-for="Input.LastName" class="form-control item" type="text" id="lastname">
-                <span asp-validation-for="Input.LastName"></span>
+                <span asp-validation-for="Input.LastName" class="text-danger"></span>
             </div>
             <div class="form-group">
                 <label asp-for="Input.Password"></label>
@@ -39,11 +41,12 @@
                 <input asp-for="Input.ConfirmPassword" class="form-control"/>
                 <span asp-validation-for="Input.ConfirmPassword" class="text-danger"></span>
             </div>
-            <button type="submit" class="btn btn-primary">Register</button>
+            <button type="submit" class="btn btn-primary" localize-content>Register</button>
         </form>
     </div>
 </div>
 
 @section Scripts {
     <partial name="_ValidationScriptsPartial"/>
+    <localization-validation-scripts></localization-validation-scripts>
 }

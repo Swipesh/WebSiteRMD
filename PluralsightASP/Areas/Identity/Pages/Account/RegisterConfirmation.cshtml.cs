@@ -1,3 +1,4 @@
+using System.ComponentModel.DataAnnotations;
 using Microsoft.AspNetCore.Authorization;
 using System.Text;
 using System.Threading.Tasks;
@@ -22,6 +23,7 @@ namespace PluralsightASP.Areas.Identity.Pages.Account
             _sender = sender;
         }
 
+        [Display(Name = "Email")]
         public string Email { get; set; }
 
         public bool DisplayConfirmAccountLink { get; set; }
