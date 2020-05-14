@@ -6,13 +6,13 @@
     var culture = CultureInfo.CurrentCulture.Name;
 }
 
+<section class="clean-block clean-form dark">
+    <div class="row">
+        <div class="col-md-6 mx-auto">
+            <div class="block-heading">
+                <h2 class="text-info" localize-content>@ViewData["Title"]</h2>
+            </div>
 
-<div class="row">
-    <div class="col-md-6 offset-3">
-        <div class="block-heading">
-            <h2 class="text-info" localize-content>@ViewData["Title"]</h2>
-        </div>
-        <section>
             <form id="account" method="post">
                 <h4 localize-content>Use a local account to log in.</h4>
                 <hr/>
@@ -48,10 +48,10 @@
                     </p>
                 </div>
             </form>
-        </section>
+        </div>
     </div>
+</section>
 
-</div>
 
 @section Scripts {
     <partial name="_ValidationScriptsPartial"/>

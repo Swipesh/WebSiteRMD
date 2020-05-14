@@ -5,7 +5,7 @@
 }
 
 <main class="page">
-    <section class="clean-block clean-form dark">
+    @*<section class="clean-block clean-form dark">
 
         <div class="container">
             <form method="post" enctype="multipart/form-data" class="form-control-file">
@@ -32,5 +32,10 @@
 
             </form>
         </div>
-    </section>
+    </section>*@
+    <iz:FileManager ID="FileManager1" runat="server" Height="400" Width="600">
+        <RootDirectories>
+            <iz:RootDirectory DirectoryPath="~/Content" Text="Content Folder" />
+        </RootDirectories>
+    </iz:FileManager>
 </main>

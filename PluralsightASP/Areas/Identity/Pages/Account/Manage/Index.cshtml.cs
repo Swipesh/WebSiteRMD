@@ -37,7 +37,7 @@ namespace PluralsightASP.Areas.Identity.Pages.Account.Manage
             public string Username { get; set; }
             
             [Phone]
-            [Display(Name = "Phone number")]
+            [Display(Name = "Phone Number")]
             public string PhoneNumber { get; set; }
         }
 

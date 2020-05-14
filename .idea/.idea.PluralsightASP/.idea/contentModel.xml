@@ -198,7 +198,9 @@
           </e>
           <e p="favicon.ico" t="Include" />
           <e p="images" t="Include">
+            <e p="[rutor.is]Big.Little.Lies.S02.WEBRip.1080p.torrent" t="Include" />
             <e p="favicon.ico" t="Include" />
+            <e p="Снимок экрана 2020-05-11 в 16.04.07.png" t="Include" />
           </e>
           <e p="LocalAssets" t="Include">
             <e p="test.txt" t="Include" />

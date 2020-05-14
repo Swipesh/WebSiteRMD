@@ -2,6 +2,7 @@ using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Threading.Tasks;
+using LazZiya.ExpressLocalization.DataAnnotations;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
@@ -36,21 +37,21 @@ namespace PluralsightASP.Areas.Identity.Pages.Account.Manage.UsersManagement
             [Display(Name = "Email")]
             public string UserName { get; set; }
 
-            [Required]
+            [ExRequired]
             [DataType(DataType.Text)]
-            [StringLength(100, ErrorMessage = "The {0} must be at least {2} and at max {1} characters long.",
-                MinimumLength = 2)]
+            [ExStringLength(100,MinimumLength = 2)]
             [Display(Name = "First Name")]
             public string FirstName { get; set; }
 
-            [Required]
+            [ExRequired]
             [DataType(DataType.Text)]
-            [StringLength(100, ErrorMessage = "The {0} must be at least {2} and at max {1} characters long.",
-                MinimumLength = 2)]
+            [ExStringLength(100, MinimumLength = 2)]
             [Display(Name = "Last Name")]
             public string LastName { get; set; }
 
-            [DataType(DataType.PhoneNumber)] public string PhoneNumber { get; set; }
+            [DataType(DataType.PhoneNumber)] 
+            [Display(Name = "Phone Number")]
+            public string PhoneNumber { get; set; }
 
             public bool EmailConfirmed { get; set; }
         }

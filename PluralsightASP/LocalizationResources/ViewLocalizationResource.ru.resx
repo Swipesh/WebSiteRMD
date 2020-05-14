@@ -636,6 +636,42 @@
     <value>Адрес эл. почты</value>
         <comment>Custom back end message</comment>
   </data>
+    <data name="First Name" xml:space="preserve">
+    <value>Фамилия</value>
+        <comment>Custom back end message</comment>
+  </data>
+    <data name="Last Name" xml:space="preserve">
+    <value>Имя</value>
+        <comment>Custom back end message</comment>
+  </data>
+    <data name="Username" xml:space="preserve">
+    <value>Имя пользователя</value>
+        <comment>Custom back end message</comment>
+  </data>
+    <data name="Phone Number" xml:space="preserve">
+    <value>Номер телефона</value>
+        <comment>Custom back end message</comment>
+  </data>
+    <data name="Add new" xml:space="preserve">
+    <value>Создать</value>
+        <comment>Custom back end message</comment>
+  </data>
+    <data name="Delete" xml:space="preserve">
+    <value>Удалить</value>
+        <comment>Custom back end message</comment>
+  </data>
+    <data name="Back to List" xml:space="preserve">
+    <value>К списку</value>
+        <comment>Custom back end message</comment>
+  </data>
+    <data name="Edit" xml:space="preserve">
+    <value>Редактировать</value>
+        <comment>Custom back end message</comment>
+  </data>
+    <data name="Details" xml:space="preserve">
+    <value>Подробнее</value>
+        <comment>Custom back end message</comment>
+  </data>
     <data name="Change email" xml:space="preserve">
     <value>Изменить адрес эл. почты</value>
         <comment>Custom back end message</comment>

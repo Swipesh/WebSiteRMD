@@ -7,59 +7,62 @@
 }
 
 
-<h4>@ViewData["Title"]</h4>
-<partial name="_StatusMessage" model="Model.StatusMessage" />
-<hr />
-<div class="row">
-    <div class="col-md-6">
-        <form method="post">
-            <div asp-validation-summary="All" class="text-danger"></div>
-            <div class="form-group">
-                <label asp-for="Input.FirstName" class="control-label"></label>
-                <input asp-for="Input.FirstName" class="form-control" />
-                <span asp-validation-for="Input.FirstName" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Input.LastName" class="control-label"></label>
-                <input asp-for="Input.LastName" class="form-control" />
-                <span asp-validation-for="Input.LastName" class="text-danger"></span>
-            </div>
+<partial name="_StatusMessage" model="Model.StatusMessage"/>
+<div class="container">
+    <div class="card shadow w-50">
+        <div class="card-header py-3">
+            <p class="text-primary m-0 font-weight-bold" localize-content>@ViewData["Title"]</p>
+        </div>
+        <div class="card-body">
+            <form method="post">
+                <div asp-validation-summary="All" class="text-danger"></div>
+                <div class="form-group">
+                    <label asp-for="Input.FirstName" class="control-label"></label>
+                    <input asp-for="Input.FirstName" class="form-control"/>
+                    <span asp-validation-for="Input.FirstName" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Input.LastName" class="control-label"></label>
+                    <input asp-for="Input.LastName" class="form-control"/>
+                    <span asp-validation-for="Input.LastName" class="text-danger"></span>
+                </div>
 
-            <div class="form-group">
-                <label asp-for="Input.UserName" class="control-label"></label>
-                <input asp-for="Input.UserName" class="form-control" />
-                <span asp-validation-for="Input.UserName" class="text-danger"></span>
-            </div>
-            
-            <input hidden="hidden" name="id" asp-for="Input.Id"/>
-            <div class="form-group form-check">
-                <label class="form-check-label">
-                    <input class="form-check-input" asp-for="Input.EmailConfirmed" /> EmailConfirmed
-                </label>
-            </div>
-            <div class="form-group">
-                <label asp-for="Input.PhoneNumber" class="control-label"></label>
-                <input asp-for="Input.PhoneNumber" class="form-control" />
-                <span asp-validation-for="Input.PhoneNumber" class="text-danger"></span>
-            </div>
-            <div class="form-group">
+                <div class="form-group">
+                    <label asp-for="Input.UserName" class="control-label"></label>
+                    <input asp-for="Input.UserName" class="form-control"/>
+                    <span asp-validation-for="Input.UserName" class="text-danger"></span>
+                </div>
+
+                <input hidden="hidden" name="id" asp-for="Input.Id"/>
+                <div class="form-group form-check">
+                    <label class="form-check-label">
+                        <input class="form-check-input" asp-for="Input.EmailConfirmed"/> Email Confirmed
+                    </label>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Input.PhoneNumber" class="control-label"></label>
+                    <input asp-for="Input.PhoneNumber" class="form-control"/>
+                    <span asp-validation-for="Input.PhoneNumber" class="text-danger"></span>
+                </div>
+                <div class="form-group">
                     @foreach (var role in Model.IdentityRoles)
                     {
                         <input type="checkbox" name="NewUserRoles" value="@role.Name"
-                               @(Model.OldUserRoles.Contains(role.Name) ? "checked=\"checked\"" : "") />    @role.Name <br />
+                               @(Model.OldUserRoles.Contains(role.Name) ? "checked=\"checked\"" : "")/>
+                        @role.Name
+                        <br/>
                     }
                 </div>
-            <div class="form-group">
-                <input type="submit" value="Save" class="btn btn-primary" />
-            </div>
-        </form>
+                <div class="form-group">
+                    <input type="submit" localize-content value="Edit" class="btn btn-success"/> |
+                    <a asp-page="UsersList" class="btn btn-primary" localize-content>Back to List</a>
+                </div>
+            </form>
+        </div>
     </div>
 </div>
 
-<div>
-    <a asp-page="UsersList">Back to List</a>
-</div>
-
 @section Scripts {
-    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+    <partial name="_ValidationScriptsPartial"/>
+    <localization-validation-scripts></localization-validation-scripts>
 }
