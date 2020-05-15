@@ -5,6 +5,11 @@
 }
 
 <main class="page">
+    @foreach (var file in Model.Files)
+    {
+        <div>@file</div>
+    }
+    
     @*<section class="clean-block clean-form dark">
 
         <div class="container">
@@ -33,9 +38,4 @@
             </form>
         </div>
     </section>*@
-    <iz:FileManager ID="FileManager1" runat="server" Height="400" Width="600">
-        <RootDirectories>
-            <iz:RootDirectory DirectoryPath="~/Content" Text="Content Folder" />
-        </RootDirectories>
-    </iz:FileManager>
 </main>

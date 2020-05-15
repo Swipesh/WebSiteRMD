@@ -51,6 +51,8 @@ namespace PluralsightASP
                 .AddUserManager<UserManager>()
                 .AddDefaultUI()
                 .AddDefaultTokenProviders();
+            services.AddStorage(Configuration.GetSection("Storage"))
+                .AddFileSystemStorage(_environment.ContentRootPath);
             
             services.AddAuthentication("cookies").AddCookie("cookies", options => options.LoginPath = "Areas/IdentityAccount/Login");
             var cultures = new[]
@@ -68,6 +70,8 @@ namespace PluralsightASP
                         o.DefaultRequestCulture = new RequestCulture("ru");
                     };
                 });
+            services.AddCloudscribeFileManager(Configuration);
+            //services.AddCloudscribeCommmon(Configuration);
             services.AddTransient<ITagHelperComponent, LocalizationValidationScriptsTagHelperComponent>();
         }
 

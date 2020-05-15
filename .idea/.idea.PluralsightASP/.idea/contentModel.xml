@@ -125,6 +125,8 @@
             <e p="GetFile.cshtml" t="Include" />
             <e p="GetFile.cshtml.cs" t="Include" />
           </e>
+          <e p="Education.cshtml" t="Include" />
+          <e p="Education.cshtml.cs" t="Include" />
           <e p="Error.cshtml" t="Include" />
           <e p="Error.cshtml.cs" t="Include" />
           <e p="Index.cshtml" t="Include" />
@@ -137,6 +139,7 @@
             <e p="_LanguagePartial.cshtml" t="Include" />
             <e p="_Layout.cshtml" t="Include" />
             <e p="_LoginPartial.cshtml" t="Include" />
+            <e p="_ProjectCardPartial.cshtml" t="Include" />
             <e p="_ValidationScriptsPartial.cshtml" t="Include" />
           </e>
         </e>

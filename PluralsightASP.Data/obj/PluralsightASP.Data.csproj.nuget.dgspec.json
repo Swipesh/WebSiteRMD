@@ -92,9 +92,17 @@
               "target": "Package",
               "version": "[3.1.1, )"
             },
+            "System.Configuration.ConfigurationManager": {
+              "target": "Package",
+              "version": "[4.7.0, )"
+            },
             "bootstrap": {
               "target": "Package",
               "version": "[4.4.1, )"
+            },
+            "cloudscribe.FileManager.Web": {
+              "target": "Package",
+              "version": "[4.0.2, )"
             }
           },
           "imports": [
@@ -231,9 +239,17 @@
               "target": "Package",
               "version": "[3.1.1, )"
             },
+            "System.Configuration.ConfigurationManager": {
+              "target": "Package",
+              "version": "[4.7.0, )"
+            },
             "bootstrap": {
               "target": "Package",
               "version": "[4.4.1, )"
+            },
+            "cloudscribe.FileManager.Web": {
+              "target": "Package",
+              "version": "[4.0.2, )"
             }
           },
           "imports": [
