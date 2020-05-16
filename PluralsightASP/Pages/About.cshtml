@@ -5,7 +5,7 @@
     ViewData["Title"] = "About";
 }
 
-<form method="post" enctype="multipart/form-data" class="form-control-file">
+@*<form method="post" enctype="multipart/form-data" class="form-control-file">
     <div class="custom-file">
 
         <input type="file" id="inputGroupFile03" class="custom-file-input" name="photo"/>
@@ -20,4 +20,8 @@
         }
     </div>
 
-</form>
+</form>*@
+@foreach(var file in Model.Files)
+    {
+        <a asp-route-path="@file.Name" target="_blank">@file.Name</a>
+    }

@@ -12,6 +12,21 @@
         <e p="appsettings.Development.json" t="Include" />
         <e p="appsettings.json" t="Include" />
         <e p="Areas" t="Include">
+          <e p="Education" t="Include">
+            <e p="Pages" t="Include">
+              <e p="_ManageNav.cshtml" t="Include" />
+              <e p="_StatusMessage.cshtml" t="Include" />
+              <e p="_ViewImports.cshtml" t="Include" />
+              <e p="_ViewStart.cshtml" t="Include" />
+              <e p="About.cshtml" t="Include" />
+              <e p="About.cshtml.cs" t="Include" />
+              <e p="Index.cshtml" t="Include" />
+              <e p="Index.cshtml.cs" t="Include" />
+              <e p="ManageNavPages.cs" t="Include" />
+              <e p="Participants.cshtml" t="Include" />
+              <e p="Participants.cshtml.cs" t="Include" />
+            </e>
+          </e>
           <e p="Identity" t="Include">
             <e p="Pages" t="Include">
               <e p="_ValidationScriptsPartial.cshtml" t="Include" />
@@ -117,16 +132,6 @@
           <e p="_ViewStart.cshtml" t="Include" />
           <e p="About.cshtml" t="Include" />
           <e p="About.cshtml.cs" t="Include" />
-          <e p="Account" t="Include">
-            <e p="Files.cshtml" t="Include" />
-            <e p="Files.cshtml.cs" t="Include" />
-            <e p="FileUpload.cshtml" t="Include" />
-            <e p="FileUpload.cshtml.cs" t="Include" />
-            <e p="GetFile.cshtml" t="Include" />
-            <e p="GetFile.cshtml.cs" t="Include" />
-          </e>
-          <e p="Education.cshtml" t="Include" />
-          <e p="Education.cshtml.cs" t="Include" />
           <e p="Error.cshtml" t="Include" />
           <e p="Error.cshtml.cs" t="Include" />
           <e p="Index.cshtml" t="Include" />
@@ -135,7 +140,10 @@
           <e p="NotFound.cshtml.cs" t="Include" />
           <e p="Privacy.cshtml" t="Include" />
           <e p="Privacy.cshtml.cs" t="Include" />
+          <e p="Science.cshtml" t="Include" />
+          <e p="Science.cshtml.cs" t="Include" />
           <e p="Shared" t="Include">
+            <e p="_CourseCardPartial.cshtml" t="Include" />
             <e p="_LanguagePartial.cshtml" t="Include" />
             <e p="_Layout.cshtml" t="Include" />
             <e p="_LoginPartial.cshtml" t="Include" />
@@ -151,6 +159,14 @@
         <e p="ScaffoldingReadMe.txt" t="Include" />
         <e p="Startup.cs" t="Include" />
         <e p="wwwroot" t="Include">
+          <e p="478939c6-e9a9-40d5-9821-46e17a90c78a" t="Include">
+            <e p="favicon.ico" t="Include" />
+            <e p="favicon — копия 2.ico" t="Include" />
+            <e p="favicon — копия 3.ico" t="Include" />
+            <e p="favicon — копия 4.ico" t="Include" />
+            <e p="favicon — копия 5.ico" t="Include" />
+            <e p="favicon — копия.ico" t="Include" />
+          </e>
           <e p="assets" t="Include">
             <e p="bootstrap" t="Include">
               <e p="css" t="Include">
@@ -212,7 +228,7 @@
       </e>
       <e p="PluralsightASP.Core" t="IncludeRecursive">
         <e p="bin" t="ExcludeRecursive" />
-        <e p="File.cs" t="Include" />
+        <e p="Course.cs" t="Include" />
         <e p="obj" t="ExcludeRecursive">
           <e p="Debug" t="Include">
             <e p="netcoreapp3.1" t="Include">
@@ -222,13 +238,12 @@
         </e>
         <e p="PluralsightASP.Core.csproj" t="IncludeRecursive" />
         <e p="User.cs" t="Include" />
-        <e p="UsersFiles.cs" t="Include" />
       </e>
       <e p="PluralsightASP.Data" t="IncludeRecursive">
         <e p="bin" t="ExcludeRecursive" />
         <e p="Migrations" t="Include">
-          <e p="20200511154740_Initial.cs" t="Include" />
-          <e p="20200511154740_Initial.Designer.cs" t="Include" />
+          <e p="20200516133453_FilesAndFolders.cs" t="Include" />
+          <e p="20200516133453_FilesAndFolders.Designer.cs" t="Include" />
           <e p="PluralsightAspDbContextModelSnapshot.cs" t="Include" />
         </e>
         <e p="obj" t="ExcludeRecursive">

@@ -13,6 +13,7 @@ using Microsoft.EntityFrameworkCore;
 using PluralsightASP.Core;
 using LazZiya.ExpressLocalization;
 using LazZiya.TagHelpers;
+using Microsoft.AspNetCore.Identity.UI;
 using Microsoft.AspNetCore.Localization;
 using Microsoft.AspNetCore.Razor.TagHelpers;
 using PluralsightASP.Data;
@@ -71,7 +72,6 @@ namespace PluralsightASP
                     };
                 });
             services.AddCloudscribeFileManager(Configuration);
-            //services.AddCloudscribeCommmon(Configuration);
             services.AddTransient<ITagHelperComponent, LocalizationValidationScriptsTagHelperComponent>();
         }
 

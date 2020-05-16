@@ -75,6 +75,9 @@
       <_ContentIncludedByDefault Remove="Areas\Identity\Pages\Admin\_ValidationScriptsPartial.cshtml" />
       <_ContentIncludedByDefault Remove="Areas\Identity\Pages\Admin\_ViewImports.cshtml" />
       <_ContentIncludedByDefault Remove="Areas\Identity\Pages\Admin\_ViewStart.cshtml" />
+      <_ContentIncludedByDefault Remove="Pages\Account\Files.cshtml" />
+      <_ContentIncludedByDefault Remove="Pages\Account\FileUpload.cshtml" />
+      <_ContentIncludedByDefault Remove="Pages\Account\GetFile.cshtml" />
     </ItemGroup>
 
     <ItemGroup>
@@ -88,14 +91,52 @@
         <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
         <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       </Content>
+      <Content Update="Pages\Shared\_CourseCardPartial.cshtml">
+        <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+        <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      </Content>
+      <Content Update="Pages\Science.cshtml">
+        <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+        <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      </Content>
       <Content Update="Pages\Shared\_ProjectCardPartial.cshtml">
         <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
         <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       </Content>
-      <Content Update="Pages\Education.cshtml">
+      <Content Update="Areas\Education\Pages\_ManageNav.cshtml">
         <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
         <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       </Content>
+      <Content Update="Areas\Education\Pages\_ViewImports.cshtml">
+        <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+        <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      </Content>
+      <Content Update="Areas\Education\Pages\Index.cshtml">
+        <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+        <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      </Content>
+      <Content Update="Areas\Education\Pages\About.cshtml">
+        <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+        <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      </Content>
+      <Content Update="Areas\Education\Pages\_StatusMessage.cshtml">
+        <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+        <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      </Content>
+      <Content Update="Areas\Education\Pages\_ViewStart.cshtml">
+        <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+        <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      </Content>
+      <Content Update="Areas\Education\Pages\Participants.cshtml">
+        <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+        <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      </Content>
+    </ItemGroup>
+
+    <ItemGroup>
+      <Compile Update="Areas\Education\Pages\Participants.cshtml.cs">
+        <DependentUpon>Participants.cshtml</DependentUpon>
+      </Compile>
     </ItemGroup>
 
 

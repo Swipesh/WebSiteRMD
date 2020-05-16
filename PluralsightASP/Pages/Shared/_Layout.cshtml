@@ -25,13 +25,13 @@
          id="navcol-1">
         <ul class="nav navbar-nav ml-auto">
             <li class="nav-item" role="presentation">
-                <a class="nav-link active" asp-page="/Index" localize-content asp-route-culture="@culture">About</a>
+                <a class="nav-link active" asp-page="/About" localize-content asp-route-culture="@culture">About</a>
             </li>
             <li class="nav-item" role="presentation">
-                <a class="nav-link active" asp-page="/Account/FileUpload" localize-content asp-route-culture="@culture">Education</a>
+                <a class="nav-link active" asp-area="Education" asp-page="/Index" localize-content asp-route-culture="@culture">Education</a>
             </li>
             <li class="nav-item" role="presentation">
-                <a class="nav-link active" asp-page="/Account/FileUpload" localize-content asp-route-culture="@culture">Science</a>
+                <a class="nav-link active" asp-page="/Science" localize-content asp-route-culture="@culture">Science</a>
             </li>
             <partial name="_LoginPartial"/>
             <partial name="_LanguagePartial"/>

@@ -18,8 +18,10 @@ namespace PluralsightASP.Core
         
         [Required]
         public string FileType { get; set; }
-
-        public virtual ICollection<UsersFiles> UsersFiles { get; set; }
         
+        [Required,ForeignKey(nameof(Folder))] 
+        public string FolderId { get; set; }
+
+        public virtual Folder Folder { get; set; }
     }
 }

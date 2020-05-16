@@ -24,4 +24,9 @@
       <PackageReference Include="System.Configuration.ConfigurationManager" Version="4.7.0" />
     </ItemGroup>
 
+    <ItemGroup>
+      <Compile Remove="File.cs" />
+      <Compile Remove="Folder.cs" />
+    </ItemGroup>
+
 </Project>

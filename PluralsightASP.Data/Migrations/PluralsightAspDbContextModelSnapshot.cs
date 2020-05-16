@@ -145,26 +145,18 @@ namespace PluralsightASP.Data.Migrations
                     b.ToTable("AspNetUserTokens");
                 });
 
-            modelBuilder.Entity("PluralsightASP.Core.File", b =>
+            modelBuilder.Entity("PluralsightASP.Core.Course", b =>
                 {
                     b.Property<string>("Id")
                         .HasColumnType("varchar(255) CHARACTER SET utf8mb4");
 
-                    b.Property<string>("FileName")
-                        .IsRequired()
-                        .HasColumnType("longtext CHARACTER SET utf8mb4");
-
-                    b.Property<string>("FilePath")
-                        .IsRequired()
-                        .HasColumnType("longtext CHARACTER SET utf8mb4");
-
-                    b.Property<string>("FileType")
+                    b.Property<string>("Name")
                         .IsRequired()
                         .HasColumnType("longtext CHARACTER SET utf8mb4");
 
                     b.HasKey("Id");
 
-                    b.ToTable("Files");
+                    b.ToTable("Courses");
                 });
 
             modelBuilder.Entity("PluralsightASP.Core.User", b =>
@@ -178,6 +170,9 @@ namespace PluralsightASP.Data.Migrations
                     b.Property<string>("ConcurrencyStamp")
                         .IsConcurrencyToken()
                         .HasColumnType("longtext CHARACTER SET utf8mb4");
+
+                    b.Property<string>("CourseId")
+                        .HasColumnType("varchar(255) CHARACTER SET utf8mb4");
 
                     b.Property<string>("Email")
                         .HasColumnType("varchar(256) CHARACTER SET utf8mb4")
@@ -227,6 +222,8 @@ namespace PluralsightASP.Data.Migrations
 
                     b.HasKey("Id");
 
+                    b.HasIndex("CourseId");
+
                     b.HasIndex("NormalizedEmail")
                         .HasName("EmailIndex");
 
@@ -235,21 +232,6 @@ namespace PluralsightASP.Data.Migrations
                         .HasName("UserNameIndex");
 
                     b.ToTable("AspNetUsers");
-                });
-
-            modelBuilder.Entity("PluralsightASP.Core.UsersFiles", b =>
-                {
-                    b.Property<string>("UserId")
-                        .HasColumnType("varchar(255) CHARACTER SET utf8mb4");
-
-                    b.Property<string>("FileId")
-                        .HasColumnType("varchar(255) CHARACTER SET utf8mb4");
-
-                    b.HasKey("UserId", "FileId");
-
-                    b.HasIndex("FileId");
-
-                    b.ToTable("UsersFiles");
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<string>", b =>
@@ -303,19 +285,11 @@ namespace PluralsightASP.Data.Migrations
                         .IsRequired();
                 });
 
-            modelBuilder.Entity("PluralsightASP.Core.UsersFiles", b =>
+            modelBuilder.Entity("PluralsightASP.Core.User", b =>
                 {
-                    b.HasOne("PluralsightASP.Core.File", "File")
-                        .WithMany("UsersFiles")
-                        .HasForeignKey("FileId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.HasOne("PluralsightASP.Core.User", "User")
-                        .WithMany("UsersFiles")
-                        .HasForeignKey("UserId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
+                    b.HasOne("PluralsightASP.Core.Course", null)
+                        .WithMany("Users")
+                        .HasForeignKey("CourseId");
                 });
 #pragma warning restore 612, 618
         }

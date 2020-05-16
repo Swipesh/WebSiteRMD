@@ -953,9 +953,9 @@
           "System.IO.FileSystem": "4.3.0"
         },
         "runtime": {
-          "lib/netstandard2.0/Microsoft.IdentityModel.Logging.dll": {
-            "assemblyVersion": "5.5.0.0",
-            "fileVersion": "5.5.0.60624"
+          "lib/netstandard1.4/Microsoft.IdentityModel.Logging.dll": {
+            "assemblyVersion": "1.1.4.0",
+            "fileVersion": "1.1.4.216"
           }
         }
       },
@@ -977,9 +977,9 @@
           "System.Xml.ReaderWriter": "4.3.0"
         },
         "runtime": {
-          "lib/netstandard2.0/Microsoft.IdentityModel.Tokens.dll": {
-            "assemblyVersion": "5.5.0.0",
-            "fileVersion": "5.5.0.60624"
+          "lib/netstandard1.4/Microsoft.IdentityModel.Tokens.dll": {
+            "assemblyVersion": "5.1.4.0",
+            "fileVersion": "5.1.4.216"
           }
         }
       },

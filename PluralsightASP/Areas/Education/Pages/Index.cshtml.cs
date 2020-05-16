@@ -1,8 +1,8 @@
 using Microsoft.AspNetCore.Mvc.RazorPages;
 
-namespace PluralsightASP.Pages
+namespace PluralsightASP.Areas.Education.Pages
 {
-    public class Education : PageModel
+    public class Index : PageModel
     {
         public void OnGet()
         {
