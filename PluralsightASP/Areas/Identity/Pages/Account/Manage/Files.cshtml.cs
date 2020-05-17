@@ -94,7 +94,7 @@ namespace PluralsightASP.Areas.Identity.Pages.Account.Manage
 
             await blockBlob.UploadFromStreamAsync(asset.OpenReadStream());
 
-            return Page();
+            return RedirectToPage();
         }
     }
 }
