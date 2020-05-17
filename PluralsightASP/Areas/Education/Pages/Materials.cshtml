@@ -1,0 +1,76 @@
+@page
+@model PluralsightASP.Areas.Education.Pages.Materials
+
+@{
+    ViewData["Title"] = "Materials";
+    ViewData["ActivePage"] = ManageNavPages.Materials;
+}
+<div class="container">
+    <div class="block-heading">
+        <h2 class="text-info" localize-content>Курс "Математическое моделирование"</h2>
+    </div>
+
+    <div class="row">
+        <div class="col-md-3">
+            <partial name="_ManageNav"/>
+        </div>
+        <div class="col-md-9">
+
+
+            <partial name="_StatusMessage" model="Model.StatusMessage" localize-content/>
+            <div class="container">
+                <div class="card shadow ">
+                    <div class="card-header py-3">
+                        <p class="text-primary m-0 font-weight-bold" localize-content>@ViewData["Title"]</p>
+                    </div>
+                    <div class="card-body">
+                        <ul class="nav nav-tabs">
+                            <li class="nav-item">
+                                <a class="nav-link active" data-toggle="tab" href="#home">Лабораторные</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" data-toggle="tab" href="#menu1">Книги</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" data-toggle="tab" href="#menu2">Ссылки</a>
+                            </li>
+                        </ul>
+
+                        <!-- Tab panes -->
+                        <div class="tab-content">
+                            <div class="tab-pane container active" id="home">
+                                <ol>
+                                    <li>
+                                        Динамические системы. Обыкновенное дифференциальное уравнение и его
+                                        решение. Символьное и численное решение.
+                                    </li>
+                                    <li>
+                                        Динамические системы. Обыкновенное дифференциальное уравнение. Особые
+                                        точки динамической системы. Качественное исследование.
+                                    </li>
+                                    <li>
+                                        Линейные динамические системы на плоскости. Классификация особых точек.
+                                        Фазовый портрет. 3_1 –непрерывные; 3_2-дискретные
+                                    </li>
+                                    <li>
+                                        Нелинейные динамические системы на плоскости. Линеаризация в окрестности
+                                        особых точек. Устойчивость.
+                                    </li>
+                                    <li>Событийно-управляемые системы. Маятник с внешней силой.</li>
+                                    <li>
+                                        Бифуркации на плоскости. Дифференциальные уравнения с полиномиальной правой
+                                        частью.
+                                    </li>
+                                    <li>Колебания в динамических системах. Предельные циклы.</li>
+                                    <li>Марковские цепи</li>
+                                </ol>
+                            </div>
+                            <div class="tab-pane container fade" id="menu1">Список книг</div>
+                            <div class="tab-pane container fade" id="menu2">Ссылки</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

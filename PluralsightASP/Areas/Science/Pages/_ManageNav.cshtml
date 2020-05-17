@@ -1,0 +1,23 @@
+@{
+}
+<ul class="nav nav-pills flex-column">
+    <li class="nav-item">
+        <a class="nav-link @ManageNavPages.AboutNavClass(ViewContext)" id="about" asp-area="Science" asp-page="/About" localize-content>About project</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link @ManageNavPages.ParticipantsNavClass(ViewContext)" id="participants" asp-area="Science" asp-page="/Participants" localize-content>Participants</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link @ManageNavPages.MaterialsNavClass(ViewContext)" id="materials" asp-area="Science" asp-page="/Materials" localize-content>Materials</a>
+    </li>
+    @*@if (User.IsInRole("admin"))
+    {
+        <li class="nav-item">
+            <a class="nav-link @ManageNavPages.UsersManagementNavClass(ViewContext)" id="users-management" asp-area="Identity" asp-page="/Account/Manage/UsersManagement/UsersList" localize-content>Users management</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link @ManageNavPages.RolesManagementNavClass(ViewContext)" id="roles-management" asp-area="Identity" asp-page="/Account/Manage/RolesManagement/RolesList"  localize-content>Roles management</a>
+        </li>
+    }*@
+
+</ul>

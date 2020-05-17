@@ -9,7 +9,7 @@ namespace PluralsightASP.Areas.Education.Pages
         public string StatusMessage { get; set; }
         public void OnGet()
         {
-            StatusMessage = "Your profile has been updated";
+            //StatusMessage = "Your profile has been updated";
         }
     }
 }

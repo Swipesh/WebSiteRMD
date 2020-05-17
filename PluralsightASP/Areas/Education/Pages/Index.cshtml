@@ -1,15 +1,20 @@
 @page
-@model PluralsightASP.Areas.Education.Pages.Index
+@model IndexModel
 
 @{
+    ViewData["Title"] = "Educational courses";
 }
-
-<div class="container col-auto mt-2">
-    <div class="row">
-        <partial name="_CourseCardPartial"/>
-        <partial name="_CourseCardPartial"/>
-        <partial name="_CourseCardPartial"/>
-        <partial name="_CourseCardPartial"/>
-        <partial name="_CourseCardPartial"/>
+<div class="container">
+    <div class="block-heading">
+        <h2 class="text-info" localize-content>@ViewData["Title"]</h2>
+    </div>
+    <div class="container col-auto mt-2">
+        <div class="row">
+            <partial name="_CourseCardPartial"/>
+            <partial name="_CourseCardPartial"/>
+            <partial name="_CourseCardPartial"/>
+            <partial name="_CourseCardPartial"/>
+            <partial name="_CourseCardPartial"/>
+        </div>
     </div>
 </div>

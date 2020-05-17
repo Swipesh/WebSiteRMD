@@ -681,7 +681,7 @@
         <comment>Custom back end message</comment>
   </data>
     <data name="About" xml:space="preserve">
-    <value>О проекте</value>
+    <value>На главную</value>
         <comment>Custom back end message</comment>
   </data>
     <data name="Education" xml:space="preserve">
@@ -694,6 +694,30 @@
   </data>
     <data name="Modelling lab" xml:space="preserve">
     <value>Лаборатория моделирования</value>
+        <comment>Custom back end message</comment>
+  </data>
+    <data name="About course" xml:space="preserve">
+    <value>О курсе</value>
+        <comment>Custom back end message</comment>
+  </data>
+    <data name="Educational courses" xml:space="preserve">
+    <value>Учебные курсы</value>
+        <comment>Custom back end message</comment>
+  </data>
+    <data name="Scientific projects" xml:space="preserve">
+    <value>Научные проекты</value>
+        <comment>Custom back end message</comment>
+  </data>
+    <data name="About project" xml:space="preserve">
+    <value>О проекте</value>
+        <comment>Custom back end message</comment>
+  </data>
+    <data name="Participants" xml:space="preserve">
+    <value>Участники</value>
+        <comment>Custom back end message</comment>
+  </data>
+    <data name="Materials" xml:space="preserve">
+    <value>Материалы</value>
         <comment>Custom back end message</comment>
   </data>
     <data name="Your email is unchanged." xml:space="preserve">

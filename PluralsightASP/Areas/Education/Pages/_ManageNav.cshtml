@@ -2,13 +2,13 @@
 }
 <ul class="nav nav-pills flex-column">
     <li class="nav-item">
-        <a class="nav-link @ManageNavPages.AboutNavClass(ViewContext)" id="profile" asp-area="Education" asp-page="/About" localize-content>About</a>
+        <a class="nav-link @ManageNavPages.AboutNavClass(ViewContext)" id="about" asp-area="Education" asp-page="/About" localize-content>About course</a>
     </li>
     <li class="nav-item">
-        <a class="nav-link @ManageNavPages.ParticipantsNavClass(ViewContext)" id="email" asp-area="Education" asp-page="/Participants" localize-content>Participants</a>
+        <a class="nav-link @ManageNavPages.ParticipantsNavClass(ViewContext)" id="participants" asp-area="Education" asp-page="/Participants" localize-content>Participants</a>
     </li>
     <li class="nav-item">
-        <a class="nav-link @ManageNavPages.MaterialsNavClass(ViewContext)" id="change-password" asp-area="Identity" asp-page="/Account/Manage/ChangePassword" localize-content>Materials</a>
+        <a class="nav-link @ManageNavPages.MaterialsNavClass(ViewContext)" id="materials" asp-area="Education" asp-page="/Materials" localize-content>Materials</a>
     </li>
     @*@if (User.IsInRole("admin"))
     {
