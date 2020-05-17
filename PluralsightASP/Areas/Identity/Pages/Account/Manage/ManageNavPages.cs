@@ -15,7 +15,7 @@ namespace PluralsightASP.Areas.Identity.Pages.Account.Manage
         public static string ChangePassword => "ChangePassword";
         public static string UsersManagement => "UsersManagement";
         public static string RolesManagement => "RolesManagement";
-        public static string FilesUpload => "FilesUpload";
+        public static string Files => "Files";
         
 
 
@@ -26,7 +26,7 @@ namespace PluralsightASP.Areas.Identity.Pages.Account.Manage
         public static string ChangePasswordNavClass(ViewContext viewContext) => PageNavClass(viewContext, ChangePassword);
         public static string UsersManagementNavClass(ViewContext viewContext) => PageNavClass(viewContext, UsersManagement);
         public static string RolesManagementNavClass(ViewContext viewContext) => PageNavClass(viewContext, RolesManagement);
-        public static string FilesUploadNavClass(ViewContext viewContext) => PageNavClass(viewContext, FilesUpload);
+        public static string FilesNavClass(ViewContext viewContext) => PageNavClass(viewContext, Files);
 
         //todo: Сделать работу с файлами
         

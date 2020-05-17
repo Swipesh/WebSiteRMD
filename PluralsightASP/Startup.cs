@@ -1,7 +1,5 @@
 using System;
 using System.Globalization;
-using GeekLearning.Storage;
-using GeekLearning.Storage.Configuration;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Identity;
@@ -18,6 +16,11 @@ using Microsoft.AspNetCore.Localization;
 using Microsoft.AspNetCore.Razor.TagHelpers;
 using PluralsightASP.Data;
 using PluralsightASP.LocalizationResources;
+using Microsoft.WindowsAzure.Storage;
+using Azure.Storage.Blobs;
+using Azure.Storage.Blobs.Models;
+using Microsoft.Extensions.Azure;
+using Microsoft.WindowsAzure.Storage.Blob;
 
 namespace PluralsightASP
 {
@@ -36,25 +39,23 @@ namespace PluralsightASP
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            var migrationsAssembly = typeof(PluralsightAspDbContext).Namespace;
             services.AddDbContextPool<PluralsightAspDbContext>(options =>
                 {
                     options.UseMySql(Configuration.GetConnectionString("MySql"));
                 });
-
-            services.AddStorage(Configuration.GetSection("Storage")).AddFileSystemStorage(_environment.ContentRootPath);
-
-            services.Configure<StorageOptions>(Configuration.GetSection("Storage"));
-            
             services.AddScoped<IEmailSender, EmailService>();
-            services.AddIdentity<User, IdentityRole>()
+            services.AddIdentity<User, IdentityRole>( options =>
+                {
+                    options.Password.RequireNonAlphanumeric = false;
+                    options.Password.RequireUppercase = false;
+                    options.User.RequireUniqueEmail = true;
+                    options.SignIn.RequireConfirmedEmail = true;
+                })
                 .AddEntityFrameworkStores<PluralsightAspDbContext>()
                 .AddUserManager<UserManager>()
                 .AddDefaultUI()
                 .AddDefaultTokenProviders();
-            services.AddStorage(Configuration.GetSection("Storage"))
-                .AddFileSystemStorage(_environment.ContentRootPath);
-            
+            services.AddSingleton<CloudBlobClient>(sp => { return CloudStorageAccount.Parse(Configuration.GetConnectionString("AccessKey")).CreateCloudBlobClient(); });
             services.AddAuthentication("cookies").AddCookie("cookies", options => options.LoginPath = "Areas/IdentityAccount/Login");
             var cultures = new[]
             {

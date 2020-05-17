@@ -1,0 +1,28 @@
+@page
+@model PluralsightASP.Areas.Identity.Pages.Account.Manage.UsersManagement.Files
+
+@{
+
+}
+<div class="container">
+    <div class="card shadow w-50">
+        <div class="card-header py-3">
+            <p class="text-primary m-0 font-weight-bold" localize-content>@ViewData["Title"]</p>
+        </div>
+        <div class="card-body">
+            @*<input hidden="hidden" name="id" asp-for="Id"/>*@
+            <ul>
+                @foreach (var item in Model.Blobs)
+                {
+                    <li>
+                        <a asp-page-handler="DownloadFile" asp-route-fileName="@item" asp-route-id="@Model.Id" class="icon-cloud-download"> @item </a>
+                    </li>
+                }
+            </ul>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}

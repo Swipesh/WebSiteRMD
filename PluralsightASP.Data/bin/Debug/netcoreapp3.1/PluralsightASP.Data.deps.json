@@ -8,9 +8,7 @@
     ".NETCoreApp,Version=v3.1": {
       "PluralsightASP.Data/1.0.0": {
         "dependencies": {
-          "GeekLearning.Storage": "0.8.0",
-          "GeekLearning.Storage.FileSystem": "0.8.0",
-          "GeekLearning.Storage.FileSystem.Server": "0.8.0",
+          "Azure.Storage.Blobs": "12.4.2",
           "LazZiya.ExpressLocalization": "4.0.0",
           "LazZiya.TagHelpers": "4.0.1",
           "LazZiya.TagHelpers.Localization": "1.3.0",
@@ -28,11 +26,51 @@
           "PluralsightASP.Core": "1.0.0",
           "Pomelo.EntityFrameworkCore.MySql": "3.1.1",
           "System.Configuration.ConfigurationManager": "4.7.0",
+          "WindowsAzure.Storage": "9.3.3",
           "bootstrap": "4.4.1",
           "cloudscribe.FileManager.Web": "4.0.2"
         },
         "runtime": {
           "PluralsightASP.Data.dll": {}
+        }
+      },
+      "Azure.Core/1.2.1": {
+        "dependencies": {
+          "Microsoft.Bcl.AsyncInterfaces": "1.1.0",
+          "System.Buffers": "4.5.0",
+          "System.Diagnostics.DiagnosticSource": "4.7.0",
+          "System.Memory": "4.5.3",
+          "System.Numerics.Vectors": "4.5.0",
+          "System.Threading.Tasks.Extensions": "4.5.3"
+        },
+        "runtime": {
+          "lib/netstandard2.0/Azure.Core.dll": {
+            "assemblyVersion": "1.2.1.0",
+            "fileVersion": "1.200.120.23003"
+          }
+        }
+      },
+      "Azure.Storage.Blobs/12.4.2": {
+        "dependencies": {
+          "Azure.Core": "1.2.1",
+          "Azure.Storage.Common": "12.4.1"
+        },
+        "runtime": {
+          "lib/netstandard2.0/Azure.Storage.Blobs.dll": {
+            "assemblyVersion": "12.4.2.0",
+            "fileVersion": "12.400.220.25602"
+          }
+        }
+      },
+      "Azure.Storage.Common/12.4.1": {
+        "dependencies": {
+          "Azure.Core": "1.2.1"
+        },
+        "runtime": {
+          "lib/netstandard2.0/Azure.Storage.Common.dll": {
+            "assemblyVersion": "12.4.1.0",
+            "fileVersion": "12.400.120.25602"
+          }
         }
       },
       "bootstrap/4.4.1": {
@@ -112,50 +150,6 @@
           "lib/netcoreapp3.0/cloudscribe.Web.Common.dll": {
             "assemblyVersion": "4.0.1.0",
             "fileVersion": "4.0.1.0"
-          }
-        }
-      },
-      "GeekLearning.Storage/0.8.0": {
-        "dependencies": {
-          "Microsoft.Extensions.Configuration.Abstractions": "3.1.3",
-          "Microsoft.Extensions.DependencyInjection.Abstractions": "3.1.3",
-          "Microsoft.Extensions.Options": "3.1.3",
-          "Microsoft.Extensions.Options.ConfigurationExtensions": "3.0.0",
-          "System.Threading.Tasks.Extensions": "4.5.3"
-        },
-        "runtime": {
-          "lib/netstandard2.0/GeekLearning.Storage.dll": {
-            "assemblyVersion": "0.8.0.0",
-            "fileVersion": "0.8.0.0"
-          }
-        }
-      },
-      "GeekLearning.Storage.FileSystem/0.8.0": {
-        "dependencies": {
-          "GeekLearning.Storage": "0.8.0",
-          "Microsoft.Extensions.DependencyInjection.Abstractions": "3.1.3",
-          "Microsoft.Extensions.FileSystemGlobbing": "3.0.0",
-          "Microsoft.Extensions.Options": "3.1.3",
-          "System.ValueTuple": "4.4.0"
-        },
-        "runtime": {
-          "lib/netstandard2.0/GeekLearning.Storage.FileSystem.dll": {
-            "assemblyVersion": "0.8.0.0",
-            "fileVersion": "0.8.0.0"
-          }
-        }
-      },
-      "GeekLearning.Storage.FileSystem.Server/0.8.0": {
-        "dependencies": {
-          "GeekLearning.Storage.FileSystem": "0.8.0",
-          "Microsoft.AspNetCore.Http.Abstractions": "2.2.0",
-          "Microsoft.Extensions.Logging.Abstractions": "3.1.3",
-          "Microsoft.IdentityModel.Tokens": "5.1.4"
-        },
-        "runtime": {
-          "lib/netstandard2.0/GeekLearning.Storage.FileSystem.Server.dll": {
-            "assemblyVersion": "0.8.0.0",
-            "fileVersion": "0.8.0.0"
           }
         }
       },
@@ -942,44 +936,6 @@
           "lib/netcoreapp2.1/Microsoft.Identity.Client.dll": {
             "assemblyVersion": "3.0.8.0",
             "fileVersion": "3.0.8.0"
-          }
-        }
-      },
-      "Microsoft.IdentityModel.Logging/1.1.4": {
-        "dependencies": {
-          "System.Diagnostics.Tracing": "4.3.0",
-          "System.Globalization": "4.3.0",
-          "System.IO": "4.3.0",
-          "System.IO.FileSystem": "4.3.0"
-        },
-        "runtime": {
-          "lib/netstandard1.4/Microsoft.IdentityModel.Logging.dll": {
-            "assemblyVersion": "1.1.4.0",
-            "fileVersion": "1.1.4.216"
-          }
-        }
-      },
-      "Microsoft.IdentityModel.Tokens/5.1.4": {
-        "dependencies": {
-          "Microsoft.IdentityModel.Logging": "1.1.4",
-          "Newtonsoft.Json": "12.0.2",
-          "System.Collections": "4.3.0",
-          "System.Diagnostics.Tools": "4.3.0",
-          "System.Runtime": "4.3.0",
-          "System.Runtime.Extensions": "4.3.0",
-          "System.Runtime.InteropServices": "4.3.0",
-          "System.Runtime.InteropServices.RuntimeInformation": "4.3.0",
-          "System.Security.Claims": "4.3.0",
-          "System.Security.Cryptography.Algorithms": "4.3.0",
-          "System.Security.Cryptography.X509Certificates": "4.3.0",
-          "System.Text.RegularExpressions": "4.3.0",
-          "System.Threading": "4.3.0",
-          "System.Xml.ReaderWriter": "4.3.0"
-        },
-        "runtime": {
-          "lib/netstandard1.4/Microsoft.IdentityModel.Tokens.dll": {
-            "assemblyVersion": "5.1.4.0",
-            "fileVersion": "5.1.4.216"
           }
         }
       },
@@ -1793,6 +1749,7 @@
           "System.Threading.Tasks": "4.3.0"
         }
       },
+      "System.Numerics.Vectors/4.5.0": {},
       "System.ObjectModel/4.3.0": {
         "dependencies": {
           "System.Collections": "4.3.0",
@@ -1999,17 +1956,6 @@
           "System.Security.Principal.Windows": "4.7.0"
         }
       },
-      "System.Security.Claims/4.3.0": {
-        "dependencies": {
-          "System.Collections": "4.3.0",
-          "System.Globalization": "4.3.0",
-          "System.IO": "4.3.0",
-          "System.Resources.ResourceManager": "4.3.0",
-          "System.Runtime": "4.3.0",
-          "System.Runtime.Extensions": "4.3.0",
-          "System.Security.Principal": "4.3.0"
-        }
-      },
       "System.Security.Cryptography.Algorithms/4.3.0": {
         "dependencies": {
           "Microsoft.NETCore.Platforms": "3.1.0",
@@ -2152,11 +2098,6 @@
           "System.Windows.Extensions": "4.7.0"
         }
       },
-      "System.Security.Principal/4.3.0": {
-        "dependencies": {
-          "System.Runtime": "4.3.0"
-        }
-      },
       "System.Security.Principal.Windows/4.7.0": {},
       "System.Security.SecureString/4.3.0": {
         "dependencies": {
@@ -2218,7 +2159,6 @@
           "System.Runtime": "4.3.0"
         }
       },
-      "System.ValueTuple/4.4.0": {},
       "System.Windows.Extensions/4.7.0": {
         "dependencies": {
           "System.Drawing.Common": "4.7.0"
@@ -2327,11 +2267,21 @@
           }
         }
       },
+      "WindowsAzure.Storage/9.3.3": {
+        "dependencies": {
+          "NETStandard.Library": "1.6.1",
+          "Newtonsoft.Json": "12.0.2"
+        },
+        "runtime": {
+          "lib/netstandard1.3/Microsoft.WindowsAzure.Storage.dll": {
+            "assemblyVersion": "9.3.2.0",
+            "fileVersion": "9.3.2.0"
+          }
+        }
+      },
       "PluralsightASP.Core/1.0.0": {
         "dependencies": {
-          "GeekLearning.Storage": "0.8.0",
-          "GeekLearning.Storage.FileSystem": "0.8.0",
-          "GeekLearning.Storage.FileSystem.Server": "0.8.0",
+          "Azure.Storage.Blobs": "12.4.2",
           "LazZiya.ExpressLocalization": "4.0.0",
           "LazZiya.TagHelpers": "4.0.1",
           "LazZiya.TagHelpers.Localization": "1.3.0",
@@ -2344,6 +2294,7 @@
           "Microsoft.Extensions.Identity.Core": "3.1.3",
           "Pomelo.EntityFrameworkCore.MySql": "3.1.1",
           "System.Configuration.ConfigurationManager": "4.7.0",
+          "WindowsAzure.Storage": "9.3.3",
           "bootstrap": "4.4.1",
           "cloudscribe.FileManager.Web": "4.0.2"
         },
@@ -2358,6 +2309,27 @@
       "type": "project",
       "serviceable": false,
       "sha512": ""
+    },
+    "Azure.Core/1.2.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-U0zPuK0/ssiz0gvli1/sslqPKANZpCa7muDM3K4Vj6Pf6YKYNnpByQsnqFQTYafzr6cQ41mr1nM07I8jOm5UkA==",
+      "path": "azure.core/1.2.1",
+      "hashPath": "azure.core.1.2.1.nupkg.sha512"
+    },
+    "Azure.Storage.Blobs/12.4.2": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-fhUwOl4qXy23StKvBHDHV5ALM34SczEETRgJWDJHwPW3sZNIYAi3GTBXlWAYPm4SNKR1JgpZSYTbMHrNYCr1DQ==",
+      "path": "azure.storage.blobs/12.4.2",
+      "hashPath": "azure.storage.blobs.12.4.2.nupkg.sha512"
+    },
+    "Azure.Storage.Common/12.4.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-Q1/w9P9wJCKo+q2LF4pgZxNwgmqmArkxHjPW+Q1pugdc894T6HU4+3hmrFda1otS9CbAPhBLG98WOZ37jMPmFg==",
+      "path": "azure.storage.common/12.4.1",
+      "hashPath": "azure.storage.common.12.4.1.nupkg.sha512"
     },
     "bootstrap/4.4.1": {
       "type": "package",
@@ -2393,27 +2365,6 @@
       "sha512": "sha512-xvXkywUWsD3C59Ky48xw4hIXeyyN7LIpeaaeRPC3xc4D5u3i8EYv6M3rnjsl0cJLucs/lthLzWLoAAsitBapXQ==",
       "path": "cloudscribe.web.common/4.0.1",
       "hashPath": "cloudscribe.web.common.4.0.1.nupkg.sha512"
-    },
-    "GeekLearning.Storage/0.8.0": {
-      "type": "package",
-      "serviceable": true,
-      "sha512": "sha512-pfi18jbVe7gN4vCKqTENFtOW4RfzNjX1Ap5hB8x48+fn/nBtL0J44ai3bNbvtd+iYWySIpxGu7JE0kpwoCzcpA==",
-      "path": "geeklearning.storage/0.8.0",
-      "hashPath": "geeklearning.storage.0.8.0.nupkg.sha512"
-    },
-    "GeekLearning.Storage.FileSystem/0.8.0": {
-      "type": "package",
-      "serviceable": true,
-      "sha512": "sha512-FZbIRAQWTYtnvj/nTtS5TUpYEI9FlUPq5ceo3xno69mBgQUL76C8FwgbcU7Gwv7g0NcioY1dxIfKwpbsc3nUWQ==",
-      "path": "geeklearning.storage.filesystem/0.8.0",
-      "hashPath": "geeklearning.storage.filesystem.0.8.0.nupkg.sha512"
-    },
-    "GeekLearning.Storage.FileSystem.Server/0.8.0": {
-      "type": "package",
-      "serviceable": true,
-      "sha512": "sha512-7HzsOUIgbp6zAetXy5i2oPQpZ6XFIwlN47S0NdmXVNBTObDJYys6kjEW9PIMGIgt5isS+OCTG4HqbqLx3l+9ZQ==",
-      "path": "geeklearning.storage.filesystem.server/0.8.0",
-      "hashPath": "geeklearning.storage.filesystem.server.0.8.0.nupkg.sha512"
     },
     "jQuery/3.0.0": {
       "type": "package",
@@ -2890,20 +2841,6 @@
       "sha512": "sha512-9E1gXBRJta8+UXooYpJkp/8g6Cy4kFQl3iURduGhR7/vU8rGKTWEMJ3tUKOO2m1qzJOfaog/n89lyjdi7S56Rg==",
       "path": "microsoft.identity.client/3.0.8",
       "hashPath": "microsoft.identity.client.3.0.8.nupkg.sha512"
-    },
-    "Microsoft.IdentityModel.Logging/1.1.4": {
-      "type": "package",
-      "serviceable": true,
-      "sha512": "sha512-j7t22EsDOuo0IXqAbp6ijdB1GuaY8cu3YoPNZpymOhUMTVC+wRTV0IHqxL31HacCnJHU/igsqe70fDKZgZu3oA==",
-      "path": "microsoft.identitymodel.logging/1.1.4",
-      "hashPath": "microsoft.identitymodel.logging.1.1.4.nupkg.sha512"
-    },
-    "Microsoft.IdentityModel.Tokens/5.1.4": {
-      "type": "package",
-      "serviceable": true,
-      "sha512": "sha512-SsJbZVPvjSlKFDAQmR2wpL6ZD/vCFlIsf0jxRlBJwyzKXZy3Wi/Xo+fE2MzAerLsJgG1UCdtplRwqDyq1euayw==",
-      "path": "microsoft.identitymodel.tokens/5.1.4",
-      "hashPath": "microsoft.identitymodel.tokens.5.1.4.nupkg.sha512"
     },
     "Microsoft.Net.Http.Headers/2.2.0": {
       "type": "package",
@@ -3514,6 +3451,13 @@
       "path": "system.net.sockets/4.3.0",
       "hashPath": "system.net.sockets.4.3.0.nupkg.sha512"
     },
+    "System.Numerics.Vectors/4.5.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-QQTlPTl06J/iiDbJCiepZ4H//BVraReU4O4EoRw1U02H5TLUIT7xn3GnDp9AXPSlJUDyFs4uWjWafNX6WrAojQ==",
+      "path": "system.numerics.vectors/4.5.0",
+      "hashPath": "system.numerics.vectors.4.5.0.nupkg.sha512"
+    },
     "System.ObjectModel/4.3.0": {
       "type": "package",
       "serviceable": true,
@@ -3675,13 +3619,6 @@
       "path": "system.security.accesscontrol/4.7.0",
       "hashPath": "system.security.accesscontrol.4.7.0.nupkg.sha512"
     },
-    "System.Security.Claims/4.3.0": {
-      "type": "package",
-      "serviceable": true,
-      "sha512": "sha512-P/+BR/2lnc4PNDHt/TPBAWHVMLMRHsyYZbU1NphW4HIWzCggz8mJbTQQ3MKljFE7LS3WagmVFuBgoLcFzYXlkA==",
-      "path": "system.security.claims/4.3.0",
-      "hashPath": "system.security.claims.4.3.0.nupkg.sha512"
-    },
     "System.Security.Cryptography.Algorithms/4.3.0": {
       "type": "package",
       "serviceable": true,
@@ -3758,13 +3695,6 @@
       "sha512": "sha512-dkOV6YYVBnYRa15/yv004eCGRBVADXw8qRbbNiCn/XpdJSUXkkUeIvdvFHkvnko4CdKMqG8yRHC4ox83LSlMsQ==",
       "path": "system.security.permissions/4.7.0",
       "hashPath": "system.security.permissions.4.7.0.nupkg.sha512"
-    },
-    "System.Security.Principal/4.3.0": {
-      "type": "package",
-      "serviceable": true,
-      "sha512": "sha512-I1tkfQlAoMM2URscUtpcRo/hX0jinXx6a/KUtEQoz3owaYwl3qwsO8cbzYVVnjxrzxjHo3nJC+62uolgeGIS9A==",
-      "path": "system.security.principal/4.3.0",
-      "hashPath": "system.security.principal.4.3.0.nupkg.sha512"
     },
     "System.Security.Principal.Windows/4.7.0": {
       "type": "package",
@@ -3843,13 +3773,6 @@
       "path": "system.threading.timer/4.3.0",
       "hashPath": "system.threading.timer.4.3.0.nupkg.sha512"
     },
-    "System.ValueTuple/4.4.0": {
-      "type": "package",
-      "serviceable": true,
-      "sha512": "sha512-BahUww/+mdP4ARCAh2RQhQTg13wYLVrBb9SYVgW8ZlrwjraGCXHGjo0oIiUfZ34LUZkMMR+RAzR7dEY4S1HeQQ==",
-      "path": "system.valuetuple/4.4.0",
-      "hashPath": "system.valuetuple.4.4.0.nupkg.sha512"
-    },
     "System.Windows.Extensions/4.7.0": {
       "type": "package",
       "serviceable": true,
@@ -3898,6 +3821,13 @@
       "sha512": "sha512-A/uxsWi/Ifzkmd4ArTLISMbfFs6XpRPsXZonrIqyTY70xi8t+mDtvSM5Os0RqyRDobjMBwIDHDL4NOIbkDwf7A==",
       "path": "system.xml.xpath.xmldocument/4.3.0",
       "hashPath": "system.xml.xpath.xmldocument.4.3.0.nupkg.sha512"
+    },
+    "WindowsAzure.Storage/9.3.3": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-VUV8j6dzkU/7vDgk5k+ob5g7nnch2fNByr0p9aOxMGFGk+tAnTehrZ4qnClF04CVozP1GNN2zrnbsxCmr+iZBg==",
+      "path": "windowsazure.storage/9.3.3",
+      "hashPath": "windowsazure.storage.9.3.3.nupkg.sha512"
     },
     "PluralsightASP.Core/1.0.0": {
       "type": "project",

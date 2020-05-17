@@ -5,7 +5,9 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.ApiExplorer;
 using Microsoft.AspNetCore.Mvc.RazorPages;
+using Microsoft.WindowsAzure.Storage.Blob;
 using PluralsightASP.Core;
 
 namespace PluralsightASP.Areas.Identity.Pages.Account.Manage
@@ -14,13 +16,15 @@ namespace PluralsightASP.Areas.Identity.Pages.Account.Manage
     {
         private readonly UserManager<User> _userManager;
         private readonly SignInManager<User> _signInManager;
+        private readonly CloudBlobClient _client;
 
         public IndexModel(
             UserManager<User> userManager,
-            SignInManager<User> signInManager)
+            SignInManager<User> signInManager, CloudBlobClient client)
         {
             _userManager = userManager;
             _signInManager = signInManager;
+            _client = client;
         }
 
         
@@ -30,7 +34,7 @@ namespace PluralsightASP.Areas.Identity.Pages.Account.Manage
 
         [BindProperty]
         public InputModel Input { get; set; }
-
+        
         public class InputModel
         {
             [Display(Name = "Username")]
@@ -45,9 +49,7 @@ namespace PluralsightASP.Areas.Identity.Pages.Account.Manage
         {
             var userName = await _userManager.GetUserNameAsync(user);
             var phoneNumber = await _userManager.GetPhoneNumberAsync(user);
-
             
-
             Input = new InputModel
             {
                 Username = userName,
@@ -62,7 +64,6 @@ namespace PluralsightASP.Areas.Identity.Pages.Account.Manage
             {
                 return NotFound($"Unable to load user with ID '{_userManager.GetUserId(User)}'.");
             }
-
             await LoadAsync(user);
             return Page();
         }

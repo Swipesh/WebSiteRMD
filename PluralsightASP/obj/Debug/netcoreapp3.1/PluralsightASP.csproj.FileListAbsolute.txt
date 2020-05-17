@@ -254,11 +254,6 @@ C:/Users/mista/RiderProjects/PluralsightASP/PluralsightASP/obj/Debug/netcoreapp3
 /Users/swipe/RiderProjects/WebSiteRMD/PluralsightASP/bin/Debug/netcoreapp3.1/MailKit.dll
 /Users/swipe/RiderProjects/WebSiteRMD/PluralsightASP/bin/Debug/netcoreapp3.1/MimeKit.dll
 /Users/swipe/RiderProjects/WebSiteRMD/PluralsightASP/bin/Debug/netcoreapp3.1/BouncyCastle.Crypto.dll
-/Users/swipe/RiderProjects/WebSiteRMD/PluralsightASP/bin/Debug/netcoreapp3.1/GeekLearning.Storage.dll
-/Users/swipe/RiderProjects/WebSiteRMD/PluralsightASP/bin/Debug/netcoreapp3.1/GeekLearning.Storage.FileSystem.dll
-/Users/swipe/RiderProjects/WebSiteRMD/PluralsightASP/bin/Debug/netcoreapp3.1/GeekLearning.Storage.FileSystem.Server.dll
-/Users/swipe/RiderProjects/WebSiteRMD/PluralsightASP/bin/Debug/netcoreapp3.1/Microsoft.IdentityModel.Logging.dll
-/Users/swipe/RiderProjects/WebSiteRMD/PluralsightASP/bin/Debug/netcoreapp3.1/Microsoft.IdentityModel.Tokens.dll
 /Users/swipe/RiderProjects/WebSiteRMD/PluralsightASP/obj/Debug/netcoreapp3.1/Razor/Areas/Identity/Pages/Account/Manage/RolesManagement/Create.cshtml.g.cs
 /Users/swipe/RiderProjects/WebSiteRMD/PluralsightASP/obj/Debug/netcoreapp3.1/Razor/Areas/Identity/Pages/Account/Manage/RolesManagement/Delete.cshtml.g.cs
 /Users/swipe/RiderProjects/WebSiteRMD/PluralsightASP/obj/Debug/netcoreapp3.1/Razor/Areas/Identity/Pages/Account/Manage/RolesManagement/Details.cshtml.g.cs
@@ -311,3 +306,9 @@ C:/Users/mista/RiderProjects/PluralsightASP/PluralsightASP/obj/Debug/netcoreapp3
 /Users/swipe/RiderProjects/WebSiteRMD/PluralsightASP/obj/Debug/netcoreapp3.1/Razor/Areas/Science/Pages/_ViewImports.cshtml.g.cs
 /Users/swipe/RiderProjects/WebSiteRMD/PluralsightASP/obj/Debug/netcoreapp3.1/Razor/Areas/Science/Pages/_ViewStart.cshtml.g.cs
 /Users/swipe/RiderProjects/WebSiteRMD/PluralsightASP/obj/Debug/netcoreapp3.1/Razor/Areas/Education/Pages/Materials.cshtml.g.cs
+/Users/swipe/RiderProjects/WebSiteRMD/PluralsightASP/bin/Debug/netcoreapp3.1/Azure.Core.dll
+/Users/swipe/RiderProjects/WebSiteRMD/PluralsightASP/bin/Debug/netcoreapp3.1/Azure.Storage.Blobs.dll
+/Users/swipe/RiderProjects/WebSiteRMD/PluralsightASP/bin/Debug/netcoreapp3.1/Azure.Storage.Common.dll
+/Users/swipe/RiderProjects/WebSiteRMD/PluralsightASP/bin/Debug/netcoreapp3.1/Microsoft.WindowsAzure.Storage.dll
+/Users/swipe/RiderProjects/WebSiteRMD/PluralsightASP/obj/Debug/netcoreapp3.1/Razor/Areas/Identity/Pages/Account/Manage/Files.cshtml.g.cs
+/Users/swipe/RiderProjects/WebSiteRMD/PluralsightASP/obj/Debug/netcoreapp3.1/Razor/Areas/Identity/Pages/Account/Manage/UsersManagement/Files.cshtml.g.cs

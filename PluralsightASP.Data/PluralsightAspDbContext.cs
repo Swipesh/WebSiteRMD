@@ -22,6 +22,11 @@ namespace PluralsightASP.Data
         {
 
             base.OnModelCreating(builder);
+            builder.Entity<User>().Ignore(c => c.AccessFailedCount)
+                .Ignore(c=> c.LockoutEnabled)
+                .Ignore(c=>c.PhoneNumberConfirmed)
+                .Ignore(c=>c.TwoFactorEnabled);
+
         }
 
         /*

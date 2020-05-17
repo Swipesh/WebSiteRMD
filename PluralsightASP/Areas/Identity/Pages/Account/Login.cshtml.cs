@@ -13,6 +13,7 @@ using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.Extensions.Logging;
 using PluralsightASP.Core;
 using LazZiya.ExpressLocalization.DataAnnotations;
+using Microsoft.WindowsAzure.Storage.Blob;
 
 namespace PluralsightASP.Areas.Identity.Pages.Account
 {
@@ -20,14 +21,16 @@ namespace PluralsightASP.Areas.Identity.Pages.Account
     public class LoginModel : PageModel
     {
         private readonly UserManager<User> _userManager;
+        private readonly CloudBlobClient _client;
         private readonly SignInManager<User> _signInManager;
         private readonly ILogger<LoginModel> _logger;
 
         public LoginModel(SignInManager<User> signInManager, 
             ILogger<LoginModel> logger,
-            UserManager<User> userManager)
+            UserManager<User> userManager, CloudBlobClient client)
         {
             _userManager = userManager;
+            _client = client;
             _signInManager = signInManager;
             _logger = logger;
         }
@@ -88,6 +91,9 @@ namespace PluralsightASP.Areas.Identity.Pages.Account
                 if (result.Succeeded)
                 {
                     _logger.LogInformation("User logged in.");
+                    var user = await _userManager.FindByEmailAsync(Input.Email);
+                    var container = _client.GetContainerReference(user.Id);
+                    await container.CreateIfNotExistsAsync();
                     return LocalRedirect(returnUrl);
                 }
                 if (result.RequiresTwoFactor)
@@ -98,6 +104,12 @@ namespace PluralsightASP.Areas.Identity.Pages.Account
                 {
                     _logger.LogWarning("User account locked out.");
                     return RedirectToPage("./Lockout");
+                }
+
+                if (!(await _userManager.FindByEmailAsync(Input.Email)).EmailConfirmed)
+                {
+                    ModelState.AddModelError(string.Empty, "You need to confirm your email.");
+                    return Page();
                 }
                 else
                 {

@@ -14,6 +14,7 @@ using PluralsightASP.Core;
 using LazZiya.ExpressLocalization.DataAnnotations;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Identity.UI.V3.Pages.Internal.Account.Manage;
+using Microsoft.WindowsAzure.Storage.Blob;
 
 namespace PluralsightASP.Areas.Identity.Pages.Account
 {
@@ -25,18 +26,20 @@ namespace PluralsightASP.Areas.Identity.Pages.Account
         private readonly ILogger<RegisterModel> _logger;
         private readonly IEmailSender _emailSender;
         private readonly IWebHostEnvironment _environment;
+        private readonly CloudBlobClient _client;
 
         public RegisterModel(
             UserManager<User> userManager,
             SignInManager<User> signInManager,
             ILogger<RegisterModel> logger,
-            IEmailSender emailSender,IWebHostEnvironment environment)
+            IEmailSender emailSender,IWebHostEnvironment environment,CloudBlobClient client)
         {
             _userManager = userManager;
             _signInManager = signInManager;
             _logger = logger;
             _emailSender = emailSender;
             _environment = environment;
+            _client = client;
         }
 
         [BindProperty]
@@ -88,7 +91,9 @@ namespace PluralsightASP.Areas.Identity.Pages.Account
             {
                 var user = new User { UserName = Input.Email, Email = Input.Email ,FirstName = Input.FirstName,LastName =  Input.LastName};
                 var result = await _userManager.CreateAsync(user, Input.Password);
-                Directory.CreateDirectory(Path.Combine(_environment.WebRootPath, user.Id));
+                //Directory.CreateDirectory(Path.Combine(_environment.WebRootPath, user.Id));
+                var container = _client.GetContainerReference(user.Id);
+                await container.CreateIfNotExistsAsync();
                 if (result.Succeeded)
                 {
                     _logger.LogInformation("User created a new account with password.");

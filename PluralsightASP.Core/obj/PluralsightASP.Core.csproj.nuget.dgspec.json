@@ -36,17 +36,9 @@
       "frameworks": {
         "netcoreapp3.1": {
           "dependencies": {
-            "GeekLearning.Storage": {
+            "Azure.Storage.Blobs": {
               "target": "Package",
-              "version": "[0.8.0, )"
-            },
-            "GeekLearning.Storage.FileSystem": {
-              "target": "Package",
-              "version": "[0.8.0, )"
-            },
-            "GeekLearning.Storage.FileSystem.Server": {
-              "target": "Package",
-              "version": "[0.8.0, )"
+              "version": "[12.4.2, )"
             },
             "LazZiya.ExpressLocalization": {
               "target": "Package",
@@ -96,6 +88,10 @@
               "target": "Package",
               "version": "[4.7.0, )"
             },
+            "WindowsAzure.Storage": {
+              "target": "Package",
+              "version": "[9.3.3, )"
+            },
             "bootstrap": {
               "target": "Package",
               "version": "[4.4.1, )"
@@ -116,9 +112,6 @@
           "assetTargetFallback": true,
           "warn": true,
           "frameworkReferences": {
-            "Microsoft.AspNetCore.App": {
-              "privateAssets": "none"
-            },
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
             }

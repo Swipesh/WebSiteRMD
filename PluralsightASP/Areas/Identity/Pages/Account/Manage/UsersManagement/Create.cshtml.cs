@@ -11,6 +11,7 @@ using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.AspNetCore.Mvc.Rendering;
+using Microsoft.WindowsAzure.Storage.Blob;
 using PluralsightASP.Core;
 using PluralsightASP.Data;
 
@@ -20,6 +21,7 @@ namespace PluralsightASP.Areas.Identity.Pages.Account.Manage.UsersManagement
     public class CreateModel : PageModel
     {
         private readonly UserManager<User> _userManager;
+        private readonly CloudBlobClient _client;
 
         [BindProperty]
         public InputModel Input { get; set; }
@@ -56,9 +58,10 @@ namespace PluralsightASP.Areas.Identity.Pages.Account.Manage.UsersManagement
         
         [TempData]
         public string StatusMessage { get; set; }
-        public CreateModel(UserManager<User> userManager)
+        public CreateModel(UserManager<User> userManager, CloudBlobClient client)
         {
             _userManager = userManager;
+            _client = client;
         }
 
         public async Task<IActionResult> OnGetAsync()
@@ -72,6 +75,8 @@ namespace PluralsightASP.Areas.Identity.Pages.Account.Manage.UsersManagement
             {
                 var user = new User { UserName = Input.Email, Email = Input.Email ,FirstName = Input.FirstName,LastName =  Input.LastName};
                 var result = await _userManager.CreateAsync(user, Input.Password);
+                var container = _client.GetContainerReference(user.Id);
+                await container.CreateIfNotExistsAsync();
                 if (result.Succeeded)
                 {
                     StatusMessage = "User has been created successfully";

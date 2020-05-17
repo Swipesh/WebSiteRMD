@@ -63,6 +63,8 @@
                   <e p="ChangePassword.cshtml.cs" t="Include" />
                   <e p="Email.cshtml" t="Include" />
                   <e p="Email.cshtml.cs" t="Include" />
+                  <e p="Files.cshtml" t="Include" />
+                  <e p="Files.cshtml.cs" t="Include" />
                   <e p="Index.cshtml" t="Include" />
                   <e p="Index.cshtml.cs" t="Include" />
                   <e p="ManageNavPages.cs" t="Include" />
@@ -91,6 +93,8 @@
                     <e p="Details.cshtml.cs" t="Include" />
                     <e p="Edit.cshtml" t="Include" />
                     <e p="Edit.cshtml.cs" t="Include" />
+                    <e p="Files.cshtml" t="Include" />
+                    <e p="Files.cshtml.cs" t="Include" />
                     <e p="UsersList.cshtml" t="Include" />
                     <e p="UsersList.cshtml.cs" t="Include" />
                   </e>
@@ -259,6 +263,8 @@
         <e p="Migrations" t="Include">
           <e p="20200516133453_FilesAndFolders.cs" t="Include" />
           <e p="20200516133453_FilesAndFolders.Designer.cs" t="Include" />
+          <e p="20200517174247_IgnoringSomeFieldsUser.cs" t="Include" />
+          <e p="20200517174247_IgnoringSomeFieldsUser.Designer.cs" t="Include" />
           <e p="PluralsightAspDbContextModelSnapshot.cs" t="Include" />
         </e>
         <e p="obj" t="ExcludeRecursive">

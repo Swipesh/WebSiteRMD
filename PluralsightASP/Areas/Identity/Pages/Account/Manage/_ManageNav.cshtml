@@ -10,6 +10,9 @@
     <li class="nav-item">
         <a class="nav-link @ManageNavPages.ChangePasswordNavClass(ViewContext)" id="change-password" asp-area="Identity" asp-page="/Account/Manage/ChangePassword" localize-content>Password</a>
     </li>
+    <li class="nav-item">
+        <a class="nav-link @ManageNavPages.FilesNavClass(ViewContext)" id="change-password" asp-area="Identity" asp-page="/Account/Manage/Files" localize-content>Files</a>
+    </li>
     @if (User.IsInRole("admin"))
     {
         <li class="nav-item">
