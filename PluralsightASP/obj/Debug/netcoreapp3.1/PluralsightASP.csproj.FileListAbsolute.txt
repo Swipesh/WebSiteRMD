@@ -311,4 +311,4 @@ C:/Users/mista/RiderProjects/PluralsightASP/PluralsightASP/obj/Debug/netcoreapp3
 /Users/swipe/RiderProjects/WebSiteRMD/PluralsightASP/bin/Debug/netcoreapp3.1/Azure.Storage.Common.dll
 /Users/swipe/RiderProjects/WebSiteRMD/PluralsightASP/bin/Debug/netcoreapp3.1/Microsoft.WindowsAzure.Storage.dll
 /Users/swipe/RiderProjects/WebSiteRMD/PluralsightASP/obj/Debug/netcoreapp3.1/Razor/Areas/Identity/Pages/Account/Manage/Files.cshtml.g.cs
-/Users/swipe/RiderProjects/WebSiteRMD/PluralsightASP/obj/Debug/netcoreapp3.1/Razor/Areas/Identity/Pages/Account/Manage/UsersManagement/Files.cshtml.g.cs
+/Users/swipe/RiderProjects/WebSiteRMD/PluralsightASP/obj/Debug/netcoreapp3.1/Razor/Areas/Identity/Pages/Account/Manage/UsersManagement/UserFiles.cshtml.g.cs

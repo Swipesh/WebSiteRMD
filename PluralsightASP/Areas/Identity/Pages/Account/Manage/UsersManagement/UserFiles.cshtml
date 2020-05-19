@@ -1,16 +1,16 @@
-@page
-@model PluralsightASP.Areas.Identity.Pages.Account.Manage.UsersManagement.Files
+@page "{Id}"
+@model UserFiles
 
 @{
-
+    ViewData["Title"] = "User files";
+    ViewData["ActivePage"] = ManageNavPages.UsersManagement;
 }
 <div class="container">
-    <div class="card shadow w-50">
+    <div class="card shadow">
         <div class="card-header py-3">
             <p class="text-primary m-0 font-weight-bold" localize-content>@ViewData["Title"]</p>
         </div>
         <div class="card-body">
-            @*<input hidden="hidden" name="id" asp-for="Id"/>*@
             <ul>
                 @foreach (var item in Model.Blobs)
                 {
@@ -21,7 +21,15 @@
             </ul>
         </div>
     </div>
+
+    @*
+    <input hidden="hidden" name="id" value="@Model.Id"/>*@
+    <form method="post" enctype="multipart/form-data">
+        <input type="file" name="asset"/>
+        <input type="submit"/>
+    </form>
 </div>
+
 
 @section Scripts {
     <partial name="_ValidationScriptsPartial" />

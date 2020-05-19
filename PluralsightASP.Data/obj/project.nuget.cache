@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "iK9Ul7gRS6QUcr/RDcc3bGePgJH76wrehiDZYU4BIJ6zhJWJ705ooKSdjsp7WBDlrWhJpQMhQWaf7NU35BeecA==",
+  "dgSpecHash": "9PUjTDRs4xtvCbsG7ElbWXOBq/JPyzlB636KjC9IURg/Ul2TJq5qs9PU2qswdIFYnpukSPOa78EhZU2HoKMGVg==",
   "success": true,
   "projectFilePath": "/Users/swipe/RiderProjects/WebSiteRMD/PluralsightASP.Data/PluralsightASP.Data.csproj",
   "expectedPackageFiles": [
@@ -12,6 +12,7 @@
     "/Users/swipe/.nuget/packages/cloudscribe.htmlagilitypack/1.0.1/cloudscribe.htmlagilitypack.1.0.1.nupkg.sha512",
     "/Users/swipe/.nuget/packages/cloudscribe.versioning/1.0.0/cloudscribe.versioning.1.0.0.nupkg.sha512",
     "/Users/swipe/.nuget/packages/cloudscribe.web.common/4.0.1/cloudscribe.web.common.4.0.1.nupkg.sha512",
+    "/Users/swipe/.nuget/packages/dropzone/4.3.0/dropzone.4.3.0.nupkg.sha512",
     "/Users/swipe/.nuget/packages/jquery/3.0.0/jquery.3.0.0.nupkg.sha512",
     "/Users/swipe/.nuget/packages/lazziya.expresslocalization/4.0.0/lazziya.expresslocalization.4.0.0.nupkg.sha512",
     "/Users/swipe/.nuget/packages/lazziya.taghelpers/4.0.1/lazziya.taghelpers.4.0.1.nupkg.sha512",

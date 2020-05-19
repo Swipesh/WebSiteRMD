@@ -16,14 +16,14 @@ namespace PluralsightASP.Pages
     {
         private readonly ILogger<IndexModel> _logger;
 
-        public IndexModel(ILogger<IndexModel> logger)
+        public IndexModel(ILogger<IndexModel> logger,RoleManager<IdentityRole> roleManager, UserManager<User> userManager)
         {
             _logger = logger;
         }
 
         public void OnGet()
         {
-           
+            
         }
         
         public IActionResult OnGetSetCultureCookie(string cltr, string returnUrl)

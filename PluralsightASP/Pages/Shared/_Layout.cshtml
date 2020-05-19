@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
-    <title>Home - Brand</title>
+    <title localize-content>Modelling Laboratory</title>
     <link rel="stylesheet" href="~/assets/bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i">
     <link rel="stylesheet" href="~/assets/fonts/fontawesome-all.min.css">
@@ -111,29 +111,12 @@
     </div>
 </footer>
 
-@* *@
-@* <script src="~/assets/js/jquery.min.js"></script> *@
-@* <script src="~/assets/bootstrap/js/bootstrap.min.js"></script> *@
-@* <script src="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.10.0/baguetteBox.min.js"></script> *@
-@*<script src="~/assets/js/smoothproducts.min.js"></script>
-<script src="~/assets/js/theme.js"></script>*@
 <script src="~/assets/js/jquery.min.js"></script>
 <script src="~/assets/bootstrap/js/bootstrap.min.js"></script>
 <script src="~/assets/js/chart.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.js"></script>
 <script src="~/assets/js/script.min.js"></script>
-@*<script>$(".dropdown-toggle").on("mouseenter", function () {
-            // make sure it is not shown:
-            if (!$(this).parent().hasClass("show")) {
-                $(this).click();
-            }
-        });
-        $(".btn-group, .dropdown").on("mouseleave", function () {
-            // make sure it is shown:
-            if ($(this).hasClass("show")){
-                $(this).children('.dropdown-toggle').first().click();
-            }
-        });</script>*@
+
 @RenderSection("Scripts", required: false)
 </body>
 </html>

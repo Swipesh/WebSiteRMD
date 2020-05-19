@@ -8,6 +8,7 @@
       <PackageReference Include="Azure.Storage.Blobs" Version="12.4.2" />
       <PackageReference Include="bootstrap" Version="4.4.1" />
       <PackageReference Include="cloudscribe.FileManager.Web" Version="4.0.2" />
+      <PackageReference Include="dropzone" Version="4.3.0" />
       <PackageReference Include="LazZiya.ExpressLocalization" Version="4.0.0" />
       <PackageReference Include="LazZiya.TagHelpers" Version="4.0.1" />
       <PackageReference Include="LazZiya.TagHelpers.Localization" Version="1.3.0" />
@@ -77,6 +78,12 @@
       <_ContentIncludedByDefault Remove="Pages\Account\Files.cshtml" />
       <_ContentIncludedByDefault Remove="Pages\Account\FileUpload.cshtml" />
       <_ContentIncludedByDefault Remove="Pages\Account\GetFile.cshtml" />
+      <_ContentIncludedByDefault Remove="wwwroot\478939c6-e9a9-40d5-9821-46e17a90c78a\favicon.ico" />
+      <_ContentIncludedByDefault Remove="wwwroot\478939c6-e9a9-40d5-9821-46e17a90c78a\favicon — копия 2.ico" />
+      <_ContentIncludedByDefault Remove="wwwroot\478939c6-e9a9-40d5-9821-46e17a90c78a\favicon — копия 3.ico" />
+      <_ContentIncludedByDefault Remove="wwwroot\478939c6-e9a9-40d5-9821-46e17a90c78a\favicon — копия 4.ico" />
+      <_ContentIncludedByDefault Remove="wwwroot\478939c6-e9a9-40d5-9821-46e17a90c78a\favicon — копия 5.ico" />
+      <_ContentIncludedByDefault Remove="wwwroot\478939c6-e9a9-40d5-9821-46e17a90c78a\favicon — копия.ico" />
     </ItemGroup>
 
     <ItemGroup>
@@ -162,7 +169,15 @@
         <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
         <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       </Content>
-      <Content Update="Areas\Identity\Pages\Account\Manage\UsersManagement\Files.cshtml">
+      <Content Update="Areas\Identity\Pages\Account\Manage\UsersManagement\UserFiles.cshtml">
+        <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+        <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      </Content>
+      <Content Update="wwwroot\assets\js\dropzone.js">
+        <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+        <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      </Content>
+      <Content Update="wwwroot\assets\css\dropzone.css">
         <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
         <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       </Content>

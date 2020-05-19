@@ -18,6 +18,8 @@ namespace PluralsightASP.Areas.Identity.Pages.Account.Manage
         private readonly UserManager<User> _userManager;
 
         public List<string> Blobs { get; set; }
+        [TempData]
+        public string StatusMessage { get; set; }
 
         public Files(CloudBlobClient client, UserManager<User> userManager)
         {
@@ -86,14 +88,23 @@ namespace PluralsightASP.Areas.Identity.Pages.Account.Manage
 
         public async Task<IActionResult> OnPostAsync(IFormFile asset)
         {
+            if (asset == null)
+            {
+                StatusMessage = "Nothing to upload";
+                return RedirectToPage();
+            }
+
             var user = await _userManager.GetUserAsync(User);
-
-            var container = _client.GetContainerReference(user.Id);
-
-            var blockBlob = container.GetBlockBlobReference(asset.FileName);
-
-            await blockBlob.UploadFromStreamAsync(asset.OpenReadStream());
-
+            if (user != null)
+            {
+                var container = _client.GetContainerReference(user.Id);
+                if (await container.ExistsAsync())
+                {
+                    var blockBlob = container.GetBlockBlobReference(asset.FileName);
+                    await blockBlob.UploadFromStreamAsync(asset.OpenReadStream());
+                }
+            }
+            
             return RedirectToPage();
         }
     }

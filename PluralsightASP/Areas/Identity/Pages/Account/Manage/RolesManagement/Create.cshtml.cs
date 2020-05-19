@@ -1,6 +1,7 @@
 using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
@@ -8,7 +9,7 @@ using PluralsightASP.Core;
 
 namespace PluralsightASP.Areas.Identity.Pages.Account.Manage.RolesManagement
 {
-    /*[Authorize(Roles = "admin")]*/
+    [Authorize(Roles = "admin")]
     public class CreateModel : PageModel
     {
         private readonly UserManager<User> _userManager;

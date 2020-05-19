@@ -3,6 +3,7 @@ using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Threading.Tasks;
 using LazZiya.ExpressLocalization.DataAnnotations;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
@@ -11,11 +12,13 @@ using PluralsightASP.Core;
 
 namespace PluralsightASP.Areas.Identity.Pages.Account.Manage.UsersManagement
 {
+    [Authorize(Roles = "admin")]
     public class EditModel : PageModel
     {
         private readonly UserManager<User> _userManager;
         private readonly RoleManager<IdentityRole> _roleManager;
         private readonly SignInManager<User> _signInManager;
+
 
         public EditModel(UserManager<User> userManager, RoleManager<IdentityRole> roleManager,
             SignInManager<User> signInManager)
@@ -39,7 +42,7 @@ namespace PluralsightASP.Areas.Identity.Pages.Account.Manage.UsersManagement
 
             [ExRequired]
             [DataType(DataType.Text)]
-            [ExStringLength(100,MinimumLength = 2)]
+            [ExStringLength(100, MinimumLength = 2)]
             [Display(Name = "First Name")]
             public string FirstName { get; set; }
 
@@ -49,7 +52,7 @@ namespace PluralsightASP.Areas.Identity.Pages.Account.Manage.UsersManagement
             [Display(Name = "Last Name")]
             public string LastName { get; set; }
 
-            [DataType(DataType.PhoneNumber)] 
+            [DataType(DataType.PhoneNumber)]
             [Display(Name = "Phone Number")]
             public string PhoneNumber { get; set; }
 

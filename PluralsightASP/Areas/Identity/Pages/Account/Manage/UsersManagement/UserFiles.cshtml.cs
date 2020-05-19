@@ -1,40 +1,44 @@
 using System.Collections.Generic;
 using System.IO;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
+using Microsoft.AspNetCore.Routing;
 using Microsoft.WindowsAzure.Storage.Blob;
 using PluralsightASP.Core;
 
 namespace PluralsightASP.Areas.Identity.Pages.Account.Manage.UsersManagement
 {
-    public class Files : PageModel
+    [Authorize(Roles = "admin")]
+    public class UserFiles : PageModel
     {
         private readonly CloudBlobClient _client;
         private readonly UserManager<User> _userManager;
 
         public List<string> Blobs { get; set; }
 
-        public string Id;
 
-        public Files(CloudBlobClient client, UserManager<User> userManager)
+        public string Id { get; set; }
+        [TempData] public string StatusMessage { get; set; }
+
+        public UserFiles(CloudBlobClient client, UserManager<User> userManager)
         {
-            Id = "";
             _client = client;
             _userManager = userManager;
             Blobs = new List<string>();
-            
         }
 
-        public async Task<IActionResult> OnGetAsync(string id)
+        public async Task<IActionResult> OnGet(string id)
         {
             Id = id;
-            var user = await _userManager.FindByIdAsync(id);
-            var container = _client.GetContainerReference(user.Id);
+            var container = _client.GetContainerReference(id);
 
-            
+            if (!await container.ExistsAsync())
+                return Content("Container does not exist");
+
             foreach (IListBlobItem item in container.ListBlobsSegmentedAsync(null, new BlobContinuationToken())
                 .GetAwaiter().GetResult().Results)
             {
@@ -57,47 +61,50 @@ namespace PluralsightASP.Areas.Identity.Pages.Account.Manage.UsersManagement
 
             return Page();
         }
-        
+
         public async Task<IActionResult> OnGetDownloadFileAsync(string id, string fileName)
         {
+            Id = id;
             var user = await _userManager.FindByIdAsync(id);
             var ms = new MemoryStream();
 
 
             var container = _client.GetContainerReference(user.Id);
 
-            if (await container.ExistsAsync())
-            {
-                var file = container.GetBlobReference(fileName);
-
-                if (await file.ExistsAsync())
-                {
-                    await file.DownloadToStreamAsync(ms);
-                    Stream blobStream = file.OpenReadAsync().Result;
-                    return File(blobStream, file.Properties.ContentType, file.Name);
-                }
-                else
-                {
-                    return Content("File does not exist");
-                }
-            }
-            else
-            {
+            if (!await container.ExistsAsync())
                 return Content("Container does not exist");
-            }
+
+
+            var file = container.GetBlobReference(fileName);
+
+            if (!await file.ExistsAsync())
+                return Content("File does not exist");
+
+            await file.DownloadToStreamAsync(ms);
+            Stream blobStream = file.OpenReadAsync().Result;
+            return File(blobStream, file.Properties.ContentType, file.Name);
         }
 
-        public async Task<IActionResult> OnPostAsync(IFormFile asset)
+        public async Task<IActionResult> OnPostAsync(string id, IFormFile asset)
         {
-            var user = await _userManager.GetUserAsync(User);
+            Id = id;
+            if (asset == null)
+            {
+                StatusMessage = "Nothing to upload";
+                return RedirectToPage();
+            }
 
+            var user = await _userManager.FindByIdAsync(id);
+            if (user == null)
+                return RedirectToPage();
             var container = _client.GetContainerReference(user.Id);
+            if (!await container.ExistsAsync())
+                return RedirectToPage();
 
             var blockBlob = container.GetBlockBlobReference(asset.FileName);
-
             await blockBlob.UploadFromStreamAsync(asset.OpenReadStream());
 
-            return Page();
+            return RedirectToPage();
         }
     }
 }

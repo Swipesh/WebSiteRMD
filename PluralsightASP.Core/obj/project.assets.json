@@ -131,6 +131,9 @@
           "Microsoft.AspNetCore.App"
         ]
       },
+      "dropzone/4.3.0": {
+        "type": "package"
+      },
       "jQuery/3.0.0": {
         "type": "package"
       },
@@ -3332,6 +3335,25 @@
         "icon.png",
         "lib/netcoreapp3.0/cloudscribe.Web.Common.Views.dll",
         "lib/netcoreapp3.0/cloudscribe.Web.Common.dll"
+      ]
+    },
+    "dropzone/4.3.0": {
+      "sha512": "erwoK0GJ+gDfphtbBOjUkdoe/MBDbTVwd2DvvgNdULgJmZvOHrnbZQJH6GnbMXf9wa463sASZG102ZYbSw+e/Q==",
+      "type": "package",
+      "path": "dropzone/4.3.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "content/Scripts/dropzone/basic.css",
+        "content/Scripts/dropzone/basic.min.css",
+        "content/Scripts/dropzone/dropzone-amd-module.js",
+        "content/Scripts/dropzone/dropzone-amd-module.min.js",
+        "content/Scripts/dropzone/dropzone.css",
+        "content/Scripts/dropzone/dropzone.js",
+        "content/Scripts/dropzone/dropzone.min.css",
+        "content/Scripts/dropzone/dropzone.min.js",
+        "dropzone.4.3.0.nupkg.sha512",
+        "dropzone.nuspec"
       ]
     },
     "jQuery/3.0.0": {
@@ -9827,7 +9849,8 @@
       "System.Configuration.ConfigurationManager >= 4.7.0",
       "WindowsAzure.Storage >= 9.3.3",
       "bootstrap >= 4.4.1",
-      "cloudscribe.FileManager.Web >= 4.0.2"
+      "cloudscribe.FileManager.Web >= 4.0.2",
+      "dropzone >= 4.3.0"
     ]
   },
   "packageFolders": {
@@ -9928,6 +9951,10 @@
           "cloudscribe.FileManager.Web": {
             "target": "Package",
             "version": "[4.0.2, )"
+          },
+          "dropzone": {
+            "target": "Package",
+            "version": "[4.3.0, )"
           }
         },
         "imports": [
@@ -9941,6 +9968,9 @@
         "assetTargetFallback": true,
         "warn": true,
         "frameworkReferences": {
+          "Microsoft.AspNetCore.App": {
+            "privateAssets": "none"
+          },
           "Microsoft.NETCore.App": {
             "privateAssets": "all"
           }

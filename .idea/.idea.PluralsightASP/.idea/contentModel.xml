@@ -93,8 +93,8 @@
                     <e p="Details.cshtml.cs" t="Include" />
                     <e p="Edit.cshtml" t="Include" />
                     <e p="Edit.cshtml.cs" t="Include" />
-                    <e p="Files.cshtml" t="Include" />
-                    <e p="Files.cshtml.cs" t="Include" />
+                    <e p="UserFiles.cshtml" t="Include" />
+                    <e p="UserFiles.cshtml.cs" t="Include" />
                     <e p="UsersList.cshtml" t="Include" />
                     <e p="UsersList.cshtml.cs" t="Include" />
                   </e>
@@ -178,14 +178,6 @@
         <e p="ScaffoldingReadMe.txt" t="Include" />
         <e p="Startup.cs" t="Include" />
         <e p="wwwroot" t="Include">
-          <e p="478939c6-e9a9-40d5-9821-46e17a90c78a" t="Include">
-            <e p="favicon.ico" t="Include" />
-            <e p="favicon — копия 2.ico" t="Include" />
-            <e p="favicon — копия 3.ico" t="Include" />
-            <e p="favicon — копия 4.ico" t="Include" />
-            <e p="favicon — копия 5.ico" t="Include" />
-            <e p="favicon — копия.ico" t="Include" />
-          </e>
           <e p="assets" t="Include">
             <e p="bootstrap" t="Include">
               <e p="css" t="Include">
@@ -196,6 +188,7 @@
               </e>
             </e>
             <e p="css" t="Include">
+              <e p="dropzone.css" t="Include" />
               <e p="smoothproducts.css" t="Include" />
             </e>
             <e p="fonts" t="Include">
@@ -229,17 +222,13 @@
               </e>
             </e>
             <e p="js" t="Include">
+              <e p="dropzone.js" t="Include" />
               <e p="jquery.min.js" t="Include" />
               <e p="smoothproducts.min.js" t="Include" />
               <e p="theme.js" t="Include" />
             </e>
           </e>
           <e p="favicon.ico" t="Include" />
-          <e p="images" t="Include">
-            <e p="[rutor.is]Big.Little.Lies.S02.WEBRip.1080p.torrent" t="Include" />
-            <e p="favicon.ico" t="Include" />
-            <e p="Снимок экрана 2020-05-11 в 16.04.07.png" t="Include" />
-          </e>
           <e p="LocalAssets" t="Include">
             <e p="test.txt" t="Include" />
           </e>

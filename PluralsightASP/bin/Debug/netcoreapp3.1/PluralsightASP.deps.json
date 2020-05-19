@@ -43,6 +43,7 @@
           "WindowsAzure.Storage": "9.3.3",
           "bootstrap": "4.4.1",
           "cloudscribe.FileManager.Web": "4.0.2",
+          "dropzone": "4.3.0",
           "Microsoft.AspNetCore.Antiforgery": "3.1.0.0",
           "Microsoft.AspNetCore.Authentication.Abstractions.Reference": "3.1.0.0",
           "Microsoft.AspNetCore.Authentication.Cookies.Reference": "3.1.0.0",
@@ -454,6 +455,7 @@
           "lib/netcoreapp3.0/cloudscribe.Web.Common.dll": {}
         }
       },
+      "dropzone/4.3.0": {},
       "jQuery/3.0.0": {},
       "LazZiya.ExpressLocalization/4.0.0": {
         "runtime": {
@@ -2935,7 +2937,8 @@
           "System.Configuration.ConfigurationManager": "4.7.0",
           "WindowsAzure.Storage": "9.3.3",
           "bootstrap": "4.4.1",
-          "cloudscribe.FileManager.Web": "4.0.2"
+          "cloudscribe.FileManager.Web": "4.0.2",
+          "dropzone": "4.3.0"
         },
         "runtime": {
           "PluralsightASP.Core.dll": {}
@@ -2964,7 +2967,8 @@
           "System.Configuration.ConfigurationManager": "4.7.0",
           "WindowsAzure.Storage": "9.3.3",
           "bootstrap": "4.4.1",
-          "cloudscribe.FileManager.Web": "4.0.2"
+          "cloudscribe.FileManager.Web": "4.0.2",
+          "dropzone": "4.3.0"
         },
         "runtime": {
           "PluralsightASP.Data.dll": {}
@@ -4572,6 +4576,13 @@
       "sha512": "sha512-xvXkywUWsD3C59Ky48xw4hIXeyyN7LIpeaaeRPC3xc4D5u3i8EYv6M3rnjsl0cJLucs/lthLzWLoAAsitBapXQ==",
       "path": "cloudscribe.web.common/4.0.1",
       "hashPath": "cloudscribe.web.common.4.0.1.nupkg.sha512"
+    },
+    "dropzone/4.3.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-erwoK0GJ+gDfphtbBOjUkdoe/MBDbTVwd2DvvgNdULgJmZvOHrnbZQJH6GnbMXf9wa463sASZG102ZYbSw+e/Q==",
+      "path": "dropzone/4.3.0",
+      "hashPath": "dropzone.4.3.0.nupkg.sha512"
     },
     "jQuery/3.0.0": {
       "type": "package",
