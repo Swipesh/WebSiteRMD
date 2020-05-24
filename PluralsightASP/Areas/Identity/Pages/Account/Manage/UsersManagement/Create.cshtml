@@ -1,13 +1,14 @@
-@page
+@page "/Users/Create"
 @model CreateModel
 
 @{
     ViewData["Title"] = "Create new user";
     ViewData["ActivePage"] = ManageNavPages.UsersManagement;
+    var culture = CultureInfo.CurrentCulture.Name;
 }
 
 
-<partial name="_StatusMessage" model="Model.StatusMessage"/>
+<partial name="_StatusMessage" model="Model.StatusMessage" xmlns="http://www.w3.org/1999/html"/>
 <div class="container">
 <div class="card shadow" style="max-width: 24rem">
         <div class="card-header py-3">
@@ -42,8 +43,8 @@
                     <span asp-validation-for="Input.ConfirmPassword" class="text-danger"></span>
                 </div>
                 <div class="form-group">
-                    <input type="submit" localize-content value="Create" class="btn btn-success"/> |
-                    <a asp-page="UsersList" class="btn btn-primary" localize-content>Back to List</a>
+                    <input type="submit" localize-content class="btn btn-success" content="Create"/>
+                    <a asp-page="UsersList" class="btn btn-outline-secondary" asp-route-culture="@culture" localize-content>Back to List</a>
                 </div>
             </form>
         </div>

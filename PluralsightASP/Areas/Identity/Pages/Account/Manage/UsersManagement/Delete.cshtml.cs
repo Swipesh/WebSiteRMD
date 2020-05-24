@@ -3,6 +3,7 @@ using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
+using Microsoft.WindowsAzure.Storage.Blob;
 using PluralsightASP.Core;
 
 namespace PluralsightASP.Areas.Identity.Pages.Account.Manage.UsersManagement
@@ -11,10 +12,12 @@ namespace PluralsightASP.Areas.Identity.Pages.Account.Manage.UsersManagement
     public class DeleteModel : PageModel
     {
         private readonly UserManager<User> _userManager;
+        private readonly CloudBlobClient _client;
 
-        public DeleteModel(UserManager<User> userManager)
+        public DeleteModel(UserManager<User> userManager, CloudBlobClient client)
         {
             _userManager = userManager;
+            _client = client;
         }
 
         [BindProperty]
@@ -47,9 +50,11 @@ namespace PluralsightASP.Areas.Identity.Pages.Account.Manage.UsersManagement
 
             User = await _userManager.FindByIdAsync(id);
 
-            if (User != null)
+            if (User != null && User!=await _userManager.GetUserAsync(HttpContext.User))
             {
                 await _userManager.DeleteAsync(User);
+                var container = _client.GetContainerReference(User.Id);
+                await container.DeleteIfExistsAsync();
                 StatusMessage = "User has been deleted successfully";
             }
 

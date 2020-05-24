@@ -50,7 +50,13 @@ namespace PluralsightASP.Areas.Identity.Pages.Account
             var user = await _userManager.FindByEmailAsync(Input.Email);
             if (user == null)
             {
-                ModelState.AddModelError(string.Empty, "Verification email sent. Please check your email.");
+                ModelState.AddModelError(string.Empty, "User does not exist.");
+                return Page();
+            }
+
+            if (user.EmailConfirmed)
+            {
+                ModelState.AddModelError(string.Empty, "Email is already confirmed.");
                 return Page();
             }
 

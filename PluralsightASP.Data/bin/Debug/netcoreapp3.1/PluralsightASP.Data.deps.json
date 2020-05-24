@@ -28,7 +28,6 @@
           "System.Configuration.ConfigurationManager": "4.7.0",
           "WindowsAzure.Storage": "9.3.3",
           "bootstrap": "4.4.1",
-          "cloudscribe.FileManager.Web": "4.0.2",
           "dropzone": "4.3.0"
         },
         "runtime": {
@@ -78,80 +77,6 @@
         "dependencies": {
           "jQuery": "3.0.0",
           "popper.js": "1.16.0"
-        }
-      },
-      "cloudscribe.FileManager.Web/4.0.2": {
-        "dependencies": {
-          "Microsoft.Extensions.Caching.Abstractions": "3.1.3",
-          "Microsoft.Extensions.Configuration.Abstractions": "3.1.3",
-          "Microsoft.Extensions.DependencyInjection.Abstractions": "3.1.3",
-          "Microsoft.Extensions.FileProviders.Embedded": "3.1.3",
-          "Microsoft.Extensions.Localization": "3.0.0",
-          "Microsoft.Extensions.Options.ConfigurationExtensions": "3.0.0",
-          "SixLabors.ImageSharp": "1.0.0-beta0004",
-          "SixLabors.ImageSharp.Drawing": "1.0.0-beta0004",
-          "cloudscribe.Web.Common": "4.0.1"
-        },
-        "runtime": {
-          "lib/netcoreapp3.0/cloudscribe.FileManager.Web.Views.dll": {
-            "assemblyVersion": "4.0.2.0",
-            "fileVersion": "4.0.2.0"
-          },
-          "lib/netcoreapp3.0/cloudscribe.FileManager.Web.dll": {
-            "assemblyVersion": "4.0.2.0",
-            "fileVersion": "4.0.2.0"
-          }
-        }
-      },
-      "cloudscribe.HtmlAgilityPack/1.0.1": {
-        "dependencies": {
-          "NETStandard.Library": "1.6.1",
-          "System.Diagnostics.TraceSource": "4.3.0",
-          "System.Xml.XPath": "4.3.0",
-          "System.Xml.XPath.XmlDocument": "4.3.0",
-          "System.Xml.XmlDocument": "4.3.0"
-        },
-        "runtime": {
-          "lib/netstandard1.6/cloudscribe.HtmlAgilityPack.dll": {
-            "assemblyVersion": "1.0.1.0",
-            "fileVersion": "1.0.1.0"
-          }
-        }
-      },
-      "cloudscribe.Versioning/1.0.0": {
-        "dependencies": {
-          "Microsoft.Extensions.Logging.Abstractions": "3.1.3"
-        },
-        "runtime": {
-          "lib/netstandard2.0/cloudscribe.Versioning.dll": {
-            "assemblyVersion": "1.0.0.0",
-            "fileVersion": "1.0.0.0"
-          }
-        }
-      },
-      "cloudscribe.Web.Common/4.0.1": {
-        "dependencies": {
-          "Microsoft.Extensions.FileProviders.Embedded": "3.1.3",
-          "Microsoft.Extensions.FileProviders.Physical": "3.0.0",
-          "Microsoft.Extensions.Http": "3.0.0",
-          "Microsoft.Extensions.Localization": "3.0.0",
-          "Microsoft.Extensions.Logging.Abstractions": "3.1.3",
-          "Microsoft.Extensions.Options": "3.1.3",
-          "Microsoft.Extensions.Options.ConfigurationExtensions": "3.0.0",
-          "Newtonsoft.Json": "12.0.2",
-          "System.Text.Encodings.Web": "4.5.0",
-          "cloudscribe.HtmlAgilityPack": "1.0.1",
-          "cloudscribe.Versioning": "1.0.0"
-        },
-        "runtime": {
-          "lib/netcoreapp3.0/cloudscribe.Web.Common.Views.dll": {
-            "assemblyVersion": "4.0.1.0",
-            "fileVersion": "4.0.1.0"
-          },
-          "lib/netcoreapp3.0/cloudscribe.Web.Common.dll": {
-            "assemblyVersion": "4.0.1.0",
-            "fileVersion": "4.0.1.0"
-          }
         }
       },
       "dropzone/4.3.0": {},
@@ -808,26 +733,12 @@
           }
         }
       },
-      "Microsoft.Extensions.FileProviders.Physical/3.0.0": {
-        "dependencies": {
-          "Microsoft.Extensions.FileProviders.Abstractions": "3.1.3",
-          "Microsoft.Extensions.FileSystemGlobbing": "3.0.0"
-        }
-      },
-      "Microsoft.Extensions.FileSystemGlobbing/3.0.0": {},
       "Microsoft.Extensions.Hosting.Abstractions/2.2.0": {
         "dependencies": {
           "Microsoft.Extensions.Configuration.Abstractions": "3.1.3",
           "Microsoft.Extensions.DependencyInjection.Abstractions": "3.1.3",
           "Microsoft.Extensions.FileProviders.Abstractions": "3.1.3",
           "Microsoft.Extensions.Logging.Abstractions": "3.1.3"
-        }
-      },
-      "Microsoft.Extensions.Http/3.0.0": {
-        "dependencies": {
-          "Microsoft.Extensions.DependencyInjection.Abstractions": "3.1.3",
-          "Microsoft.Extensions.Logging": "3.1.3",
-          "Microsoft.Extensions.Options": "3.1.3"
         }
       },
       "Microsoft.Extensions.Identity.Core/3.1.3": {
@@ -856,15 +767,6 @@
           }
         }
       },
-      "Microsoft.Extensions.Localization/3.0.0": {
-        "dependencies": {
-          "Microsoft.Extensions.DependencyInjection.Abstractions": "3.1.3",
-          "Microsoft.Extensions.Localization.Abstractions": "3.0.0",
-          "Microsoft.Extensions.Logging.Abstractions": "3.1.3",
-          "Microsoft.Extensions.Options": "3.1.3"
-        }
-      },
-      "Microsoft.Extensions.Localization.Abstractions/3.0.0": {},
       "Microsoft.Extensions.Logging/3.1.3": {
         "dependencies": {
           "Microsoft.Extensions.Configuration.Binder": "3.1.3",
@@ -898,14 +800,6 @@
             "assemblyVersion": "3.1.3.0",
             "fileVersion": "3.100.320.12802"
           }
-        }
-      },
-      "Microsoft.Extensions.Options.ConfigurationExtensions/3.0.0": {
-        "dependencies": {
-          "Microsoft.Extensions.Configuration.Abstractions": "3.1.3",
-          "Microsoft.Extensions.Configuration.Binder": "3.1.3",
-          "Microsoft.Extensions.DependencyInjection.Abstractions": "3.1.3",
-          "Microsoft.Extensions.Options": "3.1.3"
         }
       },
       "Microsoft.Extensions.Primitives/3.1.3": {
@@ -1248,78 +1142,6 @@
           }
         }
       },
-      "SixLabors.Core/1.0.0-beta0005": {
-        "runtime": {
-          "lib/netcoreapp2.0/SixLabors.Core.dll": {
-            "assemblyVersion": "0.1.0.0",
-            "fileVersion": "0.1.0.0"
-          }
-        }
-      },
-      "SixLabors.Fonts/1.0.0-beta0005": {
-        "dependencies": {
-          "SixLabors.Core": "1.0.0-beta0005",
-          "System.Collections.Immutable": "1.7.0"
-        },
-        "runtime": {
-          "lib/netstandard2.0/SixLabors.Fonts.dll": {
-            "assemblyVersion": "1.0.0.0",
-            "fileVersion": "1.0.0.0"
-          }
-        }
-      },
-      "SixLabors.ImageSharp/1.0.0-beta0004": {
-        "dependencies": {
-          "SixLabors.Core": "1.0.0-beta0005",
-          "System.Buffers": "4.5.0",
-          "System.Memory": "4.5.3",
-          "System.Runtime.CompilerServices.Unsafe": "4.6.0"
-        },
-        "runtime": {
-          "lib/netstandard2.0/SixLabors.ImageSharp.dll": {
-            "assemblyVersion": "1.0.0.0",
-            "fileVersion": "1.0.0.0"
-          }
-        }
-      },
-      "SixLabors.ImageSharp.Drawing/1.0.0-beta0004": {
-        "dependencies": {
-          "SixLabors.Core": "1.0.0-beta0005",
-          "SixLabors.ImageSharp": "1.0.0-beta0004",
-          "SixLabors.Shapes.Text": "1.0.0-beta0005"
-        },
-        "runtime": {
-          "lib/netstandard2.0/SixLabors.ImageSharp.Drawing.dll": {
-            "assemblyVersion": "1.0.0.0",
-            "fileVersion": "1.0.0.0"
-          }
-        }
-      },
-      "SixLabors.Shapes/1.0.0-beta0005": {
-        "dependencies": {
-          "SixLabors.Core": "1.0.0-beta0005",
-          "System.Buffers": "4.5.0",
-          "System.Memory": "4.5.3"
-        },
-        "runtime": {
-          "lib/netstandard2.0/SixLabors.Shapes.dll": {
-            "assemblyVersion": "1.0.0.0",
-            "fileVersion": "1.0.0.0"
-          }
-        }
-      },
-      "SixLabors.Shapes.Text/1.0.0-beta0005": {
-        "dependencies": {
-          "SixLabors.Fonts": "1.0.0-beta0005",
-          "SixLabors.Shapes": "1.0.0-beta0005"
-        },
-        "runtime": {
-          "lib/netstandard2.0/SixLabors.Shapes.Text.dll": {
-            "assemblyVersion": "1.0.0.0",
-            "fileVersion": "1.0.0.0"
-          }
-        }
-      },
       "System.AppContext/4.3.0": {
         "dependencies": {
           "System.Runtime": "4.3.0"
@@ -1543,19 +1365,6 @@
           "Microsoft.NETCore.Platforms": "3.1.0",
           "Microsoft.NETCore.Targets": "1.1.0",
           "System.Runtime": "4.3.0"
-        }
-      },
-      "System.Diagnostics.TraceSource/4.3.0": {
-        "dependencies": {
-          "Microsoft.NETCore.Platforms": "3.1.0",
-          "System.Collections": "4.3.0",
-          "System.Diagnostics.Debug": "4.3.0",
-          "System.Globalization": "4.3.0",
-          "System.Resources.ResourceManager": "4.3.0",
-          "System.Runtime": "4.3.0",
-          "System.Runtime.Extensions": "4.3.0",
-          "System.Threading": "4.3.0",
-          "runtime.native.System": "4.3.0"
         }
       },
       "System.Diagnostics.Tracing/4.3.0": {
@@ -2236,39 +2045,6 @@
           "System.Xml.XmlDocument": "4.3.0"
         }
       },
-      "System.Xml.XPath/4.3.0": {
-        "dependencies": {
-          "System.Collections": "4.3.0",
-          "System.Diagnostics.Debug": "4.3.0",
-          "System.Globalization": "4.3.0",
-          "System.IO": "4.3.0",
-          "System.Resources.ResourceManager": "4.3.0",
-          "System.Runtime": "4.3.0",
-          "System.Runtime.Extensions": "4.3.0",
-          "System.Threading": "4.3.0",
-          "System.Xml.ReaderWriter": "4.3.0"
-        }
-      },
-      "System.Xml.XPath.XmlDocument/4.3.0": {
-        "dependencies": {
-          "System.Collections": "4.3.0",
-          "System.Globalization": "4.3.0",
-          "System.IO": "4.3.0",
-          "System.Resources.ResourceManager": "4.3.0",
-          "System.Runtime": "4.3.0",
-          "System.Runtime.Extensions": "4.3.0",
-          "System.Threading": "4.3.0",
-          "System.Xml.ReaderWriter": "4.3.0",
-          "System.Xml.XPath": "4.3.0",
-          "System.Xml.XmlDocument": "4.3.0"
-        },
-        "runtime": {
-          "lib/netstandard1.3/System.Xml.XPath.XmlDocument.dll": {
-            "assemblyVersion": "4.0.2.0",
-            "fileVersion": "4.6.24705.1"
-          }
-        }
-      },
       "WindowsAzure.Storage/9.3.3": {
         "dependencies": {
           "NETStandard.Library": "1.6.1",
@@ -2298,7 +2074,6 @@
           "System.Configuration.ConfigurationManager": "4.7.0",
           "WindowsAzure.Storage": "9.3.3",
           "bootstrap": "4.4.1",
-          "cloudscribe.FileManager.Web": "4.0.2",
           "dropzone": "4.3.0"
         },
         "runtime": {
@@ -2340,34 +2115,6 @@
       "sha512": "sha512-/QO9//Z8IYv8VmxTS3VzLaQC3wYnJDNbACnZHgLEeMABYjNuVPToLa6VDP2S4KwU3gUFiXglhQYZ00cddSK0IQ==",
       "path": "bootstrap/4.4.1",
       "hashPath": "bootstrap.4.4.1.nupkg.sha512"
-    },
-    "cloudscribe.FileManager.Web/4.0.2": {
-      "type": "package",
-      "serviceable": true,
-      "sha512": "sha512-E3wSLfI9ZjDc7ks2ggbv1ggEAVM5RYAwJPbaypL5JVYKuPk3yJRwxa5iOm37XjIzZvoZfmN/1DtBL4grU3WWdA==",
-      "path": "cloudscribe.filemanager.web/4.0.2",
-      "hashPath": "cloudscribe.filemanager.web.4.0.2.nupkg.sha512"
-    },
-    "cloudscribe.HtmlAgilityPack/1.0.1": {
-      "type": "package",
-      "serviceable": true,
-      "sha512": "sha512-N/rCJ86lJyuLNXfTQmbEStjJTDuZtPaliFPtrxplOEaOwdmBufh5T7cAemHMvMpkLVeU2NYyCyDhMHUuQKhjXg==",
-      "path": "cloudscribe.htmlagilitypack/1.0.1",
-      "hashPath": "cloudscribe.htmlagilitypack.1.0.1.nupkg.sha512"
-    },
-    "cloudscribe.Versioning/1.0.0": {
-      "type": "package",
-      "serviceable": true,
-      "sha512": "sha512-7EpQYHCU1UWRy8Y42CJNSbSdMA34rr/sBXEqEToPtN4t+B/bOTLfbm6FD45QND7sfC204lKsdApk5YwDUDm77w==",
-      "path": "cloudscribe.versioning/1.0.0",
-      "hashPath": "cloudscribe.versioning.1.0.0.nupkg.sha512"
-    },
-    "cloudscribe.Web.Common/4.0.1": {
-      "type": "package",
-      "serviceable": true,
-      "sha512": "sha512-xvXkywUWsD3C59Ky48xw4hIXeyyN7LIpeaaeRPC3xc4D5u3i8EYv6M3rnjsl0cJLucs/lthLzWLoAAsitBapXQ==",
-      "path": "cloudscribe.web.common/4.0.1",
-      "hashPath": "cloudscribe.web.common.4.0.1.nupkg.sha512"
     },
     "dropzone/4.3.0": {
       "type": "package",
@@ -2740,33 +2487,12 @@
       "path": "microsoft.extensions.fileproviders.embedded/3.1.3",
       "hashPath": "microsoft.extensions.fileproviders.embedded.3.1.3.nupkg.sha512"
     },
-    "Microsoft.Extensions.FileProviders.Physical/3.0.0": {
-      "type": "package",
-      "serviceable": true,
-      "sha512": "sha512-76yB1N8hvzDaTqx3epda5sl/3HATw2FskztmmLmfWuvaooaNgbDa37Jyc7IyBCC4PreXEW/XLEET9w6fiJZOFg==",
-      "path": "microsoft.extensions.fileproviders.physical/3.0.0",
-      "hashPath": "microsoft.extensions.fileproviders.physical.3.0.0.nupkg.sha512"
-    },
-    "Microsoft.Extensions.FileSystemGlobbing/3.0.0": {
-      "type": "package",
-      "serviceable": true,
-      "sha512": "sha512-E1GcUu8JvY/8QfqMUYTs6HlDLefMYhEzeHsjrhRqOZguBmDTFU8d8m+mGtHEyYHWMRT1TEiha0a8I2AuozDUWQ==",
-      "path": "microsoft.extensions.filesystemglobbing/3.0.0",
-      "hashPath": "microsoft.extensions.filesystemglobbing.3.0.0.nupkg.sha512"
-    },
     "Microsoft.Extensions.Hosting.Abstractions/2.2.0": {
       "type": "package",
       "serviceable": true,
       "sha512": "sha512-+k4AEn68HOJat5gj1TWa6X28WlirNQO9sPIIeQbia+91n03esEtMSSoekSTpMjUzjqtJWQN3McVx0GvSPFHF/Q==",
       "path": "microsoft.extensions.hosting.abstractions/2.2.0",
       "hashPath": "microsoft.extensions.hosting.abstractions.2.2.0.nupkg.sha512"
-    },
-    "Microsoft.Extensions.Http/3.0.0": {
-      "type": "package",
-      "serviceable": true,
-      "sha512": "sha512-CVBCL1uk0P2dBsRSWeaSaTOzC0CwRU20Z5YAiH0Xnr4jcYsWGdIKwotLBRAFaYkwWrb/OTApE6A8Y65/MGyVXg==",
-      "path": "microsoft.extensions.http/3.0.0",
-      "hashPath": "microsoft.extensions.http.3.0.0.nupkg.sha512"
     },
     "Microsoft.Extensions.Identity.Core/3.1.3": {
       "type": "package",
@@ -2781,20 +2507,6 @@
       "sha512": "sha512-44WTQbfMRRXj5z9VyisllB/jzYvv1xP0TV3ApkWECBb0C9C+CxBgjyDYJLD9MIvA3Nzfl4Z89qWXXhwrCAZ4lw==",
       "path": "microsoft.extensions.identity.stores/3.1.3",
       "hashPath": "microsoft.extensions.identity.stores.3.1.3.nupkg.sha512"
-    },
-    "Microsoft.Extensions.Localization/3.0.0": {
-      "type": "package",
-      "serviceable": true,
-      "sha512": "sha512-0Rq65t5EkDPasSeBhCmSZLAHqvwG1MhXkTCaHV2/xGkOehhjDe1YXHOxCFssjFjZq2yzCtR4YRWSO3nNJadldA==",
-      "path": "microsoft.extensions.localization/3.0.0",
-      "hashPath": "microsoft.extensions.localization.3.0.0.nupkg.sha512"
-    },
-    "Microsoft.Extensions.Localization.Abstractions/3.0.0": {
-      "type": "package",
-      "serviceable": true,
-      "sha512": "sha512-NuWRefv8b5YX23jZ6/xt4qZoPXE+iTlHk7aOX/8PG+Q4h2ezVCEmYN1djse0G8QM7DQbeo6u59bsBVyJRERZ+A==",
-      "path": "microsoft.extensions.localization.abstractions/3.0.0",
-      "hashPath": "microsoft.extensions.localization.abstractions.3.0.0.nupkg.sha512"
     },
     "Microsoft.Extensions.Logging/3.1.3": {
       "type": "package",
@@ -2823,13 +2535,6 @@
       "sha512": "sha512-RyOSOg/kHW3AXojWGSdOs3BXJJnE9Sc6RVvP4LhnY5oaC2Da4k8CWfIw7I+QThxV8HTCPjzmON9c+QO+JZggNg==",
       "path": "microsoft.extensions.options/3.1.3",
       "hashPath": "microsoft.extensions.options.3.1.3.nupkg.sha512"
-    },
-    "Microsoft.Extensions.Options.ConfigurationExtensions/3.0.0": {
-      "type": "package",
-      "serviceable": true,
-      "sha512": "sha512-g4V1TXEKUDgOnp1ZKREKSvITYxcUsTqfxNlOaCG7/xlCurLLzFupm+ULkGqIBUIBK+q3kHmt42pVyHwGIcCBmg==",
-      "path": "microsoft.extensions.options.configurationextensions/3.0.0",
-      "hashPath": "microsoft.extensions.options.configurationextensions.3.0.0.nupkg.sha512"
     },
     "Microsoft.Extensions.Primitives/3.1.3": {
       "type": "package",
@@ -3139,48 +2844,6 @@
       "path": "runtime.win-x86.runtime.native.system.data.sqlclient.sni/4.4.0",
       "hashPath": "runtime.win-x86.runtime.native.system.data.sqlclient.sni.4.4.0.nupkg.sha512"
     },
-    "SixLabors.Core/1.0.0-beta0005": {
-      "type": "package",
-      "serviceable": true,
-      "sha512": "sha512-RnLbRe5J9kjSH+EDA8a58shzI+nNt96aJw1WgXxdn+DSc/ryirdEPO/2EIITvaSX6Nk9Lepcj8EOVfq16fhUmg==",
-      "path": "sixlabors.core/1.0.0-beta0005",
-      "hashPath": "sixlabors.core.1.0.0-beta0005.nupkg.sha512"
-    },
-    "SixLabors.Fonts/1.0.0-beta0005": {
-      "type": "package",
-      "serviceable": true,
-      "sha512": "sha512-di4sMkEvGCREG/QEgCdI9KE1OlQLK0Hk9D9n3/yh8MkAdAo5r2XetIXHfCsIz6yMenalM+r+a5w67Ruc6npp2A==",
-      "path": "sixlabors.fonts/1.0.0-beta0005",
-      "hashPath": "sixlabors.fonts.1.0.0-beta0005.nupkg.sha512"
-    },
-    "SixLabors.ImageSharp/1.0.0-beta0004": {
-      "type": "package",
-      "serviceable": true,
-      "sha512": "sha512-ypYAt2A8FLJ85y42VOVzrCTaULbTwKMM87kYspWOpeBQG/nGBfKWGzFikNJUqOFET7lqQ1nCMp30Nin/W3DPhQ==",
-      "path": "sixlabors.imagesharp/1.0.0-beta0004",
-      "hashPath": "sixlabors.imagesharp.1.0.0-beta0004.nupkg.sha512"
-    },
-    "SixLabors.ImageSharp.Drawing/1.0.0-beta0004": {
-      "type": "package",
-      "serviceable": true,
-      "sha512": "sha512-g4BYrC/1eBGGTWgRQ3pfcR5rYJLiwiZCwmbogJX5e/RSylKteAfsvc/ZR0i8QfDYeyJm7TWfHyFeCCh9yqTGIw==",
-      "path": "sixlabors.imagesharp.drawing/1.0.0-beta0004",
-      "hashPath": "sixlabors.imagesharp.drawing.1.0.0-beta0004.nupkg.sha512"
-    },
-    "SixLabors.Shapes/1.0.0-beta0005": {
-      "type": "package",
-      "serviceable": true,
-      "sha512": "sha512-AiyzJHChJE9M2EV1pPrbFSJBDa4tS73cGbtJybtZxMc9caVyT0j8kzcrPEIquZwg55pz+Rq/jiWzeeM81ehEqg==",
-      "path": "sixlabors.shapes/1.0.0-beta0005",
-      "hashPath": "sixlabors.shapes.1.0.0-beta0005.nupkg.sha512"
-    },
-    "SixLabors.Shapes.Text/1.0.0-beta0005": {
-      "type": "package",
-      "serviceable": true,
-      "sha512": "sha512-XtlOWOl9mqlnZ5epKH1rf2wEdKXo/KA7b6OOu0y4jE+b7VvY0XpV5TXqk3sVU7TruwbIotRjaBYV5EzZRCNUeQ==",
-      "path": "sixlabors.shapes.text/1.0.0-beta0005",
-      "hashPath": "sixlabors.shapes.text.1.0.0-beta0005.nupkg.sha512"
-    },
     "System.AppContext/4.3.0": {
       "type": "package",
       "serviceable": true,
@@ -3334,13 +2997,6 @@
       "sha512": "sha512-UUvkJfSYJMM6x527dJg2VyWPSRqIVB0Z7dbjHst1zmwTXz5CcXSYJFWRpuigfbO1Lf7yfZiIaEUesfnl/g5EyA==",
       "path": "system.diagnostics.tools/4.3.0",
       "hashPath": "system.diagnostics.tools.4.3.0.nupkg.sha512"
-    },
-    "System.Diagnostics.TraceSource/4.3.0": {
-      "type": "package",
-      "serviceable": true,
-      "sha512": "sha512-VnYp1NxGx8Ww731y2LJ1vpfb/DKVNKEZ8Jsh5SgQTZREL/YpWRArgh9pI8CDLmgHspZmLL697CaLvH85qQpRiw==",
-      "path": "system.diagnostics.tracesource/4.3.0",
-      "hashPath": "system.diagnostics.tracesource.4.3.0.nupkg.sha512"
     },
     "System.Diagnostics.Tracing/4.3.0": {
       "type": "package",
@@ -3817,20 +3473,6 @@
       "sha512": "sha512-MYoTCP7EZ98RrANESW05J5ZwskKDoN0AuZ06ZflnowE50LTpbR5yRg3tHckTVm5j/m47stuGgCrCHWePyHS70Q==",
       "path": "system.xml.xmlserializer/4.3.0",
       "hashPath": "system.xml.xmlserializer.4.3.0.nupkg.sha512"
-    },
-    "System.Xml.XPath/4.3.0": {
-      "type": "package",
-      "serviceable": true,
-      "sha512": "sha512-v1JQ5SETnQusqmS3RwStF7vwQ3L02imIzl++sewmt23VGygix04pEH+FCj1yWb+z4GDzKiljr1W7Wfvrx0YwgA==",
-      "path": "system.xml.xpath/4.3.0",
-      "hashPath": "system.xml.xpath.4.3.0.nupkg.sha512"
-    },
-    "System.Xml.XPath.XmlDocument/4.3.0": {
-      "type": "package",
-      "serviceable": true,
-      "sha512": "sha512-A/uxsWi/Ifzkmd4ArTLISMbfFs6XpRPsXZonrIqyTY70xi8t+mDtvSM5Os0RqyRDobjMBwIDHDL4NOIbkDwf7A==",
-      "path": "system.xml.xpath.xmldocument/4.3.0",
-      "hashPath": "system.xml.xpath.xmldocument.4.3.0.nupkg.sha512"
     },
     "WindowsAzure.Storage/9.3.3": {
       "type": "package",

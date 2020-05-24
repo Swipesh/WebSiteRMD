@@ -2,6 +2,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
@@ -12,6 +13,7 @@ using PluralsightASP.Core;
 
 namespace PluralsightASP.Areas.Identity.Pages.Account.Manage
 {
+    [Authorize]
     public class Files : PageModel
     {
         private readonly CloudBlobClient _client;

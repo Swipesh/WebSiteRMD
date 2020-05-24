@@ -83,15 +83,17 @@ namespace PluralsightASP.Areas.Identity.Pages.Account
         {
             returnUrl = returnUrl ?? Url.Content("~/");
 
+            
+            //todo: добавить проверку на существование пользователя
             if (ModelState.IsValid)
             {
                 // This doesn't count login failures towards account lockout
                 // To enable password failures to trigger account lockout, set lockoutOnFailure: true
                 var result = await _signInManager.PasswordSignInAsync(Input.Email, Input.Password, Input.RememberMe, lockoutOnFailure: false);
+                var user = await _userManager.FindByEmailAsync(Input.Email);
                 if (result.Succeeded)
                 {
                     _logger.LogInformation("User logged in.");
-                    var user = await _userManager.FindByEmailAsync(Input.Email);
                     var container = _client.GetContainerReference(user.Id);
                     await container.CreateIfNotExistsAsync();
                     return LocalRedirect(returnUrl);
@@ -106,19 +108,17 @@ namespace PluralsightASP.Areas.Identity.Pages.Account
                     return RedirectToPage("./Lockout");
                 }
 
-                if (!(await _userManager.FindByEmailAsync(Input.Email)).EmailConfirmed)
+                
+                if (user != null && !user.EmailConfirmed)
                 {
                     ModelState.AddModelError(string.Empty, "You need to confirm your email.");
                     return Page();
                 }
-                else
-                {
-                    ModelState.AddModelError(string.Empty, "Invalid login attempt.");
-                    return Page();
-                }
+                ModelState.AddModelError(string.Empty, "Invalid login attempt.");
+                return Page();
             }
 
-            // If we got this far, something failed, redisplay form
+            
             return Page();
         }
     }

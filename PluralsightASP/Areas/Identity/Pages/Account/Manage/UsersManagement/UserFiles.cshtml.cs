@@ -21,6 +21,7 @@ namespace PluralsightASP.Areas.Identity.Pages.Account.Manage.UsersManagement
         public List<string> Blobs { get; set; }
 
 
+        [BindProperty(SupportsGet = true)]
         public string Id { get; set; }
         [TempData] public string StatusMessage { get; set; }
 
@@ -31,10 +32,9 @@ namespace PluralsightASP.Areas.Identity.Pages.Account.Manage.UsersManagement
             Blobs = new List<string>();
         }
 
-        public async Task<IActionResult> OnGet(string id)
+        public async Task<IActionResult> OnGet()
         {
-            Id = id;
-            var container = _client.GetContainerReference(id);
+            var container = _client.GetContainerReference(Id);
 
             if (!await container.ExistsAsync())
                 return Content("Container does not exist");
@@ -62,10 +62,9 @@ namespace PluralsightASP.Areas.Identity.Pages.Account.Manage.UsersManagement
             return Page();
         }
 
-        public async Task<IActionResult> OnGetDownloadFileAsync(string id, string fileName)
+        public async Task<IActionResult> OnGetDownloadFileAsync(string fileName)
         {
-            Id = id;
-            var user = await _userManager.FindByIdAsync(id);
+            var user = await _userManager.FindByIdAsync(Id);
             var ms = new MemoryStream();
 
 
@@ -85,16 +84,15 @@ namespace PluralsightASP.Areas.Identity.Pages.Account.Manage.UsersManagement
             return File(blobStream, file.Properties.ContentType, file.Name);
         }
 
-        public async Task<IActionResult> OnPostAsync(string id, IFormFile asset)
+        public async Task<IActionResult> OnPostAsync(IFormFile asset)
         {
-            Id = id;
             if (asset == null)
             {
                 StatusMessage = "Nothing to upload";
                 return RedirectToPage();
             }
 
-            var user = await _userManager.FindByIdAsync(id);
+            var user = await _userManager.FindByIdAsync(Id);
             if (user == null)
                 return RedirectToPage();
             var container = _client.GetContainerReference(user.Id);

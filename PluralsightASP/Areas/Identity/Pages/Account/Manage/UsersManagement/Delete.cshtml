@@ -1,9 +1,10 @@
-@page
+@page "/Users/Delete/{id}"
 @model DeleteModel
 
 @{
     ViewData["Title"] = "Delete";
     ViewData["ActivePage"] = ManageNavPages.UsersManagement;
+    var culture = CultureInfo.CurrentCulture.Name;
 }
 
 
@@ -35,7 +36,7 @@
                 </div>
                 <input type="hidden" asp-for="User.Id"/>
                 <input type="submit" localize value="Delete" class="btn btn-danger"/> |
-                <a asp-page="UsersList" class="btn btn-primary" localize-content>Back to List</a>
+                <a asp-page="UsersList" class="btn btn-primary" asp-route-culture="@culture" localize-content>Back to List</a>
             </form>
         </div>
     </div>

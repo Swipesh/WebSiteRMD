@@ -7,7 +7,6 @@
     <ItemGroup>
       <PackageReference Include="Azure.Storage.Blobs" Version="12.4.2" />
       <PackageReference Include="bootstrap" Version="4.4.1" />
-      <PackageReference Include="cloudscribe.FileManager.Web" Version="4.0.2" />
       <PackageReference Include="dropzone" Version="4.3.0" />
       <PackageReference Include="LazZiya.ExpressLocalization" Version="4.0.0" />
       <PackageReference Include="LazZiya.TagHelpers" Version="4.0.1" />
@@ -179,6 +178,11 @@
       </Content>
       <Content Update="wwwroot\assets\css\dropzone.css">
         <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+        <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      </Content>
+      <Content Update="appsettings.json">
+        <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
         <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       </Content>
     </ItemGroup>

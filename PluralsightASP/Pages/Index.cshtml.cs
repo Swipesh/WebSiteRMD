@@ -16,7 +16,7 @@ namespace PluralsightASP.Pages
     {
         private readonly ILogger<IndexModel> _logger;
 
-        public IndexModel(ILogger<IndexModel> logger,RoleManager<IdentityRole> roleManager, UserManager<User> userManager)
+        public IndexModel(ILogger<IndexModel> logger)
         {
             _logger = logger;
         }

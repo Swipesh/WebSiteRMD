@@ -1,10 +1,12 @@
-@page "{Id}"
+@page "/admin/users/files/{Id}"
 @model UserFiles
 
 @{
     ViewData["Title"] = "User files";
     ViewData["ActivePage"] = ManageNavPages.UsersManagement;
 }
+
+<partial name="_StatusMessage" model="Model.StatusMessage"/>
 <div class="container">
     <div class="card shadow">
         <div class="card-header py-3">
@@ -15,15 +17,13 @@
                 @foreach (var item in Model.Blobs)
                 {
                     <li>
-                        <a asp-page-handler="DownloadFile" asp-route-fileName="@item" asp-route-id="@Model.Id" class="icon-cloud-download"> @item </a>
+                        <a asp-page-handler="DownloadFile" asp-route-fileName="@item" class="icon-cloud-download"> @item </a>
                     </li>
                 }
             </ul>
         </div>
     </div>
 
-    @*
-    <input hidden="hidden" name="id" value="@Model.Id"/>*@
     <form method="post" enctype="multipart/form-data">
         <input type="file" name="asset"/>
         <input type="submit"/>

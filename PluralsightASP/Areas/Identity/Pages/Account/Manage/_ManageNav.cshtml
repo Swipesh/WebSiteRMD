@@ -1,26 +1,33 @@
 @{
+    var culture = CultureInfo.CurrentCulture.Name;
 }
 <ul class="nav nav-pills flex-column">
     <li class="nav-item">
-        <a class="nav-link @ManageNavPages.IndexNavClass(ViewContext)" id="profile" asp-area="Identity" asp-page="/Account/Manage/Index" localize-content>Profile</a>
+        <a class="nav-link @ManageNavPages.IndexNavClass(ViewContext)" id="profile" asp-area="Identity" asp-page="/Account/Manage/Index" asp-route-culture="@culture" localize-content>Profile</a>
     </li>
     <li class="nav-item">
-        <a class="nav-link @ManageNavPages.EmailNavClass(ViewContext)" id="email" asp-area="Identity" asp-page="/Account/Manage/Email" localize-content>Email</a>
+        <a class="nav-link @ManageNavPages.EmailNavClass(ViewContext)" id="email" asp-area="Identity" asp-page="/Account/Manage/Email" asp-route-culture="@culture" localize-content>Email</a>
     </li>
     <li class="nav-item">
-        <a class="nav-link @ManageNavPages.ChangePasswordNavClass(ViewContext)" id="change-password" asp-area="Identity" asp-page="/Account/Manage/ChangePassword" localize-content>Password</a>
+        <a class="nav-link @ManageNavPages.ChangePasswordNavClass(ViewContext)" id="change-password" asp-area="Identity" asp-page="/Account/Manage/ChangePassword" asp-route-culture="@culture" localize-content>Password</a>
     </li>
     <li class="nav-item">
-        <a class="nav-link @ManageNavPages.FilesNavClass(ViewContext)" id="change-password" asp-area="Identity" asp-page="/Account/Manage/Files" localize-content>Files</a>
+        <a class="nav-link @ManageNavPages.FilesNavClass(ViewContext)" id="files" asp-area="Identity" asp-page="/Account/Manage/Files" asp-route-culture="@culture" localize-content>Files</a>
     </li>
     @if (User.IsInRole("admin"))
     {
         <li class="nav-item">
-            <a class="nav-link @ManageNavPages.UsersManagementNavClass(ViewContext)" id="users-management" asp-area="Identity" asp-page="/Account/Manage/UsersManagement/UsersList" localize-content>Users management</a>
+            <a class="nav-link @ManageNavPages.UsersManagementNavClass(ViewContext)" id="users-management" asp-area="Identity" asp-page="/Account/Manage/UsersManagement/UsersList" asp-route-culture="@culture" localize-content>Users management</a>
         </li>
         <li class="nav-item">
-            <a class="nav-link @ManageNavPages.RolesManagementNavClass(ViewContext)" id="roles-management" asp-area="Identity" asp-page="/Account/Manage/RolesManagement/RolesList"  localize-content>Roles management</a>
+            <a class="nav-link @ManageNavPages.RolesManagementNavClass(ViewContext)" id="roles-management" asp-area="Identity" asp-page="/Account/Manage/RolesManagement/RolesList" asp-route-culture="@culture"  localize-content>Roles management</a>
         </li>
     }
 
 </ul>
+
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial"/>
+    <localization-validation-scripts></localization-validation-scripts>
+}

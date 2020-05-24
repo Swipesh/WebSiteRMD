@@ -4,32 +4,34 @@
 @{
     ViewData["Title"] = "Create new role";
     ViewData["ActivePage"] = ManageNavPages.RolesManagement;
+    var culture = CultureInfo.CurrentCulture.Name;
 }
 
 
-<h4>@ViewData["Title"]</h4>
-<partial name="_StatusMessage" model="Model.StatusMessage" />
-<hr />
-<div class="row">
-    <div class="col-md-6">
-        <form method="post">
-            <div asp-validation-summary="All" class="text-danger"></div>
-            <div class="form-group">
-                <label asp-for="Input.Name"></label>
-                <input asp-for="Input.Name" class="form-control"/>
-                <span asp-validation-for="Input.Name" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <input type="submit" value="Create" class="btn btn-primary"/>
-            </div>
-        </form>
+<partial name="_StatusMessage" model="Model.StatusMessage"/>
+<div class="container">
+<div class="card shadow" style="max-width: 24rem">
+        <div class="card-header py-3">
+            <p class="text-primary m-0 font-weight-bold" localize-content>@ViewData["Title"]</p>
+        </div>
+        <div class="card-body">
+            <form method="post">
+                <div asp-validation-summary="All" class="text-danger"></div>
+                <div class="form-group">
+                    <label asp-for="Input.Name"></label>
+                    <input asp-for="Input.Name" class="form-control"/>
+                    <span asp-validation-for="Input.Name" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <input type="submit" localize-content value="Create" class="btn btn-success"/> |
+                    <a asp-page="RolesList" class="btn btn-primary" asp-route-culture="@culture" localize-content>Back to List</a>
+                </div>
+            </form>
+        </div>
     </div>
 </div>
 
-<div>
-    <a asp-page="RolesList">Back to List</a>
-</div>
-
 @section Scripts {
-    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+    <partial name="_ValidationScriptsPartial"/>
+    <localization-validation-scripts></localization-validation-scripts>
 }

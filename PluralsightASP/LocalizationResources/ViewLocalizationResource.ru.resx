@@ -528,7 +528,7 @@
         <comment>Areas/Identity/Pages/Account/Manage/TwoFactorAuthentication.cshtml</comment>
   </data>
     <data name="Update password" xml:space="preserve">
-    <value>Обновление пароля</value>
+    <value>Обновить пароль</value>
         <comment>Areas/Identity/Pages/Account/Manage/ChangePassword.cshtml</comment>
   </data>
     <data name="Use a local account to log in." xml:space="preserve">
@@ -720,8 +720,40 @@
     <value>Материалы</value>
         <comment>Custom back end message</comment>
   </data>
+    <data name="Files" xml:space="preserve">
+    <value>Файлы</value>
+        <comment>Custom back end message</comment>
+  </data>
+    <data name="Create new user" xml:space="preserve">
+    <value>Создать нового пользователя</value>
+        <comment>Custom back end message</comment>
+  </data>
     <data name="Your email is unchanged." xml:space="preserve">
     <value>Адрес эл. почты не изменен.</value>
+        <comment>Custom back end message</comment>
+  </data>
+    <data name="Manage Email" xml:space="preserve">
+    <value>Управление адресом эл. почты.</value>
+        <comment>Custom back end message</comment>
+  </data>
+    <data name="Name" xml:space="preserve">
+    <value>Название</value>
+        <comment>Custom back end message</comment>
+  </data>
+    <data name="User files" xml:space="preserve">
+    <value>Файлы пользователя</value>
+        <comment>Custom back end message</comment>
+  </data>
+    <data name="Search" xml:space="preserve">
+    <value>Поиск</value>
+        <comment>Custom back end message</comment>
+  </data>
+    <data name="Show" xml:space="preserve">
+    <value>Показать</value>
+        <comment>Custom back end message</comment>
+  </data>
+    <data name="Showing" xml:space="preserve">
+    <value>Отображается</value>
         <comment>Custom back end message</comment>
   </data>
 </root>

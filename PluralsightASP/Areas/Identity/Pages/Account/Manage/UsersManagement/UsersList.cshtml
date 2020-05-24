@@ -1,9 +1,10 @@
-@page
+@page "/admin/users"
 @model UsersList
 
 @{
     ViewData["Title"] = "Users management";
     ViewData["ActivePage"] = ManageNavPages.UsersManagement;
+    var culture = CultureInfo.CurrentCulture.Name;
 }
 
 <partial name="_StatusMessage" model="Model.StatusMessage"/>
@@ -64,19 +65,19 @@
                             </td>
                             <td>
                                 <div>
-                                    <a asp-page="Edit" asp-route-id="@item.Id">Edit</a>
+                                    <a asp-page="Edit" asp-route-culture="@culture" asp-route-id="@item.Id" localize-content>Edit</a>
                                 </div>
                                 <div>
-                                    <a asp-page="Details" asp-route-id="@item.Id">Details</a>
+                                    <a asp-page="Details" asp-route-culture="@culture" asp-route-id="@item.Id" localize-content>Details</a>
                                 </div>
                                 <div>
-                                    <a asp-page="Delete" asp-route-id="@item.Id">Delete</a>
+                                    <a asp-page="Delete" asp-route-culture="@culture" asp-route-id="@item.Id" localize-content>Delete</a>
                                 </div>
                                 <div>
-                                    <a asp-page="EditUserRoles" asp-route-id="@item.Id">Edit roles</a>
+                                    <a asp-page="EditUserRoles" asp-route-culture="@culture" asp-route-id="@item.Id" localize-content>Edit roles</a>
                                 </div>
                                 <div>
-                                    <a asp-page="UserFiles" asp-route-id="@item.Id">User files</a>
+                                    <a asp-page="UserFiles" asp-route-culture="@culture" asp-route-id="@item.Id" localize-content>User files</a>
                                 </div>
                             </td>
                         </tr>
@@ -116,7 +117,7 @@
             </div>
             </div>
             <div class="card-footer">
-                <a class="btn btn-primary" asp-page="Create">Add new</a>
+                <a class="btn btn-primary" asp-route-culture="@culture" asp-page="Create" localize-content>Add new</a>
             </div>
         </div>
     </div>

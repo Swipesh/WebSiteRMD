@@ -59,8 +59,8 @@ namespace PluralsightASP
             services.AddAuthentication("cookies").AddCookie("cookies", options => options.LoginPath = "Areas/IdentityAccount/Login");
             var cultures = new[]
             {
-                new CultureInfo("ru"),
                 new CultureInfo("en"),
+                new CultureInfo("ru")
             };
             services.AddRazorPages().AddExpressLocalization<ExpressLocalizationResource,ViewLocalizationResource>(ops =>
                 {
@@ -70,9 +70,10 @@ namespace PluralsightASP
                         o.SupportedCultures = cultures;
                         o.SupportedUICultures = cultures;
                         o.DefaultRequestCulture = new RequestCulture("ru");
+                        o.SetDefaultCulture("ru");
                     };
                 });
-            services.AddCloudscribeFileManager(Configuration);
+            
             services.AddTransient<ITagHelperComponent, LocalizationValidationScriptsTagHelperComponent>();
         }
 
@@ -90,14 +91,14 @@ namespace PluralsightASP
                 app.UseHsts();
             }
 
-            app.UseRequestLocalization();
+           
             app.UseHttpsRedirection();
             app.UseStaticFiles();
 
             app.UseRouting();
             app.UseAuthentication();
             app.UseAuthorization();
-
+            app.UseRequestLocalization();
             app.UseEndpoints(endpoints => { endpoints.MapRazorPages(); });
         }
     }

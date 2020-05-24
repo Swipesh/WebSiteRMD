@@ -96,10 +96,6 @@
               "target": "Package",
               "version": "[4.4.1, )"
             },
-            "cloudscribe.FileManager.Web": {
-              "target": "Package",
-              "version": "[4.0.2, )"
-            },
             "dropzone": {
               "target": "Package",
               "version": "[4.3.0, )"
@@ -243,10 +239,6 @@
               "target": "Package",
               "version": "[4.4.1, )"
             },
-            "cloudscribe.FileManager.Web": {
-              "target": "Package",
-              "version": "[4.0.2, )"
-            },
             "dropzone": {
               "target": "Package",
               "version": "[4.3.0, )"
@@ -377,10 +369,6 @@
             "bootstrap": {
               "target": "Package",
               "version": "[4.4.1, )"
-            },
-            "cloudscribe.FileManager.Web": {
-              "target": "Package",
-              "version": "[4.0.2, )"
             },
             "dropzone": {
               "target": "Package",

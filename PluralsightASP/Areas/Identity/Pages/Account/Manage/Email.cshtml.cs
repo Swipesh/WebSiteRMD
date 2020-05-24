@@ -15,7 +15,7 @@ using PluralsightASP.Core;
 
 namespace PluralsightASP.Areas.Identity.Pages.Account.Manage
 {
-    public partial class EmailModel : PageModel
+    public class EmailModel : PageModel
     {
         private readonly UserManager<User> _userManager;
         private readonly SignInManager<User> _signInManager;

@@ -127,7 +127,7 @@ namespace PluralsightASP.Areas.Identity.Pages.Account.Manage.UsersManagement
             }
 
             StatusMessage = "User has been updated successfully";
-            await _signInManager.RefreshSignInAsync(user);
+            //await _signInManager.RefreshSignInAsync(user);
             return RedirectToPage("UsersList");
         }
 

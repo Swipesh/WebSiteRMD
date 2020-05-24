@@ -62,7 +62,6 @@ C:/Users/mista/RiderProjects/PluralsightASP/PluralsightASP/obj/Debug/netcoreapp3
 C:/Users/mista/RiderProjects/PluralsightASP/PluralsightASP/obj/Debug/netcoreapp3.1/Razor/Pages/NotFound.cshtml.g.cs
 C:/Users/mista/RiderProjects/PluralsightASP/PluralsightASP/obj/Debug/netcoreapp3.1/Razor/Pages/Users/Edit.cshtml.g.cs
 /Users/swipe/RiderProjects/WebSiteRMD/PluralsightASP/bin/Debug/netcoreapp3.1/appsettings.Development.json
-/Users/swipe/RiderProjects/WebSiteRMD/PluralsightASP/bin/Debug/netcoreapp3.1/appsettings.json
 /Users/swipe/RiderProjects/WebSiteRMD/PluralsightASP/bin/Debug/netcoreapp3.1/Properties/launchSettings.json
 /Users/swipe/RiderProjects/WebSiteRMD/PluralsightASP/bin/Debug/netcoreapp3.1/PluralsightASP.deps.json
 /Users/swipe/RiderProjects/WebSiteRMD/PluralsightASP/bin/Debug/netcoreapp3.1/PluralsightASP.runtimeconfig.json
@@ -277,19 +276,6 @@ C:/Users/mista/RiderProjects/PluralsightASP/PluralsightASP/obj/Debug/netcoreapp3
 /Users/swipe/RiderProjects/WebSiteRMD/PluralsightASP/obj/Debug/netcoreapp3.1/PluralsightASP.LocalizationResources.ViewLocalizationResource.ru.resources
 /Users/swipe/RiderProjects/WebSiteRMD/PluralsightASP/obj/Debug/netcoreapp3.1/Razor/Pages/Shared/_LanguagePartial.cshtml.g.cs
 /Users/swipe/RiderProjects/WebSiteRMD/PluralsightASP/obj/Debug/netcoreapp3.1/Razor/Pages/Shared/_ProjectCardPartial.cshtml.g.cs
-/Users/swipe/RiderProjects/WebSiteRMD/PluralsightASP/bin/Debug/netcoreapp3.1/cloudscribe.FileManager.Web.Views.dll
-/Users/swipe/RiderProjects/WebSiteRMD/PluralsightASP/bin/Debug/netcoreapp3.1/cloudscribe.FileManager.Web.dll
-/Users/swipe/RiderProjects/WebSiteRMD/PluralsightASP/bin/Debug/netcoreapp3.1/cloudscribe.HtmlAgilityPack.dll
-/Users/swipe/RiderProjects/WebSiteRMD/PluralsightASP/bin/Debug/netcoreapp3.1/cloudscribe.Versioning.dll
-/Users/swipe/RiderProjects/WebSiteRMD/PluralsightASP/bin/Debug/netcoreapp3.1/cloudscribe.Web.Common.Views.dll
-/Users/swipe/RiderProjects/WebSiteRMD/PluralsightASP/bin/Debug/netcoreapp3.1/cloudscribe.Web.Common.dll
-/Users/swipe/RiderProjects/WebSiteRMD/PluralsightASP/bin/Debug/netcoreapp3.1/SixLabors.Core.dll
-/Users/swipe/RiderProjects/WebSiteRMD/PluralsightASP/bin/Debug/netcoreapp3.1/SixLabors.Fonts.dll
-/Users/swipe/RiderProjects/WebSiteRMD/PluralsightASP/bin/Debug/netcoreapp3.1/SixLabors.ImageSharp.dll
-/Users/swipe/RiderProjects/WebSiteRMD/PluralsightASP/bin/Debug/netcoreapp3.1/SixLabors.ImageSharp.Drawing.dll
-/Users/swipe/RiderProjects/WebSiteRMD/PluralsightASP/bin/Debug/netcoreapp3.1/SixLabors.Shapes.dll
-/Users/swipe/RiderProjects/WebSiteRMD/PluralsightASP/bin/Debug/netcoreapp3.1/SixLabors.Shapes.Text.dll
-/Users/swipe/RiderProjects/WebSiteRMD/PluralsightASP/bin/Debug/netcoreapp3.1/System.Xml.XPath.XmlDocument.dll
 /Users/swipe/RiderProjects/WebSiteRMD/PluralsightASP/obj/Debug/netcoreapp3.1/Razor/Pages/Shared/_CourseCardPartial.cshtml.g.cs
 /Users/swipe/RiderProjects/WebSiteRMD/PluralsightASP/obj/Debug/netcoreapp3.1/Razor/Areas/Education/Pages/Index.cshtml.g.cs
 /Users/swipe/RiderProjects/WebSiteRMD/PluralsightASP/obj/Debug/netcoreapp3.1/Razor/Areas/Education/Pages/_ManageNav.cshtml.g.cs
@@ -312,3 +298,4 @@ C:/Users/mista/RiderProjects/PluralsightASP/PluralsightASP/obj/Debug/netcoreapp3
 /Users/swipe/RiderProjects/WebSiteRMD/PluralsightASP/bin/Debug/netcoreapp3.1/Microsoft.WindowsAzure.Storage.dll
 /Users/swipe/RiderProjects/WebSiteRMD/PluralsightASP/obj/Debug/netcoreapp3.1/Razor/Areas/Identity/Pages/Account/Manage/Files.cshtml.g.cs
 /Users/swipe/RiderProjects/WebSiteRMD/PluralsightASP/obj/Debug/netcoreapp3.1/Razor/Areas/Identity/Pages/Account/Manage/UsersManagement/UserFiles.cshtml.g.cs
+/Users/swipe/RiderProjects/WebSiteRMD/PluralsightASP/bin/Debug/netcoreapp3.1/appsettings.json
